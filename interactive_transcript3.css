@@ -1,0 +1,47 @@
+
+
+    #all {
+       background-color: lightgrey;
+       border-radius:6px;
+       padding: 10px;
+       border:1px solid;
+       display:inline-block;
+       margin:30px;
+       width:90%;
+    }
+
+    .cues {
+       color:black;
+       font-family: sans-serif;}
+
+    .cues:hover {
+       text-decoration: none;
+       background-color: orange;
+    }
+
+    .cues.current {
+       color: darkorange;
+       font-weight: bold;
+    }
+
+    #myVideo {
+       display: block;
+       float : left;
+       margin-right: 3%;
+       width: 100%;
+       background-color: black;
+       position: relative;
+    }
+
+    #transcript {
+       padding: 10px;
+       border:1px solid #ccc;
+       border-radius: 4px;
+       float: left;
+       max-height: 225px;
+       overflow: auto;
+       width: 100%;
+       margin: 0;
+       font-size: 14px;
+       list-style: none;
+    }
