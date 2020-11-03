@@ -45,6 +45,7 @@
   background-color: #ff8080;
   padding: 0;
   margin-left: 0;
+  font: 14px sans-serif; font-weight: 600;
 }
 
 button {
@@ -52,8 +53,8 @@ button {
   background-color: #ff8080;
   border-radius:4px;
   border: 1px solid #000;
-  padding: 2px 5px 2px 5px;
-  margin: 2px 0px 2px 2px;
+  padding: 2px 5px 3px 5px;
+  margin: 2px 0px 3px 2px;
 }
 
 button:hover {
@@ -61,17 +62,17 @@ button:hover {
   background-color: skyblue;
   border-radius:4px;
   border: 1px solid #000;
-  padding: 2px 5px 2px 5px;
-  margin: 2px 0px 2px 2px;
+  padding: 2px 5px 3px 5px;
+  margin: 2px 0px 3px 2px;
 }
 
-.player__slider {
-  background-color: red;
-  color: red;
-  width: 100px;
-  padding: 0px 0px 0px 0px;
-  margin: 0px 0px 0px 0px;
-  height: 10px;
+#playspeed_label {
+  float: right;
+  font: 13px sans-serif; font-weight:normal;
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 2px 5px 3px 5px;
+  margin: 2px 2px 0px 0px;
 }
 
 
@@ -263,8 +264,8 @@ input[type=range]::-moz-range-thumb {
         <track src="assets/chapters.vtt" kind="chapters" default>-->
         <source src='https://tna-video-player.s3.amazonaws.com/66/UKSC/1/cr1-09-10-19-session-1_imx30_1.mp4' type='video/mp4'>
         <track src="chapters_num2.vtt" kind="chapters" srclang="en" label="English" default>
-        <track label="English subtitles" kind="subtitles" srclang="en" src="elephants-dream-chapters-en2.vtt">
-        <track label="Welsh subtitles" kind="subtitles" srclang="cy" src="elephants-dream-chapters-wls.vtt">
+        <track label="English subtitles" kind="subtitles" srclang="en" src="chapters-en2.vtt">
+        <track label="Welsh subtitles" kind="subtitles" srclang="cy" src="chapters-wls.vtt">
       </video>
 <!--    </div>
 <div>-->
@@ -278,7 +279,9 @@ input[type=range]::-moz-range-thumb {
        <button data-skip="-60" class="player__button">« 1min</button>
        <button data-skip="30" class="player__button">30s »</button>
        <button data-skip="60" class="player__button">1min »</button>
-       <input type="range" name="playbackRate" class="player__slider" min="0.5" max="2" step="0.1" value="1">
+
+       <div id="playspeed_label">Play Speed<input type="range" name="playbackRate" class="player__slider" id="speedslide" min="0.5" max="2" step="0.1" value="1">
+       </div>
 </div>
       <div id="transcript"></div>
 </div>
