@@ -507,8 +507,8 @@ height: 360 */
 // Load chapters / captions
 jwplayer().on('ready', function() {
 	Promise.all([
-		new Promise((resolve) => fetch('captions.vtt').then(r => r.text()).then(t => resolve(t))),
-		new Promise((resolve) => fetch('chapters.vtt').then(r => r.text()).then(t => resolve(t))),
+		new Promise((resolve) => fetch('captionsJW.vtt').then(r => r.text()).then(t => resolve(t))),
+		new Promise((resolve) => fetch('chaptersJW.vtt').then(r => r.text()).then(t => resolve(t))),
 	])
 	.then(textData => textData.map(t => t.split('\n\n').splice(1).map(s => parse(s))))
 	.then(parsedData => {
