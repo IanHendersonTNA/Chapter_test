@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>JW</title>
+
+		<style>
+		body {
+			margin:0;
+			padding:0;
+		}
+
+		.player {
+			background-color: #000;
+      border-radius:6px;
+      padding: 10px;
+      border:1px solid;
+      display:inline-block;
+      margin:30px;
+      width:1000px;
+      height: 800px;
+      position: relative;
+
+			}
+
+		/* CONTAINS STYLES FROM INTERACTIVE_TRANSCRIPT9.HTML: FROM #all {}*/
+		#header {
+		  font: 18px sans-serif; font-weight:500;
+		  background-color: #000;
+		  color: #fff;
+		  padding: 5px 0 8px 0px;
+		}
+
+		#chapter_header {
+		  font: 12px sans-serif; font-weight:600;
+		  background-color: #000;
+		  color: skyblue;
+		  padding: 2px 4px 0px 0px;
+		  margin-left: 0;
+		}
+
+		#buttonbar {
+		  display: inline-block;
+		  background-color: #000;
+		  padding: 0;
+		  margin-left: 0;
+		  font: 14px sans-serif; font-weight: 600;
+		  height: 27px;
+			position: absolute;
+			top: 40px;
+		}
+
+		button {
+		  color: black;
+		  background-color: #ff8080;
+		  border-radius:4px;
+		  border: 1px solid #000;
+		  padding: 2px 5px 3px 5px;
+		  margin: 2px 0px 3px 0px;
+		}
+
+		button:hover {
+		  color: black;
+		  background-color: skyblue;
+		  border-radius:4px;
+		  border: 1px solid #000;
+		  padding: 2px 5px 3px 5px;
+		  margin: 2px 0px 3px 0px;
+		}
+
+		#playspeed_label {
+		  float: right;
+		  font: 13px sans-serif; font-weight: normal;
+		  border: 1px solid #000;
+		  border-radius: 4px;
+		  padding: 2px 5px 3px 5px;
+		  margin: 2px 2px 0px 0px;
+		  color: skyblue;
+		}
+
+		input[type=range] {
+		  -webkit-appearance: none;
+		  background: transparent;
+		  width: 100px;
+		  margin: 0 5px;
+		  }
+
+		input[type=range]:focus {
+		  outline: none;
+		}
+
+		input[type=range]::-webkit-slider-runnable-track {
+		  width: 100%;
+		  height: 8.4px;
+		  cursor: pointer;
+		  background: skyblue;
+		  border-radius: 1.3px;
+		  border: 0.2px solid rgba(1, 1, 1, 0);
+		  box-shadow: inset 2px 1px 2px 1px black;
+		}
+
+		input[type=range]::-webkit-slider-thumb {
+		  height: 15px;
+		  width: 15px;
+		  border-radius: 50px;
+		  background: #ff8080;
+		  cursor: pointer;
+		  -webkit-appearance: none;
+		  margin-top: -3.5px;
+		  box-shadow: 2px 1px 2px 1px black;
+		}
+
+		input[type=range]:focus::-webkit-slider-runnable-track {
+		  background: skyblue;
+		  box-shadow: inset 2px 1px 2px 1px black;
+		}
+
+		input[type=range]::-moz-range-track {
+		  width: 100%;
+		  height: 8.4px;
+		  cursor: pointer;
+		  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+		  background: skyblue;
+		  border-radius: 1.3px;
+		  border: 0.2px solid rgba(1, 1, 1, 0);
+
+		}
+
+		input[type=range]::-moz-range-thumb {
+		  box-shadow: 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(13, 13, 13, 0);
+		  height: 15px;
+		  width: 15px;
+		  border-radius: 50px;
+		  background: #fff;
+		  cursor: pointer;
+		}
+
+
+		/* CONTAINS STYLES FROM INTERACTIVE_TRANSCRIPT9.HTML: FROM #all {}*/
+		.player-container {
+			background-color: #000;
+      border-radius:6px;
+      padding: 10px;
+      border:1px solid;
+      display:inline-block;
+      margin:30px;
+      width:1000px;
+      height: 800px;
+      position: relative;
+		}
+										/*REPLACED*/
+										OLD.player-container {
+											display: flex;
+											flex-wrap: wrap;
+											justify-content: center;
+										}
+
+		/*.sidebar {
+			background-color: skyblue;
+			font-family: Arial, sans-serif;
+			height: 60px;
+			margin: 30px 0;
+			overflow: hidden;
+			width: 380px;
+			margin: 30px 0;
+		}*/
+
+		/*@media screen and (max-width: 1080px) {
+			.sidebar {
+				margin-bottom: 20px;
+				width: 360px;
+				background-color: red;
+
+		}
+
+		.sidebar h3 {
+			color: #fff;
+			font-size: 14px;
+			margin: 0;
+			padding: 20px;
+			text-align: left;
+		}
+		}*/
+
+
+
+		#text_description {
+			display: inline-block;
+			color: #fff;
+			float: left;
+			font-weight: normal;
+			width: 519px;
+			background-color: #000;
+			height: 400px;
+			overflow: auto;
+			padding-top: 0;
+			padding-left: 15px;
+			padding-right: 15px;
+			margin-top: 8px;
+			margin-left: 0;
+			margin-right: 0;
+			border: 1px solid skyblue;
+			border-radius: 6px;
+			scrollbar-color: skyblue black;
+			position: absolute;
+			left: 6px;
+			top: 340px;
+		}
+
+	#text_description span {
+		background-color: skyblue;
+		margin-left: -2px;
+		margin-right: 0;
+		padding: 0 2px 1px 2px;
+
+			}
+
+			.searchbox {
+				display: inline_block;
+				position: absolute;
+				top: 50px;
+				left: 584px;
+				width: 396px;
+			}
+
+		.searchbox input {
+			background: #fff url("search.png") no-repeat top left;
+			border-radius: 3px;
+			border: none;
+			color: #000;
+			font-size: 14px;
+			line-height: 20px;
+			padding: 5px 20px 5px 30px;
+			width: 100%;
+		}
+
+		.searchbox .match {
+			color: #000;
+			font-size: 14px;
+			font-weight: normal;
+			line-height: 20px;
+			position: absolute;
+			right: 10px;
+			top: 5px;
+		}
+
+		#myVideo { /* ESSENTIAL FOR RESOLUTION OF TRANSCRIPT */
+	     display: flex;
+	     margin-right: 0;
+	     width: 540px;
+	     background-color: #000;
+	     margin-left: 5px;
+	     margin-right: 0;
+	     border: 1px solid skyblue;
+	     border-radius: 6px;
+			 position: absolute;
+			 align-content: center;
+			 justify-content: center;
+			 padding: 5px 5px 5px 5px;
+			 top: 50px;
+
+	  }
+
+		.transcript {
+			display: inline-block;
+      padding-left: 3px;
+      padding-right: 6px;
+      border: 0 solid #ccc;
+      float: right;
+      max-height: 650px;
+      overflow: auto;
+      width:390px;
+      margin-left: 8px;
+      margin-right: 0;
+      font-size: 14px;
+      list-style: none;
+      background-color: #000;
+      position: absolute;
+      top: 93px;
+			left: 575px;
+		 }
+
+
+
+
+
+											/*REPLACED
+											OLD.transcript {
+												padding: 0 20px;
+												overflow: auto;
+												flex: 1 1 auto;
+											}*/
+
+		/*.transcript p {
+			font-size: 14px;
+			overflow: hidden;
+			text-align: left;
+			color: #fff;
+			line-height: 20px;
+		}*/
+
+		.transcript p:empty {
+			display: none;
+		}
+
+		.transcript span {
+			display: inline;
+			padding: 4px 2px;
+			line-height: 24px;
+			cursor: pointer;
+			color: #fff;
+			font-weight: normal;
+		}
+
+		.transcript span.current {
+			background: darkorange;
+			color: #000;
+			font-weight: bold;
+		}
+
+		.transcript span:hover {
+				color: darkorange;
+
+		}
+
+		.transcript span.current:hover {
+			color: #000;
+		}
+
+		.transcript span em {
+			background: skyblue;
+			color: #fff;
+			font-style: normal;
+		}
+
+		.transcript span em.current {
+			background: #ff0046;
+		}
+
+		.transcript h4 {
+			margin: 25px 0 15px;
+			text-align: left;
+			color: #fff;
+			font-weight: normal;
+		}
+
+		.caption-copy {
+			max-width: 640px;
+			margin: 20px auto;
+			text-align: left;
+			padding: 10px;
+			font-weight: normal;
+		}
+
+		.caption-copy div,
+		.caption-copy ol,
+		.caption-copy li {
+			text-align: left;
+			font-size: 20px;
+			font-weight: normal;
+
+		}
+
+		.caption-copy div {
+			font-weight: 400;
+			margin: 15px 0;
+			font-weight: normal;
+		}
+
+		.caption-copy ol {
+			margin-left: 15px;
+			margin-top: 20px;
+			font-weight: normal;
+		}
+
+		.caption-copy li {
+			margin-bottom: 10px;
+			font-size: 13px;
+			font-weight: normal;
+		}
+
+		</style>
+	</head>
+	<body>
+
+		<div class="player-container">
+			<div id="header">Title: CR1-09-10-19-Session 1_IMX30_1.mxf</div>
+				<div id="buttonbar">
+						<button data-skip="-30" class="player__button">« 30s</button>
+					       <button data-skip="-60" class="player__button">« 1min</button>
+					       <button data-skip="30" class="player__button">30s »</button>
+					       <button data-skip="60" class="player__button">1min »</button>
+					<div id="playspeed_label">Play Speed<input type="range" name="playbackRate" class="player__slider" id="speedslide" min="0.5" max="2" step="0.1" value="1">
+				</div>
+
+<div id="myVideo">
+	<div id="player"></div>
+</div>
+
+			<div id="searchbox" class="searchbox">
+				<span id="match" class="match">Search transcript. 0 of 0</span>
+				<input id="search" type="search" class="search" />
+			</div>
+
+
+
+			<div class="sidebar">
+					<div id="transcript" class="transcript"></div>
+
+
+
+		</div>
+		<div id="text_description" class="scrollable-element">
+		  <h4>Catalogue description</h4>
+		  <p>Reference: UKSC 1/2/Z</p>
+		  <p>Title: CR1-09-10-19-Session 1_IMX30_1.mxf</p>
+		  <p>Description: Session: am</p>
+		  <p>Session date: 2009 Oct 19</p>
+		  <p>CASE ID: UKSC 2009/0020</p>
+		  <p>Case name: R (on the application of A) (Appellant) v B (Respondent)</p>
+		  <p><span>Case summary:</span>
+		 Judgment: The Supreme Court unanimously dismissed A’s appeal. Lord Brown, with whom all the members of the Court agreed,
+		 gave the leading judgment. Lord Hope gave a concurring opinion.</p>
+
+		<p>Reasons for the judgment: Two alternative arguments were advanced by A: Section 65(2)(a) excludes the section 7(1)(a)
+		  jurisdiction of any other tribunal but not that of the courts. Even if section 65(2)(a) is to be construed as conferring
+		  exclusive section 7(1)(a) jurisdiction on the IPT, it does so only in respect of proceedings against the intelligence
+		  services arising out of the exercise of one of the investigatory powers regulated by RIPA.
+
+		  <p>As to the first argument, Lord Brown noted that the language of section 7(2) of the 1998 Act and the use of the word
+		    "only” before “appropriate tribunal”   in section 65(2)(a) indicated that it was unlikely that Parliament was intending to
+		    leave it to a complainant to choose for   himself whether to bring proceedings in court or before the IPT (Para 13).
+		    Whilst the IPT rules made under RIPA were restrictive (e.g. in relation to the limited disclosure of information to a
+		    complainant), there were various provisions in RIPA and the IPT rules which were designed to ensure that, even in the most
+		    sensitive cases, disputes could be properly determined. None of these provisions would be available in the courts (Para 14).
+		    A further telling consideration against A’s construction was that there were in fact no other tribunals with section 7(1)(a)
+		    jurisdiction over the categories of claim listed in section 65(3) of RIPA (Para 15). </p>
+
+		  <p>As to the second argument, Lord Brown considered that A’s submission would involve reading
+		  into section 65(3)(a) (which contains the phrase “proceedings against any of the intelligence services”) words which
+		  were simply not there. There were, in addition, other provisions in RIPA which were more obviously directed to complaints
+		  of abuse of the intelligence services’ regulatory power which made it impossible to adopt A’s construction (Para 18).
+		  It also did not seem right to regard proceedings of the kind intended here as immune from the same requirement for
+		  non-disclosure of information as other proceedings against the intelligence services (Para 19). Lord Brown then went
+		  on to consider whether there were sufficiently strong arguments available to A which would require the Court to construe
+		  section 65 in a way which was contrary to Lord Brown’s initial conclusions as to its construction.</p>
+
+		  <p>For the reasons set out below, Lord Brown concluded that there were no such arguments available to A. Lord Brown rejected A’s argument to
+		  the effect that to construe section 65 as conferring exclusive jurisdiction on the IPT would constitute an ouster of the
+		  jurisdiction of the courts that would be constitutionally objectionable (Para 21). RIPA, the 1998 Act and the
+		  Civil Procedure Rules all came into force at the same time as part of a single legislative scheme and it could not be
+		  said that section 65(2)(a) was ousting some pre-existing right (Paras 21-22). Parliament had not ousted judicial
+		  scrutiny of the acts of the intelligence services, but had simply allocated that scrutiny (as to
+		  section 7(1)(a) proceedings) to the IPT (Para 23-24). </p>
+
+		  <p>Lord Brown also rejected the argument that forcing A’s article 10 challenge into the IPT would result in breaches of article 6
+		    of the Convention. Claims against intelligence services inevitably raise special problems that cannot be dealt with in the same
+		    way as other claims and this was recognised both domestically and by the European Court of Human Rights (Para 26).
+		    The Court would be going further than the Strasbourg jurisprudence if it were to hold that the IPT procedures are necessarily
+		    incompatible with article 6(1) and it would decline to do so here (Para 30). Even if the IPT’s rules are in any way incompatible
+		    with article 6, the remedy would be to modify them, instead of adopting some artificially limited construction of the IPT’s
+		    jurisdiction (Para 31). The anomalies which A alleged would arise if the Court of Appeal’s construction were to be adopted also did
+		    not cast doubt on the correctness of the Court of Appeal’s decision (Paras 32-37).</p>
+
+		<p>Hearing start date: 2009 Oct 19</p>
+		<p>Hearing end date: 2009 Oct 20</p>
+		  <p></p>
+
+		</div>
+
+<!--<div class="caption-copy">
+			<p>Closed captions are great for making video accessible to non-native speakers or when audio is not available. They are supported in all editions of JW Player and loaded using WebVTT files.</p>
+			<p>Beyond captions, WebVTT has many useful applications:</p>
+			<ol>
+				<li>Preview thumbnails are shown on the controlbar to assist seeking in the video.</li>
+				<li>Chapter markers are displayed both on the controlbar and as a table of contents.</li>
+				<li>A searchable transcript below the video allows for easy searching of keywords. Click on the transcript text to jump to a specific section in the video.</li>
+			</ol>
+		</div>-->
+
+<!--Link to Derbyshire upload video-<script src="https://cdn.jwplayer.com/players/ZenuspxT-WBlFhazN.js"></script>-->
+
+<!--BELOW IS JWPLAYER 'CLOUD PLAYER LIBRARY URL' REQUIRED TO ACESS THE VIDEO, TAKEN FROM
+PLAYER DOWNLOADS & KEYS FROM JWPLAYER DASHBOARD -->
+<script src="https://cdn.jwplayer.com/libraries/WBlFhazN.js"></script>
+
+<script type="text/javascript">
+/* script element variable declarations */
+
+var chapters = [];
+var captions = [];
+var caption = -1;
+var matches = [];
+var query = "";
+var cycle = -1;
+
+/* script element consts (point at unchanging values) declarations */
+const transcript = document.getElementById('transcript'); /* getElementById method returns the element that has the ID attribute with the specified value */
+const search = document.getElementById('search'); /*to manipulate, or get info from, an element on your document*/
+const match = document.getElementById('match');
+
+// Setup JW Player - PLAYLIST ADDED HERE DERBYSHIRE PLAYLIST: https://cdn.jwplayer.com/v2/playlists/mgPvPDVZ //
+jwplayer("player").setup({
+	playlist: 'https://cdn.jwplayer.com/v2/media/3p683El7', /*live playlist */
+	displaytitle: false,
+	width: 468/*,
+height: 360 */
+});
+
+
+// Load chapters / captions
+jwplayer().on('ready', function() { /* function is a block of code designed to perform a particular task*/
+	Promise.all([
+		new Promise((resolve) => fetch('captionsJW.vtt').then(r => r.text()).then(t => resolve(t))),
+		new Promise((resolve) => fetch('chaptersJW.vtt').then(r => r.text()).then(t => resolve(t))),
+	])
+	.then(textData => textData.map(t => t.split('\n\n').splice(1).map(s => parse(s))))
+	.then(parsedData => {
+		captions = parsedData[0];
+		chapters = parsedData[1];
+		loadCaptions();
+	});
+});
+
+function loadCaptions() {
+	var h = "<p>";
+	var section = 0;
+	captions.forEach((caption, i) => {
+		if (section < chapters.length && caption.begin > chapters[section].begin) {
+			h += "</p><h4>"+chapters[section].text+"</h4><p>";
+			section++;
+		}
+		h += `<span id="caption${i}">${caption.text}</span>`;
+	});
+	transcript.innerHTML = h + "</p>";
+};
+
+function parse(d) {
+	var a = d.split('\n');
+	var i = a[1].indexOf(' --> ');
+	var t = a[2];
+	if (a[3]) {  t += " " + a[3]; }
+	t = t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+	return {
+		begin: seconds(a[1].substr(0,i)),
+		btext: a[1].substr(3,i-7),
+		end: seconds(a[1].substr(i+5)),
+		text: t
+	}
+}
+
+function seconds(s) {
+	var a = s.split(':');
+	var r = Number(a[a.length - 1]) + Number(a[a.length - 2]) * 60;
+	if (a.length > 2) {
+		r += Number(a[a.length - 3]) * 3600;
+	}
+	return r;
+}
+
+// Highlight current caption and chapter
+jwplayer().on('time', function(e) {
+	var p = e.position;
+	for(let j = 0; j<captions.length; j++) {
+		if(captions[j].begin < p && captions[j].end > p) {
+			if(j != caption) {
+				var c = document.getElementById(`caption${j}`);
+				if(caption > -1) {
+					document.getElementById(`caption${caption}`).className = "";
+				}
+				c.className = "current";
+				if(query == "") {
+					transcript.scrollTop = c.offsetTop - transcript.offsetTop - 40;
+				}
+				caption = j;
+			}
+			break;
+		}
+	}
+});
+
+// Hook up interactivity
+transcript.addEventListener('click', function(e) {
+	if (e.target.id.indexOf('caption') === 0) {
+		let i = Number(e.target.id.replace('caption', ''));
+		jwplayer().seek(captions[i].begin);
+	}
+});
+
+search.addEventListener('focus', () => setTimeout(() => search.select(), 100));
+
+search.addEventListener('keydown', function(e) {
+	switch (e.key) {
+		case 'Escape':
+		case 'Esc':
+			resetSearch();
+			break;
+
+		case 'Enter':
+			let q = this.value.toLowerCase();
+			if (q.length) {
+				if (q === query) {
+					let thisCycle;
+					if (e.shiftKey) {
+						thisCycle = cycle <= 0 ? (matches.length - 1) : (cycle - 1);
+					} else {
+						thisCycle = (cycle >= matches.length - 1) ? 0 : (cycle + 1);
+					}
+					console.log(thisCycle);
+					cycleSearch(thisCycle);
+					return;
+				}
+				resetSearch();
+				searchTranscript(q);
+				return;
+			}
+			resetSearch();
+			break;
+
+		default:
+			// none
+	}
+});
+
+const sanitizeRegex = q => {
+	return q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+};
+
+// Execute search
+function searchTranscript(q) {
+	matches = [];
+	query = q;
+	captions.forEach(({ text }, loc) => {
+		let matchSpot = text.toLowerCase().indexOf(q);
+		if (matchSpot > -1) {
+			const replacer = sanitizeRegex(q);
+			document.getElementById(`caption${loc}`).innerHTML = text.replace(new RegExp(`(${replacer})`, 'gi'), `<em>$1</em>`, );
+			matches.push(loc);
+		}
+	});
+	if(matches.length) {
+		cycleSearch(0);
+	} else {
+		resetSearch();
+	}
+};
+function cycleSearch(i) {
+	if (cycle > -1) {
+		let o = document.getElementById(`caption${matches[cycle]}`);
+		o.querySelector('em').classList.remove('current');
+	}
+	console.log(matches[i]);
+	const c = document.getElementById(`caption${~~matches[i]}`);
+	c.querySelector('em').classList.add('current');
+	match.textContent = `${i + 1} of ${matches.length}`;
+	transcript.scrollTop = c.offsetTop - transcript.offsetTop - 40;
+	cycle = i;
+};
+
+function resetSearch() {
+	if (matches.length) {
+		captions.forEach((caption, i) => {
+			document.getElementById(`caption${~~i}`).textContent = caption.text;
+		});
+	}
+
+	query = "";
+	matches = [];
+	match.textContent = "0 of 0";
+	cycle = -1;
+	transcript.scrollTop = 0;
+};
+
+</script>
+	</body>
+</html>
