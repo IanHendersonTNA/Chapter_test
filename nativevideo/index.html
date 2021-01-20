@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parkour</title>
+    <meta name = "viewport" content = "width = device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="stylesheets/main.css" rel="stylesheet" type="text/css" />
+    <script src="javascripts/ani.js"></script>
+    <script src="javascripts/video.js"></script>
+    <script>
+      var videos = [];
+
+      var selected = -1;
+
+      function hover(videoNo) {
+       if (selected == videoNo) {
+         return;
+       }
+       videos[videoNo].preview();
+      }
+
+      function unhover(videoNo) {
+       if (selected == videoNo) {
+         return;
+       }
+       videos[videoNo].deselect();
+      }
+
+      function clicked(videoNo) {
+        if (selected == videoNo) {
+          return;
+        }
+        if (selected != -1) {
+           videos[selected].deselect();
+        }
+        selected = videoNo;
+        videos[videoNo].select();
+      }
+
+      function init() {
+       for (var i = 0; i < 4; i++) {
+         videos[i] = new Video("video" + i);
+       }
+      }
+
+      function keyDown(event) {
+        if (event.keyCode == 38) {
+          var s = selected - 1;
+          if (s < 0) {
+            s = 3;
+          }
+          clicked(s);
+          return false;
+        }
+        if (event.keyCode == 40) {
+          var s = selected + 1;
+          if (s > 3) {
+            s = 0;
+          }
+          clicked(s);
+          return false;
+        }
+        if (event.keyCode == 27) {
+          videos[selected].deselect();
+          selected = -1;
+        }
+        if (event.keyCode == 13) {
+          if (selected != -1) {
+            videos[selected].togglePlay();
+          }
+          return false;
+        }
+        if (event.keyCode == 39) {
+          if (selected != -1) {
+            videos[selected].fastForward();
+          }
+          return false;
+        }
+        if (event.keyCode == 37) {
+          if (selected != -1) {
+            videos[selected].rewind();
+          }
+          return false;
+        }
+        return true;
+      }
+
+      window.onkeydown = keyDown;
+
+
+      window.onload = init;
+    </script>
+  </head>
+  <body>
+  <!--  <img src="images/wall.jpg" class="fullpage"/>-->
+
+    <div id="#row">
+      <h3 id="header">Demo video gallery</h3>
+
+
+
+
+
+
+</div>
+<div class="video-play">
+
+
+
+    <video id="video0"
+        onclick="clicked(0)"
+        onmouseover="hover(0)"
+        onmouseout="unhover(0)"
+        style="position: absolute; top: 2%; left: 3%; width: 20%; height: 20%;">
+      <source src="https://tna-video-player.s3.amazonaws.com/66/UKSC/1/cr1-09-10-19-session-1_imx30_1.mp4"/>
+    </video>
+    <video id="video1"
+        onclick="clicked(1)"
+        onmouseover="hover(1)"
+        onmouseout="unhover(1)"
+        style="position: absolute; top: 20%; left: 3%; width: 20%; height: 20%;">
+      <source src="https://tna-video-player.s3.amazonaws.com/66/UKSC/1/cr1-09-10-19-session2_imx30_1.mp4"/>
+    </video>
+    <video id="video2"
+        onclick="clicked(2)"
+        onmouseover="hover(2)"
+        onmouseout="unhover(2)"
+        style="position: absolute; top: 38%; left: 3%; width: 20%; height: 20%;">
+      <source src="https://tna-video-player.s3.amazonaws.com/66/UKSC/1/cr1-09-10-20-session1_imx30_1.mp4"/>
+    </video>
+    <video id="video3"
+        onclick="clicked(3)"
+        onmouseover="hover(3)"
+        onmouseout="unhover(3)"
+        style="position: absolute; top: 56%; left: 3%; width: 20%; height: 20%;">
+      <source src="https://tna-video-player.s3.amazonaws.com/66/UKSC/1/cr1-09-10-20-session2_imx30_1.mp4"/>
+    </video>
+    </div>
+</div>
+  </div>
+
+  </body>
+</html>
