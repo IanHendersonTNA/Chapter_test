@@ -14,14 +14,23 @@ fullpage {
 #header{
   position: absolute;
   left:38%;
-  top: -10px;
+  top: -12px;
+  border: 1px solid black;
+  padding: 8px;
+  border-radius: 12px;
+  padding-bottom: 10px;
+
 }
 
 #sub-head{
   position: absolute;
-  left:23%;
+  left:22%;
   top: 400px;
   max-width: 600px;
+  border: 1px solid black;
+  padding: 8px;
+  border-radius: 12px;
+  padding-bottom: 10px;
 }
 
 
