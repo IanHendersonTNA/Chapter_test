@@ -17,6 +17,12 @@ fullpage {
   top: -10px;
 }
 
+#sub-head{
+  position: absolute;
+  left:50%;
+  top: 400px;
+}
+
 
 video {
   max-width: 600px;
