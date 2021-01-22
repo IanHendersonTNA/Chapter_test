@@ -13,12 +13,13 @@ fullpage {
 
 #header{
   position: absolute;
-  left:40%;
+  left:41%;
   top: -12px;
   border: 1px solid black;
   padding: 8px;
   border-radius: 12px;
   padding-bottom: 10px;
+  background-color: #fff;
 
 }
 
@@ -31,6 +32,7 @@ fullpage {
   padding: 8px;
   border-radius: 12px;
   padding-bottom: 10px;
+  background-color: #fff;
 }
 
 
