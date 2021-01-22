@@ -21,6 +21,7 @@ fullpage {
   position: absolute;
   left:23%;
   top: 400px;
+  max-width: 600px;
 }
 
 
