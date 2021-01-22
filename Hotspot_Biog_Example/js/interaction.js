@@ -3,13 +3,13 @@ var videoHalfWay = 0;
 var formattedHalfWay = 0;
 
 // Choice parts
-var choicePart = 7;
-var goodChoicePart = 7;
-var badChoicePart = 20;
-var goodChoiceChosen = false;
+//var choicePart = 7;
+//var goodChoicePart = 7;
+//var badChoicePart = 20;
+//var goodChoiceChosen = false;
 
 // Question variable
-var question1Asked = false;
+//var question1Asked = false;
 
 var video1;
 
@@ -27,16 +27,16 @@ $(document).ready(function(){
 		playPauseVideo('.persona2PopUp');
 	});
 
-	$('.goodChoice').on('click', function(){
-		goodChoiceChosen = true;
-		$.featherlight.close();
-		video1[0].currentTime = goodChoicePart;
-	})
+	//$('.goodChoice').on('click', function(){
+	//	goodChoiceChosen = true;
+	//	$.featherlight.close();
+	//	video1[0].currentTime = goodChoicePart;
+	//})
 
-	$('.badChoice').on('click', function(){
-		$.featherlight.close();
-		video1[0].currentTime = badChoicePart;
-	})
+//	$('.badChoice').on('click', function(){
+	//	$.featherlight.close();
+	//	video1[0].currentTime = badChoicePart;
+	//})
 
 	$(video1).on('loadeddata', function(){
 		videoHalfWay = Math.round(this.duration/2);
