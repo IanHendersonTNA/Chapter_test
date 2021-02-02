@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+  <title>HTML5 Video Test</title>
+  <link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+  <script src="http://vjs.zencdn.net/c/video.js"></script>
+</head>
+
+<body>
+  <video id="my_video_1" class="video-js vjs-default-skin"
+     controls preload="auto" width="720" height="400"
+       poster="trailer_480p.jpg" data-setup="{}">
+    <source src="https://tna-video-player.s3.amazonaws.com/66/UKSC/1/cr1-09-10-19-session-1_imx30_1.mp4" type='video/mp4'>
+    <source src="trailer_480p.webm" type='video/webm'>
+    
+    <track kind="subtitles" src="https://github.com/IanHendersonTNA/Chapter_test/blob/master/chapters-en2.vtt" srclang="en" label="English" default>
+  </video>
+</body>
+
+</html>
