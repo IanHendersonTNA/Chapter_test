@@ -55,8 +55,13 @@
       border: 1px solid black;
       border-radius: 6px;
       max-width: 850px;
-        
-    }
+      }
+
+   .inline-img {
+      margin: 0px 0px 0px 0px;
+      border: 0 solid red;
+      max-width: 850px;
+      }
 
 .vid-left {
        margin: 5px 5px 5px 15px;
