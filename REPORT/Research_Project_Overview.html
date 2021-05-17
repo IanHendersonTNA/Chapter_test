@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<meta charset="utf-8">
+<head>
+ 
+ <!--CSS -->
+ 
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+ <link rel="stylesheet" href="style.css">
+  <style>
+  html {
+      --scrollbarBG: #8BA4AE;
+      --thumbBG: #DEE5E8;
+    }
+
+    body::-webkit-scrollbar {
+      width: 15px;
+    }
+
+    body::-webkit-scrollbar-track {
+      background: var(--scrollbarBG);
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background-color: var(--thumbBG);
+      border-radius: 20px;
+      border: 1px solid var(--scrollbarBG);
+    }
+      
+      
+      /*W3CSchool Zoom*/
+* {box-sizing: border-box;}
+
+* {box-sizing: border-box;}
+    
+    #myimage {
+    border-radius: 10px;
+    }
+    
+
+.img-zoom-container {
+  position: relative;
+  margin: 0px 0px 0px 15px;
+    
+ }
+
+.img-zoom-lens {
+  position: absolute;
+  border: 1px solid white;
+  /*set the size of the lens:*/
+  width: 120px;
+  height: 90px;
+    border: 1px solid white;
+}
+
+.img-zoom-result {
+  border: 1px solid #d4d4d4;
+  /*set the size of the result div:*/
+  width: 930px;
+  height: 650px;
+border-radius: 10px;
+}
+      
+img {
+      margin: 0px 0px 0px 0px;
+      border: 1px solid black;
+      border-radius: 6px;
+      max-width: 850px;
+        
+    }
+      
+   #flex-parent>.img-zoom-container div {
+      border: 1px solid white;
+      text-align: left;
+    }    
+      
+      
+    .img-note {
+        float: right;
+        padding: 0 0 0 0;
+        margin: 0px 220px 0px 0px;
+        
+
+}
+
+   
+
+      
+  </style>
+  <!--CSS -->
+  
+ 
+     
+  <title>Transcription and Chaptering Research Projects Report</title>
+</head>
+   
+    <!--BODY-->
+
+
+<body style="font-family: sans-serif;">
+  <div class="page">
+   <!--NAVBAR-->
+  
+    
+     
+       <div class="w3-top">
+<div class="navbar w3-blue-grey">
+  <a href="index.html" class="w3-bar-item w3-button w3-mobile navbar-link">Home</a>
+  
+  <!--<div class="w3-dropdown-hover w3-mobile navbar-link">
+    <button class="w3-button">Research Proposals <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+        <a href="Research_Proposal_Transcription.html" class="w3-bar-item w3-button w3-mobile navbar-link">AV Transcription</a>
+        <a href="Research_Proposal_Chaptering.html" class="w3-bar-item w3-button w3-mobile navbar-link">AV Chaptering</a>
+        <a href="Work_Plan.html" class="w3-bar-item w3-button w3-mobile navbar-link">Work Plan</a>
+      </div>
+    </div>
+    -->
+    
+     <a href="Research_Project_Overview.html" class="w3-bar-item w3-button w3-mobile navbar-link">Project Overview</a>
+    
+<!--
+    
+  <a href="HowSpeechToTextWorks.html" class="w3-bar-item w3-button w3-mobile navbar-link">Speech to Text</a>
+-->
+   
+   
+    <div class="w3-dropdown-hover w3-mobile navbar-link">
+    <button class="w3-button navbar-link-dropdown">Speech to Text <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+        <a href="HowSpeechToTextWorks.html" class="w3-bar-item w3-button w3-mobile navbar-link">Speech &amp; Speech Recogntion</a>
+        <a href="Automated_Transcription_Service_Testing.html" class="w3-bar-item w3-button w3-mobile navbar-link">Testing Transcription Services</a>
+       <!-- <a href="Work_Plan.html" class="w3-bar-item w3-button w3-mobile navbar-link">Work Plan</a>-->
+      </div>
+    </div>
+   
+   
+   
+   
+   
+   <div class="w3-dropdown-hover w3-mobile navbar-link">
+    <button class="w3-button navbar-link-dropdown">AV Transcription &amp; Chaptering <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+       
+       
+        <a href="Sub_Cap_Transcp.html" class="w3-bar-item w3-button w3-mobile navbar-link">Textural Representation of Speech</a>
+        <a href="Player_Models.html" class="w3-bar-item w3-button w3-mobile navbar-link">AV Player Models</a>
+       
+       <!-- <a href="Work_Plan.html" class="w3-bar-item w3-button w3-mobile navbar-link">Work Plan</a>-->
+      </div>
+    </div>
+ 
+   
+<!--
+   <div class="w3-dropdown-hover w3-mobile navbar-link">
+    <button class="w3-button navbar-link-dropdown">Testing &amp; Models <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+        <a href="Automated_Transcription_Service_Testing.html" class="w3-bar-item w3-button w3-mobile navbar-link">Testing Services</a>
+        <a href="Player_Models.html" class="w3-bar-item w3-button w3-mobile navbar-link">Player Models</a>
+       <a href="Work_Plan.html" class="w3-bar-item w3-button w3-mobile navbar-link">Work Plan</a>
+      </div>
+    </div>
+-->
+   
+   
+   
+   
+   
+   
+   
+    <!--<a href="Automated_Transcription_Services.html" class="w3-bar-item w3-button w3-mobile navbar-link">Transcription Services</a>
+    
+    <a href="index_RENAME.html" class="w3-bar-item w3-button w3-mobile navbar-link">Player Work</a>
+    
+  <a href="Work_Plan.html" class="w3-bar-item w3-button w3-mobile navbar-link">Work Plan</a>-->
+</div>
+   </div>
+   <!--NAVBAR-->
+   
+   
+ <!--   <div class="w3-top">
+    <div class="navbar w3-blue-grey">
+    <a href="index.html" class="w3-bar-item w3-button w3-mobile navbar-link w3-black">Home</a>
+    
+     <div class="w3-dropdown-hover w3-mobile navbar-link">
+      <button class="w3-button dropdown-link">Digital Formats<i class="fa fa-caret-down"></i></button>
+      <div class="w3-dropdown-content w3-bar-block w3-dark-grey navbar-link">
+        <a href="Apple_ProRes_LT.html" class="w3-bar-item w3-button w3-mobile navbar-link">Apple ProRes LT</a>
+        <a href="Work_Plan.html" class="w3-bar-item w3-button w3-mobile navbar-link">---2</a>
+        <a href="#" class="w3-bar-item w3-button w3-mobile navbar-link">---3</a>
+      </div>
+      </div>-->
+   
+   
+   
+   
+   <div id="flex-parent" class="double-border">
+   
+   <h1>Research Project Overview: AV Transcription &amp; Video Chaptering Technologies with Models</h1>
+   
+   
+<!--    <h2>AV Transcript &amp; Chaptering Technologies &amp; Models</h2>-->
+
+            <p class="explain">Page content best viewed at a browser width of 980px or higher</p>
+            
+            <p><strong>This page provides an overview of the Audio-Visual related projects for the 2020-21 period, which developed from project proposals presented here.</strong></p>
+    
+    <h3>Research Project Introduction</h3>
+    <p>This reporting document represents work initially considered to be two distinct areas for research into different issues for the presentation of digital Audio-Visual (AV) files. As work progressed however it became apparent, particularly when working on the development of online AV player-models, that these two aspects could be related in terms of the underlying technology, and complimentary in application - enhancing user experience and enabling accessibility. Closely related items of AV presentation: (Closed) Captions (CC) and subtitles then came into focus to be included within research scope. </p>
+    
+    <p>The two project proposals are summarised here separately as originally conceived, the full project proposals are available to view from the <span class="hidelink-note">green links</span> below each project summary. Clicking these links will 'un-hide' the full project proposal texts as submitted; making them available to read inline of the visible page text area.</p>
+   
+    <h2>Project 1: Video transcribing - text extraction from digital AV (audio &amp; video) files</h2>
+    
+    <h3>Project Description</h3>
+
+     <p><strong>Definition of transcription</strong><br>
+      A transcription is a written or printed text version (i.e. a <em>'transcript'</em>) created from some spoken source, which may be made at a live event or from a recording. </p>
+      
+      <p><strong>Assumption:</strong> <br>
+        It can generally be assumed that in most scenarios where bot accuracy of capture and completeness of content is desirable if not essential, that a transcript would contain all relevant speech within the bounds of a recorded event from which a transcription is produced. In AV terms this would generally mean speech from the entire duration of the file being presented.</p>
+     
+     
+       <p><strong>Current AV presentation at TNA</strong> <br>
+Currently TNA does not employ audio-visual file transcription as part of access file production or generally provide Captions. Therefore TNA publishes AV online without any text-based representation, which would be particularly beneficial for inclusive accessibility.</p>
+      
+    
+     <h4>Aims of the project</h4>       
+  <ul>
+ <li> Through research and testing, to establish what transcriptions systems and services are available, how well they work and how easily they could be established in a workflow.</li>
+ 
+  <li> To investigate transcription options and methods including any browser plugin apps, online, automated services (including ‘AI’ driven), and their relative feature-sets</li>
+    
+    <li>To determine the variations in offered service (this may raise new possibilities for usage at TNA), compare the accuracy of output, and the practicalities e.g. time required per duration of file, approximate costs</li>
+    
+    <li>To try to establish how secure service-based systems might be via either video upload, or a service through installed software via API. Could either scenario be trusted with ‘non-Open’ materials?</li>
+     </ul>
+      
+    <p><strong>Relevance to TNA</strong> <br>
+      Transcription is relevant to our presentation access, particularly in order to address user accessibility needs. Text transcriptions from AV can also be useful for internal TNA processes e.g. sensitivity review, researcher requests etc.</p>  
+      
+      <!--HIDE-UNHIDE-->
+         <p><a href="javascript:unhide('trans-proj-prop');" class="hidelink">Unhide Complete Transcription Research Proposal</a></p>
+         
+      
+       <!--HIDDEN-->
+    <div id="trans-proj-prop" class="hidden" class="img-cent">
+           
+<table border="1" cellspacing="0" class="table">
+<tbody>
+<tr>
+<td valign="top" ><p><strong>Name:</strong></p></td>
+<td valign="top" ><p>Ian Henderson</p></td>
+</tr>
+
+<tr>
+<td valign="top" ><p><strong>Project Title:</strong></p></td>
+<td valign="top" ><p>Video transcribing – text extraction from video (and audio) files</p></td>
+</tr>
+
+<tr>
+<td valign="top" ><p><strong>Organisation’s Name:</strong></p></td>
+<td valign="top" ><p>The National Archives</p></td>
+</tr>
+
+<tr>
+<td valign="top" ><p><strong>Date of submission:</strong></p></td>
+<td valign="top" ><p>June 2020</p></td>
+</tr>
+
+</tbody>
+</table>
+
+<table border="1" cellspacing="0" class="table">
+<tbody>
+<tr>
+<td valign="top" colspan="2" ><p>1. <strong>Statement of Problem: the “Why?”</strong></p></td>
+</tr>
+
+<tr>
+<td valign="top" ><p>o Problem description, what is the problem to be addressed? (as you now understand it)</p>
+
+<p>o Relevance or importance of problem</p>
+
+<p>o What are the existing gaps and challenges? </p>
+
+<p>o What are the opportunities / benefits for the organisation and/or user(s)?</p></td>
+<td valign="top" ><p>We currently do not employ audio-visual file transcription, and therefore publish video/ audio online without any text-based representation. </p>
+
+<p>Transcription is relevant to our presentation access, particularly to user needs, and also for internal uses e.g. sensitivity review, researcher requests etc. </p>
+
+<p>There are many Transcription benefits, some are:</p>
+
+<p>Ease of sensitivity review for legacy video materials on-hand (LOCOG), accumulating (UKSC), and for ‘new accession’ material, e.g. HMF (potentially an automated process could be made available or presented as a service to contributors).</p>
+
+<p>Extends accessibility to profoundly deaf or hard of hearing customers, both in TNA’s Reading Rooms and online. By extension, the provision of online text-file versions, or preferably time-synch’ed ‘Closed Caption’ (CC) text would provide an alternative for the 466m worldwide with disabling hearing loss (W.H.O. <a href="https://www.who.int/news-room/fact-sheets/detail/deafness-and-hearing-loss">https://www.who.int/news-room/fact-sheets/detail/deafness-and-hearing-loss</a>).</p>
+
+<p>Production of text transcriptions negates the absolute need for the ability to play back the video in order to access its primary information (- where speech is the principle component). </p>
+
+<p>There may be a bearing on video search methods</p>
+
+<p>From the largest file-sized source formats (video) speech-to-text output renders one of the most compact and universally interoperable: text. This text can be used wholly independently. </p>
+
+<p>Speech rendered to text makes the information more portable and can be rendered in just about any format and digital/ print environment. </p>
+
+<p>Better comprehension – the ability to read along with the video content allows for reinforced learning/ and helps ensure correct interpretation of speech. </p>
+
+<p>Can also assist with comprehension where speech is fast, unclear or with a high level background noise. Background noise can be a great problem when attempting to isolate the voice of interest and for achieving a correct extraction from speech. <em>The relative ability of transcribing systems to extract correct information in this scenario is a major point of interest.”</em></p>
+
+<p>Flexible viewing in Sound-Sensitive Environments – e.g. Reading Rooms, - transcription/ CC would negate necessity for sound. </p></td>
+</tr>
+
+</tbody>
+</table>
+
+<table border="1" cellspacing="0" class="table">
+<tbody>
+<tr>
+<td valign="top" colspan="2" ><p>2. <strong>Objectives: the “What?”</strong></p></td>
+</tr>
+
+<tr>
+<td valign="top" ><p>What is the overall goal of the project?</p>
+
+<p>Frame SMART objectives: </p>
+
+<p>o Specific: The objectives should be clear and unambiguous, (what you intend to achieve).</p>
+
+<p>o Measurable: The objectives should be quantifiable so that one can see if they are being achieved or not. </p>
+
+<p>o Achievable: The objective should be feasible, viable and within the control/capacity of the organization. </p>
+
+<p>o Realistic: When you draft the objective ensure that they are realistic and can be attained within the available resources and time frame.</p>
+
+<p>o Time – bound: It is important to give a time-frame for completing a particular objective. </p>
+
+<p>o Use active verbs like create, identify, promote, enhance, increase, and develop etc.. </p>
+
+<p>o Keep 3-4 objectives: </p></td>
+<td valign="top" ><p>Through research and testing, to establish what systems and services are available, how well they work and how easily they can be established in an accessioning -&gt; preservation/ access file creation workflow. </p>
+
+<p>To investigate the transcription options, - </p>
+
+<p>· ‘manual’ software assisted vs. </p>
+
+<p>· ‘AI’ driven, automated transcription software and services</p>
+
+<p>and to determine the range of systems that might be available, i.e. </p>
+
+<p>· Skilled human operator</p>
+
+<p>· (Potentially) video editor plugin</p>
+
+<p>· Online, auto service via file upload (using YouTube and similar services as a baseline), </p>
+
+<p>· installed software with connection to online service </p>
+
+<p>· installed software with offline transcription capacity (- if any)</p>
+
+<p>To determine the variations in offered service (this may raise new possibilities for usage at TNA), compare the accuracy of output, and the practicalities e.g. time required per duration of file, approximate costs</p>
+
+<p>To try to establish how secure service-based systems are via either video upload, or a service through installed software via API. Could either scenario be trusted with ‘non-Open’ materials?</p></td>
+</tr>
+
+</tbody>
+</table>
+
+<table border="1" cellspacing="0" class="table">
+<tbody>
+<tr>
+<td valign="top" colspan="2" ><p>3. <strong>Technical Approach: the “How?”</strong></p></td>
+</tr>
+
+<tr>
+<td valign="top" ><p>Although you may not know all the details of the problem solution, you should know a first design on how you will approach the problem, and you should have some design concepts. </p>
+
+<p>The purpose of this section is to present the <em>process</em> by which you will arrive at the final answer. This section answers the following questions:</p>
+
+<p>1) What are the steps in the design process? </p>
+
+<p>2) How will you generate solution concepts?</p>
+
+<p>3) How will you analyse the performance of your solution?</p></td>
+<td valign="top" ><p>Online research, - understand the basis of how the systems operate and what can be realistically achieved. </p>
+
+<p>Discover a set of representative, and available service/ software options. Compare capabilities, outputs, and methods of submitting video to the system. </p>
+
+<p>From the above establish core features/ functionality/ ease of application and compare and document</p>
+
+<p>Produce a set of open, test videos of various durations, and with mono stereo and multi-channel audio, and examples with audio of variable quality and levels of noise. Manually transcribe these with timecode.</p>
+
+<p>Test these to evaluate output and degree of correct information derived</p></td>
+</tr>
+
+</tbody>
+</table>
+
+<table border="1" cellspacing="0" class="table">
+<tbody>
+<tr>
+<td valign="top" colspan="2" ><p>4. <strong>Project Management: “How and When?”</strong></p></td>
+</tr>
+
+<tr>
+<td valign="top" ><p>o What are the timescales and deadlines for the proposed development?</p>
+
+<p>o Timeline with milestones: Gantt chart</p></td>
+<td valign="top" ><p>3 months (from October 20 start) </p></td>
+</tr>
+
+</tbody>
+</table>
+
+<table border="1" cellspacing="0" class="table">
+<tbody>
+<tr>
+<td valign="top" colspan="2" ><p>5. <strong>Key Dates</strong></p></td>
+</tr>
+
+<tr>
+<td valign="top" ><p>Proposal Submission</p></td>
+<td valign="top" ><p>04/06/2020</p></td>
+</tr>
+
+<tr>
+<td valign="top" ><p>Project Report Submission</p></td>
+<td valign="top" ><p>12/20</p></td>
+</tr>
+
+<tr>
+<td valign="top" ><p>Project Presentation</p></td>
+<td valign="top" ></td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+  
+      <br><br>
+      
+      
+      <h2>Project 2: Research and testing of ‘Chaptering’ of Video</h2>
+  
+       <h3>Project Description</h3>
+             
+    <p><strong>Definition of Chaptering</strong><br>
+      'Chaptering' as used here in an AV context is the division of the time-duration of a digital video file (this could equally be applied to digital audio files) in order to allow easy navigation to pre-determined points of interest or change that have been identified within an AV recording. The longer the duration of a video or audio file, the more difficult it is for a user to identify and locate points of interest. This can be exacerbated by potential online playback issues when attempting to skip previous or later points  along the timeline.</p>
+      
+       <p><strong>Assumption:</strong> </p>
+       <uL> 
+       <li>That chaptering methods are non-edit based, and that the whole video duration is represented and made available to the viewer.</li>
+        <li>That chaptering methods can be permanently applied and that chapter locations consistently represented upon any playback instance across different contemporary web-browser-versions. Older browser versions cannot be considered and Internet Explorer is ignored.</li>
+        </uL>
+
+     <p><strong>Current AV presentation at TNA</strong> <br>
+At present our online videos are not presented in anything other than linear (start to end) playback mode. The ‘indexing’ /‘chaptering’/ ‘highlighting’ of video for changes in scene, point of interest, new speaker or other event would be beneficial to the casual user, researcher and for our own referencing uses.</p>
+
+     <h4>Aims of the project</h4>  
+      <ul>
+      <li>To investigate methods of annotating points of interest within a duration, and allow a user to navigate directly via time-code points that relate.
+      </li>
+      </ul>
+
+<p><strong>Relevance to TNA</strong> <br>
+This is highly relevant to our digital collections as we receive particularly long duration videos from inquires and court sessions (UK Supreme Court session videos are generally 2+ hours but can uncommonly be up to 4 hours+ per file).</p>
+
+<!--HIDE-UNHIDE-->
+         <p><a href="javascript:unhide('chap-proj-prop');" class="hidelink">Unhide Complete Chaptering Research Proposal</a></p>
+      
+       <!--HIDDEN-->
+    <div id="chap-proj-prop" class="hidden" class="img-cent">
+           
+<table  border="1" cellspacing="0" class="table">
+<tbody>
+<tr>
+<td  valign="top" ><p><strong>Name:</strong></p></td>
+<td  valign="top" ><p>Ian Henderson</p></td>
+</tr>
+
+<tr>
+<td  valign="top" ><p><strong>Project Title:</strong></p></td>
+<td  valign="top" ><p>Research and testing of ‘indexing’ /‘chaptering’/ ‘highlighting’ methods for video (terminology to be set during research)</p></td>
+</tr>
+
+<tr>
+<td  valign="top" ><p><strong>Organisation’s Name:</strong></p></td>
+<td  valign="top" ><p>Digital Preservation (Research)</p></td>
+</tr>
+
+<tr>
+<td  valign="top" ><p><strong>Date of submission:</strong></p></td>
+<td  valign="top" ><p>June 2020</p></td>
+</tr>
+
+</tbody>
+</table>
+
+<table  border="1" cellspacing="0" class="table">
+<tbody>
+<tr>
+<td  valign="top" colspan="2" ><p>1. <strong>Statement of Problem: the “Why?”</strong></p></td>
+</tr>
+
+<tr>
+<td  valign="top" ><p>o Problem description, what is the problem to be addressed? (as you now understand it)</p>
+
+<p>o Relevance or importance of problem</p>
+
+<p>o What are the existing gaps and challenges? </p>
+
+<p>o What are the opportunities / benefits for the organisation and/or user(s)?</p></td>
+<td  valign="top" ><p>The longer the duration of video or audio file, the more difficult it is for a user to identify and locate points of interest within the recording duration. This can be exacerbated by potential playback issues online when attempting to skip to other entry points along the duration (- see associated project on online delivery/ low rez’, streaming of video).</p>
+
+<p>Ideally we would present video online where:</p>
+
+<p>Significant points of interest within a duration (i.e. for entry of different speakers, or start of event) are annotated, and can be navigated to directly to timecode points that relate</p>
+
+<p>This is highly relevant to our digital collections as we receive particularly long durations from inquiry video (UKSC – generally 2 + hours but up to 4 hours + per file). </p>
+
+<p>At present our online videos are not presented in anything other than linear playback form. The ‘indexing’ /‘chaptering’/ ‘highlighting’ of video for changes in scene, point of interest, new speaker of other events would be beneficial to the casual user, researcher and for our own referencing uses.</p></td>
+</tr>
+
+</tbody>
+</table>
+
+<table  border="1" cellspacing="0" class="table">
+<tbody>
+<tr>
+<td  valign="top" colspan="2" ><p>2. <strong>Objectives: the “What?”</strong></p></td>
+</tr>
+
+<tr>
+<td  valign="top" ><p>What is the overall goal of the project ?</p>
+
+<p><strong><em>Frame SMART objectives: </em></strong></p>
+
+<p>o Specific: The objectives should be clear and unambiguous, (what you intend to achieve).</p>
+
+<p>o Measurable: The objectives should be quantifiable so that one can see if they are being achieved or not. </p>
+
+<p>o Achievable: The objective should be feasible, viable and within the control/capacity of the organization. </p>
+
+<p>o Realistic: When you draft the objective ensure that they are realistic and can be attained within the available resources and time frame.</p>
+
+<p>o Time – bound: It is important to give a time-frame for completing a particular objective. </p>
+
+<p>o Use active verbs like create, identify, promote, enhance, increase, and develop etc.. </p>
+
+<p>o Keep 3-4 objectives: </p></td>
+<td  valign="top" ><p>The aim is to initially research and discover, and then where possible, test different methods/ technologies/ software/ services for (automatically) locating, identifying and indexing (primarily) video (but possibly also audio). </p>
+
+<p>(2 calendar months?) </p>
+
+<p>Focus on what can be achieved with open source tools and technologies, and with abilities native to HTML5/ generic browsers.</p>
+
+<p>All methodologies and workflows to be documented.</p>
+
+<p>From this stage to then present the video within (where practicable) a functional presentation model, which enables navigation of the video by the applied ‘index’. </p>
+
+<p>(2 calendar months?) </p></td>
+</tr>
+
+</tbody>
+</table>
+
+<table  border="1" cellspacing="0" class="table">
+<tbody>
+<tr>
+<td  valign="top" colspan="2" ><p>3. <strong>Technical Approach: the “How?”</strong></p></td>
+</tr>
+
+<tr>
+<td  valign="top" ><p>Although you may not know all the details of the problem solution, you should know a first design on how you will approach the problem, and you should have some design concepts. </p>
+
+<p>The purpose of this section is to present the <em>process</em> by which you will arrive at the final answer. This section answers the following questions:</p>
+
+<p>1) What are the steps in the design process? </p>
+
+<p>2) How will you generate solution concepts?</p>
+
+<p>3) How will you analyse the performance of your solution?</p></td>
+<td  valign="top" ><p>1 Online research – gain understanding of methods for controlling video navigation and playback via timecode/ metadata and script in online players, and any necessary aspects of AV stream/ container encoding </p>
+
+<p>2. Find existing online presentations that achieve desired presentation characteristics and retrieve information. </p>
+
+<p>3. Identify players/ delivery methods that can be most simply implemented to achieve results</p>
+
+<p>3. Using knowledge gained, create a demonstration model for (online) playback, which provides the user with tagged shortcuts/ links to key points in the duration along with regular playback controls. </p></td>
+</tr>
+
+</tbody>
+</table>
+
+<table  border="1" cellspacing="0" class="table">
+<tbody>
+<tr>
+<td  valign="top" colspan="2" ><p>4. <strong>Project Management: “How and When?”</strong></p></td>
+</tr>
+
+<tr>
+<td  valign="top" ><p>o What are the timescales and deadlines for the proposed development?</p>
+
+<p>o Timeline with milestones: Gantt chart</p></td>
+<td  valign="top" ><p>3 months (from Jan 21 start)</p></td>
+</tr>
+
+</tbody>
+</table>
+
+<table  border="1" cellspacing="0" class="table">
+<tbody>
+<tr>
+<td  valign="top" colspan="2" ><p>5. <strong>Key Dates</strong></p></td>
+</tr>
+
+<tr>
+<td  valign="top" ><p>Proposal Submission</p></td>
+<td  valign="top" ><p>04/06/2020</p></td>
+</tr>
+
+<tr>
+<td  valign="top" ><p>Project Report Submission</p></td>
+<td  valign="top" ><p>03/21</p></td>
+</tr>
+
+<tr>
+<td  valign="top" ><p>Project Presentation</p></td>
+<td  valign="top" ></td>
+</tr>
+
+</tbody>
+</table>
+
+
+       </div>
+      <br><br>
+       
+  <h2>Work-plan Mindmap</h2>
+    <p>This 'Mind-Map' presents a visual representation of various inter-related aspects of AV transcription and chaptering considered within the research conducted during the course of the projects. </p><br>
+    <!--
+    <!--Zoom-1-->
+    <div class="box-div1">
+    <div class="detail-view" class="img-zoom-source" style="background-image: url(images/Project_MindMap.png);"></div>
+
+ </div>
+   
+  <!--Zoom-2 W3School-->
+    
+  
+    
+<div class="img-zoom-container" class="float-left">
+  <img id="myimage" src="images/Project_MindMap.png" width="300" class="float-left" style="border: solid 2px #4695FC";><p><strong><span style="color: ";>Mouse over the small image on the left to navigate the zoom image below</span></strong></p><br>
+  
+
+  <div id="myresult" class="img-zoom-result" style="border: solid 2px #4695FC";></div>
+</div>
+       
+       
+       <h3>Early Project Presentation 2020</h3>
+       <p>This slide-show was presented to colleagues at a midway point of research into automated transcription and services. It encapsulates some findings re: online automated services and features with some testing returns, as contained and extended within these document pages.</p>
+       <p><a href="SpeechRec/Presentation1.pptx">MS PPT version</a></p> 
+       <p><a href="SpeechRec/Presentation1.mp4">MP4 version</a></p>
+       <video controls width="100%" class="vid-left float-left">
+  <source src="SpeechRec/Presentation1.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<br><br><br>
+       </div>
+
+
+
+
+
+    </div>
+    
+     <!--W3C School Zoom-->
+     <script type="text/javascript">
+ document.addEventListener("DOMContentLoaded", function(){
+  // Handler when the DOM is fully loaded
+});
+     
+         
+function imageZoom(imgID, resultID) {
+  var img, lens, result, cx, cy;
+  img = document.getElementById(imgID);
+  result = document.getElementById(resultID);
+  /*create lens:*/
+  lens = document.createElement("DIV");
+  lens.setAttribute("class", "img-zoom-lens");
+  /*insert lens:*/
+  img.parentElement.insertBefore(lens, img);
+  /*calculate the ratio between result DIV and lens:*/
+  cx = result.offsetWidth / lens.offsetWidth;
+  cy = result.offsetHeight / lens.offsetHeight;
+  /*set background properties for the result DIV:*/
+  result.style.backgroundImage = "url('" + img.src + "')";
+  result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+  /*execute a function when someone moves the cursor over the image, or the lens:*/
+  lens.addEventListener("mousemove", moveLens);
+  img.addEventListener("mousemove", moveLens);
+  /*and also for touch screens:*/
+  lens.addEventListener("touchmove", moveLens);
+  img.addEventListener("touchmove", moveLens);
+  function moveLens(e) {
+    var pos, x, y;
+    /*prevent any other actions that may occur when moving over the image:*/
+    e.preventDefault();
+    /*get the cursor's x and y positions:*/
+    pos = getCursorPos(e);
+    /*calculate the position of the lens:*/
+    x = pos.x - (lens.offsetWidth / 2);
+    y = pos.y - (lens.offsetHeight / 2);
+    /*prevent the lens from being positioned outside the image:*/
+    if (x > img.width - lens.offsetWidth) {x = img.width - lens.offsetWidth;}
+    if (x < 0) {x = 0;}
+    if (y > img.height - lens.offsetHeight) {y = img.height - lens.offsetHeight;}
+    if (y < 0) {y = 0;}
+    /*set the position of the lens:*/
+    lens.style.left = x + "px";
+    lens.style.top = y + "px";
+    /*display what the lens "sees":*/
+    result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
+  }
+  function getCursorPos(e) {
+    var a, x = 0, y = 0;
+    e = e || window.event;
+    /*get the x and y positions of the image:*/
+    a = img.getBoundingClientRect();
+    /*calculate the cursor's x and y coordinates, relative to the image:*/
+    x = e.pageX - a.left;
+    y = e.pageY - a.top;
+    /*consider any page scrolling:*/
+    x = x - window.pageXOffset;
+    y = y - window.pageYOffset;
+    return {x : x, y : y};
+  }
+}
+</script>
+
+  
+    
+
+<script>
+    /* Zoo1 model (*/)
+    
+var zoomBoxes = document.querySelectorAll('.detail-view');
+    // Extract the URL
+zoomBoxes.forEach(function(image) {
+  var imageCss = window.getComputedStyle(image, false),
+    imageUrl = imageCss.backgroundImage
+                       .slice(4, -1).replace(/['"]/g, '');
+
+  // Get the original source image
+  var imageSrc = new Image();
+  imageSrc.onload = function() {
+    var imageWidth = imageSrc.naturalWidth,
+        imageHeight = imageSrc.naturalHeight,
+        ratio = imageHeight / imageWidth;
+
+    // Adjust the box to fit the image and to adapt responsively
+    var percentage = ratio * 100 + '%';
+    image.style.paddingBottom = percentage;
+
+    // Zoom and scan on mousemove
+    image.onmousemove = function(e) {
+      // Get the width of the thumbnail
+      var boxWidth = image.clientWidth,
+          // Get the cursor position, minus element offset
+          x = e.pageX - this.offsetLeft,
+          y = e.pageY - this.offsetTop,
+          // Convert coordinates to % of elem. width & height
+          xPercent = x / (boxWidth / 100) + '%',
+          yPercent = y / (boxWidth * ratio / 100) + '%';
+
+      // Update styles w/actual size
+      Object.assign(image.style, {
+        backgroundPosition: xPercent + ' ' + yPercent,
+        backgroundSize: imageWidth + 'px'
+      });
+    };
+
+    // Reset when mouse leaves
+    image.onmouseleave = function(e) {
+      Object.assign(image.style, {
+        backgroundPosition: 'center',
+        backgroundSize: 'cover'
+      });
+    };
+  }
+  imageSrc.src = imageUrl;
+});
+    
+    /*W3C School Zoom */
+     <script type="text/javascript">
+function imageZoom(imgID, resultID) {
+  var img, lens, result, cx, cy;
+  img = document.getElementById(imgID);
+  result = document.getElementById(resultID);
+  /*create lens:*/
+  lens = document.createElement("DIV");
+  lens.setAttribute("class", "img-zoom-lens");
+  /*insert lens:*/
+  img.parentElement.insertBefore(lens, img);
+  /*calculate the ratio between result DIV and lens:*/
+  cx = result.offsetWidth / lens.offsetWidth;
+  cy = result.offsetHeight / lens.offsetHeight;
+  /*set background properties for the result DIV:*/
+  result.style.backgroundImage = "url('" + img.src + "')";
+  result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+  /*execute a function when someone moves the cursor over the image, or the lens:*/
+  lens.addEventListener("mousemove", moveLens);
+  img.addEventListener("mousemove", moveLens);
+  /*and also for touch screens:*/
+  lens.addEventListener("touchmove", moveLens);
+  img.addEventListener("touchmove", moveLens);
+  function moveLens(e) {
+    var pos, x, y;
+    /*prevent any other actions that may occur when moving over the image:*/
+    e.preventDefault();
+    /*get the cursor's x and y positions:*/
+    pos = getCursorPos(e);
+    /*calculate the position of the lens:*/
+    x = pos.x - (lens.offsetWidth / 2);
+    y = pos.y - (lens.offsetHeight / 2);
+    /*prevent the lens from being positioned outside the image:*/
+    if (x > img.width - lens.offsetWidth) {x = img.width - lens.offsetWidth;}
+    if (x < 0) {x = 0;}
+    if (y > img.height - lens.offsetHeight) {y = img.height - lens.offsetHeight;}
+    if (y < 0) {y = 0;}
+    /*set the position of the lens:*/
+    lens.style.left = x + "px";
+    lens.style.top = y + "px";
+    /*display what the lens "sees":*/
+    result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
+  }
+  function getCursorPos(e) {
+    var a, x = 0, y = 0;
+    e = e || window.event;
+    /*get the x and y positions of the image:*/
+    a = img.getBoundingClientRect();
+    /*calculate the cursor's x and y coordinates, relative to the image:*/
+    x = e.pageX - a.left;
+    y = e.pageY - a.top;
+    /*consider any page scrolling:*/
+    x = x - window.pageXOffset;
+    y = y - window.pageYOffset;
+    return {x : x, y : y};
+  }
+}
+</script>
+
+<script type="text/javascript">
+// Initiate zoom effect:
+imageZoom("myimage", "myresult");
+</script>
+
+      
+       
+           
+               
+                   
+                       
+                           
+                               
+                                       
+
+  <!--BODY-->
+<!--SCRIPT-->
+        <script type="text/javascript">
+        function unhide(playpricing) {
+        var item = document.getElementById(playpricing);
+        if (item) {
+        item.className=(item.className=='hidden')?'unhidden':'hidden';
+        }
+        }
+        </script> 
+
+
+</body>
+
+</html>

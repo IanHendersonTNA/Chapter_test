@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Speech to Text</title>
+
+    
+    <!--CSS -->
+ 
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <link rel="stylesheet" href="style.css">
+  <style>
+    html {
+      --scrollbarBG: #8BA4AE;
+      --thumbBG: #DEE5E8;
+    }
+
+    body::-webkit-scrollbar {
+      width: 15px;
+    }
+
+    body::-webkit-scrollbar-track {
+      background: var(--scrollbarBG);
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background-color: var(--thumbBG);
+      border-radius: 20px;
+      border: 1px solid var(--scrollbarBG);
+    }
+      
+    .table
+tr:nth-child(odd) {background-color: #DEE5E8;}
+
+/*.grey {
+  background-color: rgba(128,128,128,.25);
+}
+.red {
+  background-color: rgba(255,0,0,.25);
+}
+.blue {
+  background-color: rgba(0,0,255,.25);
+}*/
+
+.column_col_tbl
+tr td:nth-child(1),
+tr td:nth-child(2),
+tr td:nth-child(4),
+tr td:nth-child(8),
+tr td:nth-child(11),
+tr td:nth-child(13)
+{
+  background: #DEE5E8;
+}
+  
+
+
+  </style>
+  <!--CSS -->
+    <!--BODY-->
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body style="font-family: sans-serif;">
+  <div class="page">
+   <!--NAVBAR-->
+  
+    
+     
+       <div class="w3-top">
+<div class="navbar w3-blue-grey">
+  <a href="index.html" class="w3-bar-item w3-button w3-mobile navbar-link">Home</a>
+  
+  <!--<div class="w3-dropdown-hover w3-mobile navbar-link">
+    <button class="w3-button">Research Proposals <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+        <a href="Research_Proposal_Transcription.html" class="w3-bar-item w3-button w3-mobile navbar-link">AV Transcription</a>
+        <a href="Research_Proposal_Chaptering.html" class="w3-bar-item w3-button w3-mobile navbar-link">AV Chaptering</a>
+        <a href="Work_Plan.html" class="w3-bar-item w3-button w3-mobile navbar-link">Work Plan</a>
+      </div>
+    </div>
+    -->
+    
+     <a href="Research_Project_Overview.html" class="w3-bar-item w3-button w3-mobile navbar-link">Project Overview</a>
+    
+<!--
+    
+  <a href="HowSpeechToTextWorks.html" class="w3-bar-item w3-button w3-mobile navbar-link">Speech to Text</a>
+-->
+   
+   
+    <div class="w3-dropdown-hover w3-mobile navbar-link">
+    <button class="w3-button navbar-link-dropdown">Speech to Text <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+        <a href="HowSpeechToTextWorks.html" class="w3-bar-item w3-button w3-mobile navbar-link">Speech &amp; Speech Recogntion</a>
+        <a href="Automated_Transcription_Service_Testing.html" class="w3-bar-item w3-button w3-mobile navbar-link">Testing Transcription Services</a>
+       <!-- <a href="Work_Plan.html" class="w3-bar-item w3-button w3-mobile navbar-link">Work Plan</a>-->
+      </div>
+    </div>
+   
+   
+   
+   
+   
+   <div class="w3-dropdown-hover w3-mobile navbar-link">
+    <button class="w3-button navbar-link-dropdown">AV Transcription &amp; Chaptering <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+       
+       
+        <a href="Sub_Cap_Transcp.html" class="w3-bar-item w3-button w3-mobile navbar-link">Textural Representation of Speech</a>
+        <a href="Player_Models.html" class="w3-bar-item w3-button w3-mobile navbar-link">AV Player Models</a>
+       
+       <!-- <a href="Work_Plan.html" class="w3-bar-item w3-button w3-mobile navbar-link">Work Plan</a>-->
+      </div>
+    </div>
+ 
+   
+<!--
+   <div class="w3-dropdown-hover w3-mobile navbar-link">
+    <button class="w3-button navbar-link-dropdown">Testing &amp; Models <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+        <a href="Automated_Transcription_Service_Testing.html" class="w3-bar-item w3-button w3-mobile navbar-link">Testing Services</a>
+        <a href="Player_Models.html" class="w3-bar-item w3-button w3-mobile navbar-link">Player Models</a>
+       <a href="Work_Plan.html" class="w3-bar-item w3-button w3-mobile navbar-link">Work Plan</a>
+      </div>
+    </div>
+-->
+   
+   
+   
+   
+   
+   
+   
+    <!--<a href="Automated_Transcription_Services.html" class="w3-bar-item w3-button w3-mobile navbar-link">Transcription Services</a>
+    
+    <a href="index_RENAME.html" class="w3-bar-item w3-button w3-mobile navbar-link">Player Work</a>
+    
+  <a href="Work_Plan.html" class="w3-bar-item w3-button w3-mobile navbar-link">Work Plan</a>-->
+</div>
+   </div>
+   <!--NAVBAR-->
+   
+   
+ <!--   <div class="w3-top">
+    <div class="navbar w3-blue-grey">
+    <a href="index.html" class="w3-bar-item w3-button w3-mobile navbar-link w3-black">Home</a>
+    
+     <div class="w3-dropdown-hover w3-mobile navbar-link">
+      <button class="w3-button dropdown-link">Digital Formats<i class="fa fa-caret-down"></i></button>
+      <div class="w3-dropdown-content w3-bar-block w3-dark-grey navbar-link">
+        <a href="Apple_ProRes_LT.html" class="w3-bar-item w3-button w3-mobile navbar-link">Apple ProRes LT</a>
+        <a href="Work_Plan.html" class="w3-bar-item w3-button w3-mobile navbar-link">---2</a>
+        <a href="#" class="w3-bar-item w3-button w3-mobile navbar-link">---3</a>
+      </div>
+      </div>-->
+   
+   <div id="flex-parent" class="double-border">
+    
+    
+    <h1 style="font-family: Trebuchet MS, Segoe UI Semibold, Verdana, Arial;">How Speech to Text Works: Speech &amp; Speech Recognition</h1>
+       <p class="explain">Page content best viewed at a browser width of 980px or higher</p>
+
+
+<h2>The Interpretation of Information delivered in Speech</h2>
+ <p>People interpret the information presented within speech or written text using the following criteria:</p>
+
+   <p><strong>Syntax:</strong> - which describes the formal rules of grammar in a language, including:</p>
+<ul>
+<li>word order - the placement of verb, adjective and noun words etc. relative to one another in a phrase or sentence</li>
+<li>word-endings - changes in order to reflect tense, plural, or declension of words</li>
+
+ <p><strong><em>'Syntactical categories'</em></strong> of words and phrases include:</p> <ul> 
+       <li>Noun (N)</li>
+        <li>Verb (V)</li>
+         <li>Sentence (S)</li>
+         <li>Noun Phrase (NP)</li>
+       <li>Verb Phrase (VP)</li>         
+         </ul>
+</ul>
+    
+<p><strong>Semantics:</strong> describes the meaning of words and their associations in sentence form</p>
+<p><strong>Pragmatics:</strong> determines the context of words and the meaning of a sentence within a given. particular situation</p>
+
+<p>From these established rules a <strong><em>‘syntax'</em></strong>  or <strong><em>‘parse tree’</em></strong> can be constructed, which can tag every word within an part of speech and determine  how a sentence is constructed.</p>
+      
+    <div class="box-div1">
+            <img src="images/parse_tree.PNG" width="600px" class="float-left">
+            <p class="img-cap">Image left: A simplified example of a 'Syntax' or 'Parse' Tree which represents parts of speech in grammatical structure as elements or nodes</p>
+      </div>
+
+
+<h4>NLP - Natural Language Processing</h4>
+            
+<p>NLP is a branch of computer science and Artifical Intelligence (AI) research &amp; development work looking at the understanding, interpreting, and manipulation of human speech and language by computer programmes. NLP aims to enable human-computer interaction directly via spoken or written language and thereby allow the performance of language-based, automated tasks.</p> 
+     
+       <p>Methods for the programmatic recognition of parts of speech and phrase structure (e.g. noun phase, verb phrase etc.) by applied rules have been developed allowing computers to encapsulate and 'understand' the constructs within the grammar of a language. </p>
+      
+<p>Recent developments of algorithmic models used for the processing of languages have allowed a move from reliance on preset, encoded rules to more flexible 'Machine Learning' (ML - a subset of AI work) techniques, which allow computer systems to learn directly from existing language datasets. The most accurate speech recognitions systems at present are those that employ 'Deep Neural Networks'. A DNN doesn't just work according to an algorithm, it can also predict solutions and make  conclusions to arrive at answers based on previous experience, without the need for human programmatical assistance.</p>
+
+
+    <h3>The Mechanics of Speech &amp; Speech Recognition</h3>
+     
+     
+      <p>When a person talks and produces different vocal sounds in doing so they generate individually amplified or reduced <strong><em>‘resonances’</em></strong>.</p>
+      
+      <div class="explain"><strong><em>Resonance</em></strong> “An object free to vibrate tends to do so at a specific rate called the object's natural, or resonant, frequency. (This frequency depends on the size, shape, and composition of the object.) Such an object will vibrate strongly when it is subjected to vibrations or regular impulses at a frequency equal to or very close to its natural frequency. This phenomenon is called resonance. Through resonance, a comparatively weak vibration in one object can cause a strong vibration in another… This principle also applies to the human voice, in which the vibrations of the vocal cords are 
+      reinforced by resonant vibrations in the oral and nasal passages.”<br />
+      <a target=”_blank” href="https://science.howstuffworks.com/resonance-info.htm">https://science.howstuffworks.com/resonance-info.htm</a></div>
+      
+      <p>These resonances, when picked up by a microphone can be converted into digital audio form. The conversion to frequencies is performed by a ‘Fast Fourier Transform’ algorithm. In processing via a speech recognition system, amplitude variations (amplitude - the strength or level of sound pressure) in the audio signal, - either sourced via a microphone capturing speech in real time, or otherwise when processing from an existing recording, are analysed to detect the magnitude in amplitude of frequency components in the waveform that make up particular sounds of speech. Various peaks that appear in the frequency spectrum are called <strong><em>‘formants’</em></strong>. A vocal formant is a concentration of acoustic sound energy around a particular frequency produced by the vocal tract (- starting from the vocal chords and running up to the lips). Vowel sounds are composed of different combinations of such formants. </p>
+     
+      
+        <p class="img-cap">Vowel Sounds &amp; their Formant Frequency Combinations</p>
+        
+        <table>
+           <th colspan="4">Formant frequencies for common vowels in American English (from Peterson and Barney, 1952)</th>
+          <tr>
+               <td><strong><span class="span-code">Phonetic Symbol</span></strong></td><td><strong><span class="span-code">Example Word</span></strong></td><td><strong><span class="span-code">F1 (Hz)</span></strong></td><td><strong><span class="span-code">F2 (Hz)</span></strong></td><td><strong><span class="span-code">F3 (Hz)</span></strong></td></tr>
+             <tr><td>/ow/</td> 
+               <td>bought</td>
+               <td>570</td>
+               <td>840</td>
+                <td>2410</td></tr>
+          
+             <tr><td>/oo/</td> 
+               <td>boot</td>
+               <td>300</td>
+               <td>870</td>
+                <td>2240</td>
+               </tr>
+               
+                  <tr><td>/u/</td> 
+               <td>foot</td>
+               <td>440</td>
+               <td>1020</td>
+               <td>2240</td></tr>
+               
+                <tr><td>/a/</td>
+               <td>hat</td>
+               <td>730</td>
+               <td>1090</td>
+               <td>2440</td></tr>
+               
+                <tr><td>/e/</td>
+               <td>bet</td>
+               <td>530</td>
+               <td>1840</td>
+               <td>2480</td></tr>    
+        </table>
+      
+            <p>Variations in formants then produce the sound pieces known as <strong><em>‘phonemes.’</em></strong> </p>
+     
+      <div class="explain"><strong>Phoneme</strong> “phoneme …perceptually distinct units of sound in a specified language that distinguish one word from another, for example <em>p, b, d, and t</em> in the English words <em>pad, pat, bad, and bat.</em>”
+      </div>
+      
+      <h4>Phoneme Identification &amp; Computer Language Models</h4>
+      
+      <p>There are stated to be 44 in English <a target=”_blank” href="https://www.dyslexia-reading-well.com/44-phonemes-in-english.html">https://www.dyslexia-reading-well.com/44-phonemes-in-english.html</a>. These can be recognised by computers for 'pattern matching'. As there are variations in both personal speech patterns and regional accent, the accuracy of speech recognition can be greatly improved by use of a <strong><em>‘Language Model’</em></strong>. </p>
+      
+          <div class="explain"><strong>Language modeling</strong> 
+“(LM) is the use of various statistical and probabilistic techniques to determine the probability of a given sequence of words occurring in a sentence. ... They are used in natural language processing (NLP) applications, particularly ones that generate text as an output.”<a target=”_blank” href="https://searchenterpriseai.techtarget.com/definition/language-modeling">https://searchenterpriseai.techtarget.com/definition/language-modeling</a></div>
+ 
+<p>Presented with a sequence of words, a language model computes the probability that any particular word available from its language database source would follow those already recognised, and if they are likely possibilities to be the next correct options. In this manner, using 'probabilistic methods' a computer interprets individual words or a phrase in speech based on the most likely and 'logical' connections between individual identified words, both by grammatical structure and context. </p>
+      
+<p><strong><em>Example:</em></strong> from an ambiguous or poorly recorded speech source <em>“I am hungry”</em> is more likely than <em>“I am Hungary.“</em><em> “I am”</em> is likely to be followed by an adjective, and the adjective hungry is more logical a choice than the  noun Hungary.</p>
+      
+    
+      
+      <h3>Speech Recognition Software in Speech to Text </h3>
+      
+      <p>In very simple terms when audio data including speech arrives at a server, - either for real-time recognition by direct feed from an active microphone, or otherwise from audio contained within an uploaded AV file, software then breaks the speech element down into identified phonemes. The speech is then interpreted by audio analysis software from the phoneme order, most likely identified word-combination, grammatical syntax and by overall context to evaluate the best text match for the words analyzed against matches in its database.</p>
+      <p>Where two words have the same sound but different meaning (that is they are 'Homophones') such as <em>I &amp; eye</em>, <em>deer &amp; dear</em>,<em> 8 &amp; eight</em>, and <em>mail &amp; male</em>) then the most logical match within context is selected.</p>
+      
+      
+      
+     <p><strong>Links:</strong> <br>
+      <a target=”_blank” href="https://scienceline.org/2014/08/ever-wondered-how-does-speech-to-text-software-work/#:~:text=When%20you%20speak%20the%20words,software%20can%20analyze%20your%20speech">ScienceLine: Ever Wondered: How does speech-to-text software work? (2014)</a> <br>
+
+<a target=”_blank” href="https://www.amberscript.com/en/blog/how-speech-to-text-software-works">Amber Script: How Does Speech to Text Software Work?</a> <br>
+
+<a target=”_blank” href="https://electronics.howstuffworks.com/gadgets/high-tech-gadgets/speech-recognition1.htm">Howstuffworks: How Speech Recognition Works</a>
+<br>
+
+<a target=”_blank” href="https://cloud.google.com/speech-to-text/docs/concepts">Google Cloud: Cloud Speech-to-Text > Documentation > Guides> Concepts</a> <br>
+      
+<a target=”_blank” href="https://www.youtube.com/watch?v=fOvTtapxa9c" >Natural Language Processing: Crash Course Computer Science #36:</a> <br> 
+
+<a target=”_blank” href="https://scienceline.org/2014/08/ever-wondered-how-does-speech-to-text-software-work/#:~:text=When%20you%20speak%20the%20words,software%20can%20analyze%20your%20speech">ScienceLine: Ever Wondered: How does speech-to-text software work? (2014) </a> <br>
+
+<a target=”_blank” href="https://www.amberscript.com/en/blog/how-speech-to-text-software-works">Amber Script: How Does Speech to Text Software Work?</a> <br>
+
+<a target=”_blank” href="https://electronics.howstuffworks.com/gadgets/high-tech-gadgets/speech-recognition1.htm">Howstuffworks: How Speech Recognition Works</a>
+ <br>
+
+         <a target=”_blank” href="https://cloud.google.com/speech-to-text/docs/concepts">Google: Speech-to-Text basics</a>
+</p>
+
+
+<h4>Video Demo: Speech to Text in the Browser</h4>
+
+<p>Speech to Text capability is available in Windows, Mac OS and Android platforms allowing-voice command control of PC events and enabling document dictation and voice based browser searches. A good demonstration of some of the core aspects of the speech-recognition and text production process is provided by the speech-to-text capability implemented in browser via the <span class="code-blue">Web Speech API</span>. Currently support is limited to Chrome browser versions,- recognition can be enabled via the 'WebKit' browser engine (<a target=”_blank” href="https://webkit.org/">https://webkit.org/</a>) or other server-based recognition engines. The Web Speech API enables you to incorporate voice data into web apps. The Web Speech API has two parts: SpeechSynthesis (Text-to-Speech), and <span class="code-blue">SpeechRecognition</span> ('asynchronous').</p> <p>SpeechRecognition (- a main controller interface) is a global variable, at <strong><em>DOM Window</em></strong> level (- Window is a <em>Global Object</em> that represents the browser's window that contains a document). The Web Speech API also employs a number of other associated interfaces to represent grammar, return results, etc.</p>
+
+<!--
+<video width="" controls class="vid-left">
+  <source src="SpeechRec/speech_in_browser1-export.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+-->
+     <p class="img-cap">Video: Text to Speech in the Chrome Browser, output to transcription enabled via JavaScript</p>
+
+<video width="" controls class="vid-left">
+  <source src="SpeechRec/speech_in_browser2_export.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+
+
+
+
+<div class="box-div1">
+<div class="float-left">
+ <p class="img-cap">JavaScript code for Text to Speech model above</p>
+<p class="span-code">&lt;script&gt; <br>
+      window.SpeechRecognition = window.SpeechRecognition <br>|| window.webkitSpeechRecognition; <br>
+       </p>
+    
+    <p class="span-code">
+     const recognition = new SpeechRecognition(); <br>
+    recognition.interimResults = true;</p>
+    <p class="span-code">
+    let p = document.createElement('p');<br>
+    const words = document.querySelector('.words');<br>
+    words.appendChild(p);</p>
+    <p class="span-code">
+    recognition.addEventListener('result', e => {<br>
+        console.log(e.results);<br>
+        const transcript = Array.from(e.results)<br>
+        .map(result => result[0])<br>
+        .map(result => result.transcript)<br>
+        .join('')</p>
+   <p class="span-code">     
+        p.textContent = transcript;<br>
+        if(e.results[0].isFinal) {<br>
+            p = document.createElement("p");<br>
+            words.appendChild(p);<br>
+        }<br>
+        console.log(transcript);<br>
+    });</p>
+ <p class="span-code">   
+recognition.addEventListener('end', recognition.start);</p>
+<p class="span-code">    
+    recognition.start();</p>
+<p class="span-code">
+&lt;/script&gt;</p>
+
+   </div>
+    
+    <br>
+    <p>In the model demonstrated above, and as detailed in the JavaScript to the left, a JavaScript <strong><em>EventListener</em></strong> listens for an instance of a '<span class="code-blue">SpeechRecognition</span>' event and then returns the <strong><em>'result'</em></strong>. </p> 
+    
+    <p>If you go into the nested content of that result, as demonstrated in the video below, there is a <strong><em>'confidence' element</em></strong> along with the associated speech snippet produced by the speech-recognition service or system employed in working on sound taken from the devices microphone.</p>
+        
+    <p>You can <strong><em>'map'</em></strong> to the result values and return the associated speech snippets (to a paragraph tag) in order to populate part of a transcript.</p> 
+    <p>The video below shows how the process of speech recognition returns interim values, until more 'confident' results (but not necessarily more correct) values are returned.</p>
+    <p><span class="credit">Script example from Wes Bos: #JavaScript30</span> <a target=”_blank” href="https://javascript30.com/">https://javascript30.com/</a></p>
+    
+    
+    
+   </div> 
+     <p class="img-cap">Video: Speech Recognition in the Chrome Browser, interim values and 'confidence' stats displayed</p>
+     <video width="700px" controls class="vid-left">
+  <source src="SpeechRec/speech_test3.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+    
+<p><strong>Links:</strong>
+ <br>
+   <a target=”_blank” href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API">Using the Web Speech API</a>
+   <br>
+   <a target=”_blank” href="https://caniuse.com/speech-recognition">Can I Use...Speech Recognition API</a>
+   </p>
+     <br><br><br>
+      
+  </div>
+  </div>
+      
+    
+    
+    
+</body>
+</html>

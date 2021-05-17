@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!--CSS -->
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="style.css">
+  <style>
+    html {
+      --scrollbarBG: #8BA4AE;
+      --thumbBG: #DEE5E8;
+    }
+    body::-webkit-scrollbar {
+      width: 15px;
+    }
+    body::-webkit-scrollbar-track {
+      background: var(--scrollbarBG);
+    }
+    body::-webkit-scrollbar-thumb {
+      background-color: var(--thumbBG);
+      border-radius: 20px;
+      border: 1px solid var(--scrollbarBG);
+    }
+      
+      .drop-down {
+          height = 10px;
+          width= 100px;
+          background-color: red;
+          color = blue;
+      }
+      
+      .box-div1 {
+          overflow: visible;
+          padding-bottom: 0px;
+          padding-top: 0px;
+          margin-top: 0px;
+          margin-bottom: 0px;
+          /*background-color: orchid;*/
+          
+      }
+      
+       .box-div1-5 {
+          overflow: visible;
+          padding-bottom: 90px;
+          padding-top: 0px;
+          margin-top: 0px;
+          margin-bottom: 0px;
+          background-color: orchid;
+          
+      }
+      
+       .box-div1-75 {
+          overflow: visible;
+          padding-bottom: 140px;
+          padding-top: 0px;
+          margin-top: 0px;
+          margin-bottom: 0px;
+          /*background-color: orchid;*/
+          
+      }
+      
+      
+        .box-div2 {
+          overflow: visible;
+          padding-bottom: 180px;
+          padding-top: 0px;
+          margin-top: 0px;
+          margin-bottom: 0px;
+         /* background-color: orchid;*/
+ 
+      }
+      
+         .box-div3 {
+          overflow: visible;
+          padding-bottom: 210px;
+          padding-top: 0px;
+          margin-top: 0px;
+          margin-bottom: 0px;
+         /*background-color: orchid;*/
+          
+      }
+      
+      
+          .box-div4 {
+          overflow: visible;
+          padding-bottom: 230px;
+          padding-top: 0px;
+          margin-top: 0px;
+          margin-bottom: 0px;
+          /*background-color: orchid;*/
+          
+      }
+      
+      
+.indent {margin-left: 505px;
+    
+}
+
+      
+  </style>
+  <!--CSS -->
+    <!--BODY-->
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body style="font-family: sans-serif;">
+<!--   <div class="page"> -->
+   <!--NAVBAR-->
+  
+    
+     
+       <div class="w3-top">
+<div class="navbar w3-blue-grey">
+  <a href="index.html" class="w3-bar-item w3-button w3-mobile navbar-link">Home</a>
+  
+  <!--<div class="w3-dropdown-hover w3-mobile navbar-link">
+    <button class="w3-button">Research Proposals <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+        <a href="Research_Proposal_Transcription.html" class="w3-bar-item w3-button w3-mobile navbar-link">AV Transcription</a>
+        <a href="Research_Proposal_Chaptering.html" class="w3-bar-item w3-button w3-mobile navbar-link">AV Chaptering</a>
+        <a href="Work_Plan.html" class="w3-bar-item w3-button w3-mobile navbar-link">Work Plan</a>
+      </div>
+    </div>
+    -->
+    
+     <a href="Research_Project_Overview.html" class="w3-bar-item w3-button w3-mobile navbar-link">Project Overview</a>
+    
+<!--
+    
+  <a href="HowSpeechToTextWorks.html" class="w3-bar-item w3-button w3-mobile navbar-link">Speech to Text</a>
+-->
+   
+   
+    <div class="w3-dropdown-hover w3-mobile navbar-link">
+    <button class="w3-button navbar-link-dropdown">Speech to Text <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+        <a href="HowSpeechToTextWorks.html" class="w3-bar-item w3-button w3-mobile navbar-link">Speech &amp; Speech Recogntion</a>
+        <a href="Automated_Transcription_Service_Testing.html" class="w3-bar-item w3-button w3-mobile navbar-link">Testing Transcription Services</a>
+       <!-- <a href="Work_Plan.html" class="w3-bar-item w3-button w3-mobile navbar-link">Work Plan</a>-->
+      </div>
+    </div>
+   
+   
+   
+   
+   
+   <div class="w3-dropdown-hover w3-mobile navbar-link">
+    <button class="w3-button navbar-link-dropdown">AV Transcription &amp; Chaptering <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+       
+       
+        <a href="Sub_Cap_Transcp.html" class="w3-bar-item w3-button w3-mobile navbar-link">Textural Representation of Speech</a>
+        <a href="Player_Models.html" class="w3-bar-item w3-button w3-mobile navbar-link">AV Player Models</a>
+       
+       <!-- <a href="Work_Plan.html" class="w3-bar-item w3-button w3-mobile navbar-link">Work Plan</a>-->
+      </div>
+    </div>
+ 
+   
+<!--
+   <div class="w3-dropdown-hover w3-mobile navbar-link">
+    <button class="w3-button navbar-link-dropdown">Testing &amp; Models <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+        <a href="Automated_Transcription_Service_Testing.html" class="w3-bar-item w3-button w3-mobile navbar-link">Testing Services</a>
+        <a href="Player_Models.html" class="w3-bar-item w3-button w3-mobile navbar-link">Player Models</a>
+       <a href="Work_Plan.html" class="w3-bar-item w3-button w3-mobile navbar-link">Work Plan</a>
+      </div>
+    </div>
+-->
+   
+   
+   
+   
+   
+   
+   
+    <!--<a href="Automated_Transcription_Services.html" class="w3-bar-item w3-button w3-mobile navbar-link">Transcription Services</a>
+    
+    <a href="index_RENAME.html" class="w3-bar-item w3-button w3-mobile navbar-link">Player Work</a>
+    
+  <a href="Work_Plan.html" class="w3-bar-item w3-button w3-mobile navbar-link">Work Plan</a>-->
+</div>
+   </div>
+   <!--NAVBAR-->
+   
+   
+ <!--   <div class="w3-top">
+    <div class="navbar w3-blue-grey">
+    <a href="index.html" class="w3-bar-item w3-button w3-mobile navbar-link w3-black">Home</a>
+    
+     <div class="w3-dropdown-hover w3-mobile navbar-link">
+      <button class="w3-button dropdown-link">Digital Formats<i class="fa fa-caret-down"></i></button>
+      <div class="w3-dropdown-content w3-bar-block w3-dark-grey navbar-link">
+        <a href="Apple_ProRes_LT.html" class="w3-bar-item w3-button w3-mobile navbar-link">Apple ProRes LT</a>
+        <a href="Work_Plan.html" class="w3-bar-item w3-button w3-mobile navbar-link">---2</a>
+        <a href="#" class="w3-bar-item w3-button w3-mobile navbar-link">---3</a>
+      </div>
+      </div>-->
+   
+   <div id="flex-parent" class="double-border">
+    
+            <h1>Testing Automated Transcription Services</h1>
+        
+            
+        <h4>Source files: <span class="todo"></span></h4>
+        
+        <p>Some limited testing was performed in order to evaluate the performance of certain text to speech services.</p> 
+        
+        <h4>Service Testing Plan</h4>
+        <p>As trials are pretty limited, and essentially we are just testing the handling of sound - use audio only content to limit file size of test files. </p>
+        <h4>
+            Use public domain sources of speech.</h4>
+        <p>Librivox audio-book readings is one good option for isolated, single as they are recorded largely by amateur readers with domestic equipment, rather than to professional standards in studio conditions, which would not generally be representative of video collections.  </p>
+        
+        <p class="quote">
+            "Public Domain Mark 1.0 No Copyright<br>
+            This work has been identified as being free of known 
+            restrictions under copyright law, including all related and neighbouring rights. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission. See Other Information below..."</p>
+            
+            
+          <h4>  Test Files</h4>
+           <p><strong> Test file 1: </strong><br>
+          Librivox recording (public domain) of short story Louise by Saki. </p>
+            <ul>
+        <li> 1 reader. </li>
+          <li>Audio recording quality: Fair</li>
+          <li>Bitrate: 128Kbps, 64 Kbps</li> 
+          <li>Vocalisation clear (‘home-counties’, ‘old BBC’) English accent.</li>
+         <li> Rate of speech moderate to slow</li>
+         </ul>
+            
+            <p><strong> Test file 2: </strong><br>
+          As Test file 1 above, except at a bitrate of 64Kbps</p>
+          
+          
+        
+        
+        <h4>Estimating Percentage of Error: </h4>
+        <ol>
+           <li>Get number of errors: 
+         <ul>
+               <li>Count number of errors from output text (with any timecode or other ‘non-written-text’ elements removed) compared with the manually transcribed version (with quotation marks removed). Make note of any paragraph variations that might skew comparison results</li>
+          </ul>
+           <li> Divide number of errors by total of words</li>
+            <li>Multiply by 100 to give the error percentage</li>
+            
+            <li>Does punctuation in the source throw off comparison checks? </li> </ol>
+            
+            <h4>How to Automatically Transcribe Video files into Text Using YouTube</h4>
+        <p><a target=”_blank” href="https://www.youtube.com/watch?v=mIuVURa4ivI">https://www.youtube.com/watch?v=mIuVURa4ivI</a></p>
+        <p>Video must be uploaded to YouTube for generation of ‘Closed Captions’ to take
+            As of 2016 video, states that automatic transcriptions can take from a minute to a day.</p>
+            <p>No punctuation, you can edit the transcriptions on YouTube after generation. No text output, tough apparently there is a get around.</p>
+            
+         <p>   How to Transcribe Audio to Text (Video Transcription Tutorial!)
+          <a target=”_blank” href="https://www.youtube.com/watch?v=bltDLL6-CbQ">https://www.youtube.com/watch?v=bltDLL6-CbQ</a></p>
+        
+        
+        <h4>Google Voice</h4>
+        
+        <p>These services require upload or sending through of link to video to be processed, OR upload audio only - mp3 etc.</p>
+        
+        <p>Online Services
+            Temi - around 10c per minute
+            Spext - around 25c per minute</p>
+        <p>Automated processes, fast turnaround, - require very clear audio. Results may be variable, particularly where background noise/ music present or speaker has a strong accent. Not recommended by video host where high level of accuracy is important (though 2nd, manual clean up run could be made to fix errors)</p>
+            
+            
+            
+            <h3>Overview of Otter.AI </h3>
+            <p><a target=”_blank” href="https://otter.ai/">https://otter.ai/</a><br>
+          Currently running a month’s trial at Premium. After that return to Free rate at: 600mins per month, longest duration file: 40mins.</p>
+         <p>images/Premium Features (@ $8.33 per month): </p>
+             
+           <h4>Otter.ai Features</h4>
+            <ul>
+            <li>Upload of audio and video files. Otter lets you import existing recordings in the following formats:</li>
+            <ul>
+            <li>audio: mp3, aac, wav, m4a, wma</li>
+            <li>video: mp4, avi, mov, wmv, mpg</li>
+            </ul>
+              <li>advanced export: PDF, DOCX, SRT</li>
+            <li>Custom vocabulary</li>
+            <li>Synch audio and video from Dropbox</li>
+            <li>Bulk import and export is available</li>
+          </ul>
+          
+          <p class="img-cap">Format export options from Ottter.AI</p>
+          
+          <img src="images/Otter_AI-UKSC-test_1_Export_Text_formats.jpg" alt="Format export options from Ottter.AI"  width="50%">
+          
+          
+          <p><strong>Test of UKSC file: </strong>cr1-09-12-16-judgements_imx30_1.mp4, as downloaded from: <br><a target=”_blank” href="https://discovery.nationalarchives.gov.uk/details/r/f965fcd22e564027b331f6934773f1da">https://discovery.nationalarchives.gov.uk/details/r/f965fcd22e564027b331f6934773f1da</a></p>
+        
+        <h4>Otter.AI</h4>
+        
+        
+        <p class="img-cap">Otter.AI ‘MyConversations’/ Edit page</p>
+          
+          <div class="box-div1">
+          
+          <img src="images/Otter_AIpreviewPage.PNG" alt="Otter.ai My Cnvesations Preview Page" width=50% class="float-left">
+          
+          <p>The Otter.ai service produces the following outputs:</p>
+        <ul>
+           <li><strong>Audio playback</strong> of transcript - the text highlights individual word by word and in synch with the spoken word implying that the underlying timecode must be applied to each word and quite accurate. YouTube by contrast tends to be ‘short phrase’ based – presumably the time-code is per a set period of time rather. </li>
+            <li><strong>Text output to screen</strong> <a target=”_blank” href="https://otter.ai/note/22YSYXFVYCP6Q34K?f=%2Fmy-notes">https://otter.ai/note/22YSYXFVYCP6Q34K?f=%2Fmy-notes</a></li>
+            <li><strong>Summary Keywords</strong> derived from the text transcription e.g. “school”, “admission”, “grounds” etc. </li>
+            <li><strong>Time-coded text</strong> – in this case one block of text per speaker (total of 2), not line-by-line time-code details as seen in YouTube CC export files </li></ul>
+         </div>
+          
+          
+        <p class="img-cap">Otter.ai export text options</p>
+           <img src="images/Otter_AI-UKSC-test_1_Export_Text_options.jpg" alt="Otter.ai Export Text Options" width="50%">
+           
+           
+           
+           
+                 
+                       
+                                   
+            
+           <!--HIDE-UNHIDE-->
+         <p><a href="javascript:unhide('OtterAI-Check');" class="hidelink">Toggle OtterAI Tests</a></p>
+      
+       <!--HIDDEN-->
+    <div id="OtterAI-Check" class="hidden" class="img-cent" class="hidden-test">
+          
+          <h2>OtterAI output from Audio file (Louise by Saki)</h2>
+ 
+ <p><strong>Speech Source:</strong> Librivox, public domain: Saki Toys of Peace/ ‘Louise’ toysofpeace_02_saki_64kb from Internet Archive. </p>
+
+<p>Text below also sourced from IA, corrections from OCR made for correct comparison with output from service. </p>
+
+<p>Story number two of The Toys of Peace. This is a Librivox recording. All Librivox recordings are in the public domain. For more information or to volunteer please visit Librivox.org.</p>
+
+<p>Recording by Graham Redman. </p>
+
+<p>The Toys of Peace. Short stories by Saki.</p>
+
+<p>LOUISE </p>
+
+<p>“The tea will be quite cold, you'd better ring for some more," said the Dowager Lady Beanford. </p>
+
+<p>Susan Lady Beanford was a vigorous old woman who had coquetted with imaginary ill-health for the greater part of a lifetime; Clovis Sangrail irreverently declared that she had caught a chill at the Coronation of Queen Victoria and had never let it go again. Her sister, Jane Thropplestance, who was some years her junior, was chiefly remarkable for being the most absent-minded woman in Middlesex. </p>
+
+<p>"I've really been unusually clever this afternoon," she remarked gaily, as she rang for the tea. "I've called on all the people I meant to call on, and I've done all the shopping that I set out to do. I even remembered to try and match that silk for you at Harrod's, but I'd forgotten to bring the pattern with me, so it was no use. I really think that was the only important thing I forgot during the whole afternoon. Quite wonderful for me, isn't it?" </p>
+
+<p>"What have you done with Louise?" asked her sister. "Didn't you take her out with you? You said you were going to." </p>
+
+<p>"Good gracious," exclaimed Jane, "what have I done with Louise? I must have left her somewhere." </p>
+
+<p>"But where?" </p>
+
+<p>"That's just it. Where have I left her? I can't remember if the Carrywoods were at home or if I just left cards. If they were at home I may have left Louise there to play bridge. I'll go and telephone to Lord Carrywood and find out." </p>
+
+<p>"Is that you, Lord Carrywood?" she queried over the telephone; "it's me, Jane Thropplestance. I want to know, have you seen Louise?" </p>
+
+<p>"'Louise,'" came the answer, "it's been my fate to see it three times. At first, I must admit, I wasn't impressed by it, but the music grows on one after a bit. Still, I don't think I want to see it again just at present. Were you going to offer me a seat in your box?" </p>
+
+<p>"Not the opera 'Louise' -my niece, Louise Thropplestance. I thought I might have left her at your house." </p>
+
+<p>“You left cards on us this afternoon, I understand, but I don't think you left a niece. The footman would have been sure to have mentioned it if you had. Is it going to be a fashion to leave nieces on people as well as cards? I hope not; some of these houses in Berkeley-square have practically no accommodation for that sort of thing." </p>
+
+<p>"She's not at the Carrywoods'," announced Jane, returning to her tea; "now I come to think of it, perhaps I left her at the silk counter at Selfridge's. I may have told her to wait there a moment while I went to look at the silks in a better light, and I may easily have forgotten about her when I found I hadn't your pattern with me. In that case she's still sitting there. She wouldn't move unless she was told to; Louise has no initiative." </p>
+
+<p>"You said you tried to match the silk at Harrod's," interjected the dowager. </p>
+
+<p>"Did I? Perhaps it was Harrod's. I really don't remember. It was one of those places where every one is so kind and sympathetic and devoted that one almost hates to take even a reel of cotton away from such pleasant surroundings." </p>
+
+<p>"I think you might have taken Louise away. I don't like the idea of her being there among a lot of strangers. Supposing some unprincipled person was to get into conversation with her." </p>
+
+<p>"Impossible. Louise has no conversation. I've never discovered a single topic on which she'd anything to say beyond 'Do you think so? I dare say you're right.' I really thought her reticence about the fall of the Ribot Ministry was ridiculous, considering how much her dear mother used to visit Paris. This bread and butter is cut far too thin; it crumbles away long before you can get it to your mouth. One feels so absurd, snapping at one's food in mid-air, like a trout leaping at may-fly." </p>
+
+<p>"I am rather surprised," said the dowager, "that you can sit there making a hearty tea when you've just lost a favourite niece." </p>
+
+<p>"You talk as if I'd lost her in a churchyard sense, instead of having temporarily mislaid her. I'm sure to remember presently where I left her."</p>
+
+<p>"You didn't visit any place of devotion, did you? If you've left her mooning about Westminster Abbey or St. Peter's, Eaton Square, without being able to give any satisfactory reason why she's there, she'll be seized under the Cat and Mouse Act and sent to Reginald McKenna." </p>
+
+<p>"That would be extremely awkward," said Jane, meeting an irresolute piece of bread and butter halfway; "we hardly know the McKennas, and it would be very tiresome having to telephone to some unsympathetic private secretary, describing Louise to him and asking to have her sent back in time for dinner. Fortunately, I didn't go to any place of devotion, though I did get mixed up with a Salvation Army procession. It was quite interesting to be at close quarters with them, they're so absolutely different to what they used to be when I first remember them in the 'eighties. They used to go about then unkempt and dishevelled, in a sort of smiling rage with the world, and now they're spruce and jaunty and flamboyantly decorative, like a geranium bed with religious convictions. Laura Kettleway was going on about them in the lift of the Dover Street Tube the other day, saying what a lot of good work they did, and what a loss it would have been if they'd never existed. ‘If they had never existed,' I said, 'Granville Barker would have been certain to have invented something that looked exactly like them.' If you say things like that, quite loud, in a Tube lift, they always sound like epigrams." </p>
+
+<p>"I think you ought to do something about Louise," said the dowager. </p>
+
+<p>"I'm trying to think whether she was with me when I called on Ada Spelvexit. I rather enjoyed myself there. Ada was trying, as usual, to ram that odious Koriatoffski woman down my throat, knowing perfectly well that I detest her, and in an unguarded moment she said: 'She's leaving her present house and going to Lower Seymour Street.' 'I dare say she will, if she stays there long enough,’ I said. Ada didn't see it for about three minutes, and then she was positively uncivil. No, I am certain I didn't leave Louise there." </p>
+
+<p>"If you could manage to remember where you did leave her, it would be more to the point than these negative assurances," said Lady Beanford; "so far, all that we know is that she is not at the Carrywoods', or Ada Spelvexit's, or Westminster Abbey." </p>
+
+<p>"That narrows the search down a bit," said Jane hopefully; "I rather fancy she must have been with me when I went to Mornay's. I know I went to Mornay's, because I remember meeting that delightful Malcolm What's-his-name there -you know whom I mean. That's the great advantage of people having unusual first names, you needn't try and remember what their other name is. Of course I know one or two other Malcolms, but none that could possibly be described as delightful. He gave me two tickets for the Happy Sunday Evenings in Sloane Square. I've probably left them at Mornay's, but still it was awfully kind of him to give them to me." </p>
+
+<p>"Do you think you left Louise there?" </p>
+
+<p>"I might telephone and ask. Oh, Robert, before you clear the tea-things away I wish you'd ring up Mornay's, in Regent Street, and ask if I left two theatre tickets and one niece in their shop this afternoon." </p>
+
+<p>“A niece, ma'am?" asked the footman. </p>
+
+<p>“Yes, Miss Louise didn't come home with me, and I'm not sure where I left her." </p>
+
+<p>"Miss Louise has been upstairs all the afternoon, ma'am, reading to the second kitchenmaid, who has the neuralgia. I took up tea to Miss Louise at a quarter to five o'clock, ma'am." </p>
+
+<p>"Of course, how silly of me. I remember now, I asked her to read the Faerie Queene to poor Emma, to try to send her to sleep. I always get some one to read the Faerie Queene to me when I have neuralgia, and it usually sends me to sleep. Louise doesn't seem to have been successful, but one can't say she hasn't tried. I expect after the first hour or so the kitchenmaid would rather have been left alone with her neuralgia, but of course Louise wouldn't leave off till some one told her to. Anyhow, you can ring up Mornay's, Robert, and ask whether I left two theatre tickets there. Except for your silk, Susan, those seem to be the only things I've forgotten this afternoon. Quite wonderful for me.” </p>
+
+<p>End of Louise, recorded by Graham Redman.</p>
+
+<p><strong>WORD COUNT: 1,532</strong></p>
+
+<p><strong>Output from Otter.ai</strong></p>
+
+<p>Story number two of the toys of peace. This is a Librivox recording. All Librivox recordings are in the public domain. For more information or to volunteer, please visit librivox.org</p>
+
+<p>Recording by Graham Redmond</p>
+
+<p>the toys of peace short stories by Saki</p>
+
+<p>Louise</p>
+
+<p>the T will be quite cold. You're better ring for some more, said the damage lady been fed. Susan lady been fed was a vigorous old woman who had co created with imaginary ill health for the greater part of a lifetime. clovers sang Rael irreverently declared that she had caught a chill at the coronation of Queen Victoria and had never let it go again. Her sister James Rob Austin's who was Some years have Jr. was chiefly remarkable for being the most absent minded woman in Middlesex. (5)</p>
+
+<p>I've really</p>
+
+<p>been unusually clever this afternoon, she remarked gaily as she rang for the tea. I've called on all the people I meant to call on, and I've done all the shopping that I set out to do. I even remember to try and match that silk for you and Harrods. But I'd forgotten to bring the pattern with me. So it was no use. I really think that was the only important thing I forgot during the whole afternoon. quite wonderful for me, isn't it? What have you done with Louise? asked her sister. Didn't you take her out with you? You said you were going to Good gracious. Explain, Jane. What have I done with Louise? I must have left her somewhere. But where? That's justed . (4)</p>
+
+<p>Where have I left her</p>
+
+<p>(I) Can't remember if the carry Woods were at home or if I just left cards. If they were at home, I may have left Louise there to play bridge. I'll go and tell him to Lord Carrie wouldn't find out. Is that you Lord Carrie would? She queried over the telephone? It's me, James rubble stones. I wanted to know. Have you seen Louise? Louise kindly answer. It's been my fate to see it three times. At first, I must admit, I wasn't impressed by it. But the music grows on one after a bit. Still, I don't think I want to see it again. Just at present. Were you going to offer me a seat in your box? Not the opera Louise. My nice Louise throttle stunts. I thought I might have left her at your house. Your left cards on us this afternoon. I understand. But I don't think you left a nice the footman would have been showing have mentioned it if you had, is it going to be a fashion to leave sneezes on people as well as cards? I hope not. Some of these houses in Barclays square have practically no accommodation for that sort of thing. . (10)</p>
+
+<p>She's not</p>
+
+<p>at the Kerry woods, announced to Jane returning to her tea. Now I come to think of it. Perhaps I left her at the silk counter at Selfridges. I may have told her to wait there a moment while I went to look at the silks in a better light. And I may easily have forgotten about her when I found I hadn't your pattern with me. In that case, she's still sitting there. She wouldn't move unless she was told to. Louise has no initiative.</p>
+
+<p>You said you tried to match the silicate</p>
+
+<p>herons interjected the damage I did I perhaps it was Harrods. . (3)</p>
+
+<p>I really don't remember.</p>
+
+<p>It was one of those places where everyone is so kind and sympathetic and devoted That one almost hates to take even a reel of cotton away from such pleasant surroundings. I think you might have taken Louise away. I don't like the idea of her being there among a lot of strangers. Supposing some unprincipled person was to get into conversation with her. Impossible. Louise has no conversation. I've never discovered a single topic on which she had anything to say beyond. Do you think so? I daresay You're right. I really thought her reticence about the fall of the rebo ministry was ridiculous. Considering how much her dear mother used to visit Paris. This bread and butter is cut far too thin. it crumbles away long before you can get it to your mouth. One feels so observed snapping at One's Food in midair like a trout leaping at me fly. I am rather surprised, said the Dowager that you can sit there making up RTT when you've just lost a favourite niece, you talk as if I had lost her in a church child sense, instead of having temporarily mislead her. I'm sure to remember presently where I left her. You didn't visit any place of devotion, did you? If you've left her mooning about Westminster Abbey awesome Peters Eaton square, without being able to give any satisfactory reason why she is there. She'll be seized under the cat and mouse act and sent to Reginald McKenna. That would be extremely awkward, said Jane, meeting an original huge piece of bread and butter halfway. We hardly know them McKenna's and it would be very tiresome having to telephone to some unsympathetic private secretary, describing Louise to him and asking to have her send back in time for dinner. Fortunately, I didn't go to any place of devotion, though I did get mixed up with the Salvation Army procession It was quite interesting to be at close quarters with them. They're so absolutely different to what they used to be when I first remember them in the 80s. They used to go about then unkempt and dishevelled, in a sort of smiling rage with the world. And now there's spruce and jaunty and flamboyantly decorative, like a geranium bed with religious convictions. Laura kettle away was going on about them in the lift of the Dover Street to the other day, saying what a lot of good work they did, . (14)</p>
+
+<p>and what a loss it would have been if they'd never</p>
+
+<p>existed. If they had never existed, I said, Granville Barker would have been certain to have invented something that looked exactly like</p>
+
+<p>them.</p>
+
+<p>If you say things like that quite loud in a tube lift, they always sound like epigrams I think you ought to do something about Louise, said the Dowager I'm trying to think whether she was with me when I called on either spelled EXID. I rather enjoyed myself there. Ada was trying as usual to ram that odious kotowski woman down my throat, knowing perfectly well that I detest her. And in an unguarded moment, she said she's leaving her present house and going to lower CMOS Street. I dare say she will if she stays there long enough. I said. Ada didn't see it for about three minutes. And then she was positively uncivil? No, I am certain I didn't leave Louise there. If you could manage to remember where you did leave her. It would be more to the point than these negative assurances, said lady be inferred. so far. All that we know is that she is not at the Kerry woods or ADA spell of exits, or Westminster Abbey that narrows the search done In a bit sad Jane hopefully, I rather fancy She must have been with me when I went to Monet's. I know I went to more names because I remember meeting that delightful Malcolm, what's his name there? You know who may mean? That's the great advantage of people having unusual first names, you'll need to try and remember what their other name is. Of course, I know one or two other Malcolm's but none that could possibly be described as delightful. He gave me two tickets for the happier Sunday evenings in Sloane Square. I probably left the mud Monet's, but still it was awfully kind of him to give them to me. Do you think you left Louise there? I might telephone and ask. Oh, Robert, before you clear the two things away. I wish she would ring up Monet's in Regent Street and ask if I left two theatre tickets and one nice in their shop this afternoon. A nice smell. Ask the footman. Yes, Miss Louise didn't come home with me. And I'm not sure where I left her. Miss Louise has been upstairs all the afternoon, ma'am. Reading to the second kitchen maid who has the neuralgia. I took up to you to miss Louise at a quarter to five o'clock, ma'am. Of course, How silly of me. I remember now, I asked her to read the fairy queen to pour Emma to try to send her to sleep. I always get someone to read the fairy queen to me when I have neuralgia and it usually sends me to sleep. Louise doesn't seem to have been successful, but one can't say she hasn't tried. I expect after the first hour or so the kitchen maid would rather have been left alone with her neuralgia. But of course, Louise wouldn't leave off till someone told her to. Anyhow, you can ring up Monet's Robert and ask whether I left to theatre Tickets there. Except for your silk Susan. Those seem to be the only things I've forgotten this afternoon, Connie, wonderful for me and of Louise Recording by Graham Redmond. . (17)</p>
+
+<p><strong>TOTAL ERRORS: 53</strong></p>
+
+<p><strong>53 (errors) / 1,532 (source file word count) = 0.03459</strong></p>
+
+<p><strong>Error % of 3.459 = 96.54% accurate</strong></p>
+
+
+ 
+   </div>
+ 
+          
+    
+                    
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            
+            <h3>YouTube Studio</h3>
+            <p>File upload – YouTube Studio</p>
+        <p>YouTube ‘Studio’ (available to all user accounts) allows upload of multiple files (15 at once) by browse, or drag-and-drop selection. Upload is a two stage process, - a standard-definition (SD) file will first be generated, and, after a processing period, any full resolution version will become available. </p>
+        
+        <p>Three main window tabs form the process of file upload and configuration for publication. As part of the initial processing upon upload you can select:   Language, subtitles and closed captions (CC). There are a few different English options based on (generalised?) regional vocalisation (and dialect?). </p>
+           
+         
+         <p class="img-cap">Language, subtitles and closed captions (CC)</p>
+           
+           
+           <img src="images/YouTube_CC_language_selector.jpg" alt="YouTube select language, subtitles and closed captions (CC) options"  width="50%">
+           
+           <p class="img-cap">License and distribution options</p>
+           
+           <img src="images/YouTube_disallow_embedding_comments.jpg" alt="YouTube Licence and distribution opions" width="50%">
+           
+           <p class="img-cap">Visibility Options</p>
+           
+            
+       
+            
+      <div class="box-div1">     
+      <img src="images/YouTube_Visibility_Private.jpg" alt="YouTube video visibility options" width="50%" class="float-left">      
+    <h4>Restriction of circulation</h4>
+        <p>In the license and distribution section are the options for ‘Allow embedding and Publish to subscriptions feed and notify subscribers. These features can be disabled by tickbox.    
+            Comments and ratings can also be disallowed.</p>
+        
+        <p>On the 3rd tab are the <span class="code-blue">‘Visibility’</span> options for online publication. This can be set to ‘Private’ – <span class="quote">“only you and people who you choose can watch your video.”</span> </p>
+               </div>
+        
+      
+        
+           <h4>Your Video</h4>
+           
+          
+           
+           <div class="box-div1">
+            <img src="images/YouTube_Studio_side_menu_SUBS.jpg" class="float-left" alt="" width="30%">
+            
+           <p> Once refreshed (status changed from ‘Refresh’ to ‘Published, Automatic’) you then have the option to edit, download or delete. There is also an option within the page to ‘Add language.’</p>
+           
+          <h4> Edit options</h4>
+        <p>The edit options in YouTube Studio allow: </p>
+        <ul>
+           <li>editing of the transcript text (see left-hand column in image below) and </li>
+            <li>editing of timecode position and duration of portions of text by dragging to new position, cropping and stretching of text-boxes along a timeline (located beneath video preview)</li>
+            <li>introduction of new subtitle text, or removal of existing</li>    
+         </ul>
+         
+         </div>
+         
+         <img src="images/YouTube_Transcribe_and_Time_Settings_page.jpg" alt="YouTube transcribe and set timings" width="75%">
+         
+         <h4><a href="Tests/media/YouTube_Subs_DEMO.mp4">See video: YouTube_Subs_DEMO.mp4</a> <span class="todo">EMBED RATHER THAN LINK</span></h4>
+         
+         <h4>Download Formats</h4>
+        <p>Download options are: *.WebVTT, *.SRT and ‘*.SBV’. SBV contain time stamps are formatted in H:MM:SS.000 format.</p>
+        
+    
+ 
+        
+      <!--HIDE-UNHIDE-->
+         <p><a href="javascript:unhide('YouTube-Check');" class="hidelink">Toggle YouTube Tests Tests</a></p>
+      
+       <!--HIDDEN-->
+    <div id="YouTube-Check" class="hidden" class="img-cent" class="hidden-test">           
+                      
+ <h1>YouTube Consistency Checks</h1>
+ 
+  <p><strong>SOURCE TEXT – 280 words</strong></p>
+
+<p>All rise!</p>
+
+<p>Judgement to the appeal Queen on the application of the E against the governing body of JFS and Queen on the application of E against the governing body of JFS and the united synagogue.</p>
+
+<p>The JFS formerly the Jews free school has an admissions policy that gives preference to children who are recognized as Jewish according to the Orthodox Jewish religion. This means that the child's mother must either be descended from a Jewish mother herself or have converted to Judaism in accordance with the requirements of Jewish orthodoxy. This appeal is about a boy whose mother converted to Judaism in a way that did not satisfy the Orthodox requirements. He was refused entry to the school. His father challenged the admissions policy on the ground that in discriminating against those who had not been recognised as Jewish it breached the race relations act. That act forbids discrimination on the ground of ethnic origin. The majority of the court has concluded that the JFS admission policy does discriminate on the ground of ethnic origin and is in consequence unlawful. The minority disagrees considering that the admission requirement is exclusively a religious requirement that does not depend on ethnic origin. The majority have made it plain in their judgments that the fact that the JFS admission policy has fallen foul of the race relations act certainly does not mean that those responsible for the admission policy have behaved in a way that is racist as that word is generally understood. In the result the substantive appeal is dismissed. The appeal on costs of the United synagogue is allowed to the extent set out in the judgment of Lord Hope.</p>
+
+<p><strong>2<sup>nd</sup> female voice, after All Rise from male Usher, boosted +10dB. Uploaded to YouTube</strong></p>
+
+<p><strong>YouTube output: 269</strong></p>
+
+<p>all right <br>
+non-issue [------ missing text -------- ] the e against the governing body of GHS and the only application you see against the governing body with GFS and the united silikov </p>
+
+<p>the JFS formally the jews free school has an admissions policy that gives preference to children who are recognized as jewish according to the Orthodox Jewish religion this means that the child's mother must either be descended from a Jewish mother herself or have converted to Judaism in accordance with the requirements of Jewish orthodoxy this appeal is about a boy whose mother converted to Judaism in a way that did not satisfy the orthodox requirements he was refused entry to the school his father challenged the admissions policy on the ground that in discriminating against those who had not [------ missing text -------- ] recognised as Jewish it breached the race relations act that act forbids discrimination on the ground of ethnic origin the majority of the court has concluded that the JFS admission policy does discriminate on the ground of ethnic origin and is in consequence unlawful the minority disagrees considering that the admission requirement is exclusively a religious requirement that does not depend on ethnic origin the majority have made it plain in their judgments that the fact that the JFS admission policy has fallen foul of the race relations act certainly does not mean that those responsible for the admission policy have behaved in a way that is racist as that word is generally understood in the result the substantive appeal is dismissed the appeal on costs of the United synagogue is allowed to the [------ missing text -------- ] set out in the judgement of Lord hope </p>
+
+<p><strong>10 errors in text actually produced. <em>If using the word count from the SOURCE instead…. 1</em>0 / 280 ( = number of words in source) = 0.035 * 100 = 3.5% error. <br>
+<em>IF counting the missing words as errors: 280 – 269 = 11 missing words<br>
+</em>10 errors in text actually produced + 11 <em>= 21<br>
+21 </em>/ 280 ( = number of words in source) = 0.075 * 100 = 7.5% error.</strong></p>
+
+
+  
+   </div>                                                                                                                                      
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+        
+       
+       
+    
+          <br>
+           
+            
+             
+              
+               
+                
+                 
+                  
+                   
+                    
+                     
+                      
+                       
+                        
+                          
+       <div class="explain">   
+        <h4>ADA compliant captions</h4>
+
+<p>University of Cincinnati Accessibility Network </p>
+<p>Re: YouTube captions misrepresent the spoken content within the presence of accents, dialects, background noise, or poor sound quality, or with use of proper nouns, abbreviations, or acronyms. Miscomprehension may occur because of the absence of grammar and punctuation, and lack of a complete textual representation of the audio that includes speaker identification and non-speech information. You should always review automatic captions and edit any parts that have not been properly transcribed.” <a target=”_blank” href="https://www.uc.edu/about/accessibility-network/video-media/youtube-studio-captioning-instructions.html">https://www.uc.edu/about/accessibility-network/video-media/youtube-studio-captioning-instructions.html</a></p>
+
+<p>YouTube’s Automatic Captions Prove Insufficient for ADA Compliance <a target=”_blank” href="https://www.automaticsync.com/captionsync/youtube-automatic-captions/">https://www.automaticsync.com/captionsync/youtube-automatic-captions/</a></p>
+
+</div>
+
+        
+        
+        <br>
+
+<h3>Google Docs (in-Browser) transcription</h3>
+ <div class="box-div1">
+      
+       <img src="images/Microphone_Privacy.jpg" alt="PC Microphone_Privacy setting for online speech recognition" width=55% class="float-left"> 
+            
+                 <p>Google Docs can be used to automatically transcribe from ‘computer sound’ as well as via the PC microphone. To enable its use in this manner the ‘Online speech recognition’ switch (found in <strong><em>Settings > Privacy > Speech</em></strong>) must be set to <span class="code-blue">On</span></p>     
+             
+             </div>
+             
+<div class="box-div1">
+<img src="images/sound_settings.jpg" alt="PC sound settings" width="40%" class="float-left" >
+       
+<p>Additionally the Input option under <strong><em>settings > Sound</em></strong> needs to be changed from the built-in microphone to the ‘<span class="code-blue">Stereo Mix</span>’ option, - this enables recording of PC sound. </p>
+<p>As it would appear from testing that the capture is to some extent dependant on a volume above a certain level (possibly to limit interference from low level background speech) The Master Volume for the Output Device (Speakers) should be set to a high to 100% level to ensure that all voices are beyond any set threshold (- this to be investigated) for capture. </p>
+<p>In order to avoid annoyance to others from playback, and to maintain privacy, the PC’s output speakers should be effectively muted <em>without</em> reducing the PC volume. One simple way to achieve this is to plug a headphone extension cable (without headphones attached) into the PC’s headphone socket. </p>
+
+ </div>    
+
+      
+      
+ <div class="box-div1">
+              
+            <img src="images/Google_DOCS_START.jpg" alt="" width="50%" class="float-left">
+               
+          <p>In order to transcribe speech from a desired source simply open a GoogleDocs document in a Chrome browser, and from the Tools menu select ‘<span class="code-blue">Voice typing</span>’ (Ctrl+Shift+S). You will then see a small pop-up window with a microphone icon.</p>
+          
+          <img src="images/Google_mic_speak.jpg" alt="" class="float-left">
+          <p>From the language option pull down there is an extended list of language and accent options to choose from, including a range of English as spoken with various accents: US, UK, Australia, Canada etc.</p> 
+      </div>
+      
+      <div class="box-div1">
+      
+       <p>When ready to commence the recording click the icon. If doing so for the first time you may be presented with a pop-up from the browser stating: <span class="quote">“docs.google.com wants to use your microphone”</span> and with ‘<strong><em>Allow</em></strong>’ and ‘<strong><em>Block</em></strong>’ buttons. Click <span class="code-blue">Allow</span> to proceed. </p>
+      
+      <img src="images/Googledocs_active_rec_icon.jpg" alt="" width="25%" class="float-left">
+      <p>The pop-up should then be replaced with a red, active recording microphone icon, which when actually capturing sound gains animated rings.</p>
+      
+      
+      <p>At this point you should see text, initially ‘pixelated’ resolve and, with a small delay, progressively type out within the GoogleDoc. </p>
+<p>Once the session has concluded, deactivate the recording. You then have the option to edit within the doc or ‘<strong><em>Download As</em></strong>’:    docx, odt, rtf, pdf, txt, html (zipped) and epub. Alternatively you can ‘Email as Attachment’ with the same option formats available, or publish to web. </p>
+      </div>
+         
+         
+         
+             
+          <!--HIDE-UNHIDE-->
+         <p><a href="javascript:unhide('GoogleDocs-Consistency-Check');" class="hidelink">Toggle GoogleDocs - 3x Run Consistency Check Tests</a></p>
+      
+       <!--HIDDEN-->
+    <div id="GoogleDocs-Consistency-Check" class="hidden" class="img-cent" class="hidden-test">
+       <h2>GoogleDocs - 3x Run Consistency Check</h2>
+  
+  <p><strong>SOURCE TEXT – 280 words</strong></p>
+
+<p><em>All rise!</em></p>
+
+<p><em>Judgement to the appeal Queen on the application of the E against the governing body of JFS </em></p>
+
+<p><em>and Queen on the application of E against the governing body of JFS and the united synagogue.</em></p>
+
+<p><em>The JFS formerly the Jews free school has an admissions policy that gives preference to children who are recognized as Jewish according to the Orthodox Jewish religion. This means that the child's mother must either be descended from a Jewish mother herself or have converted to Judaism in accordance with the requirements of Jewish orthodoxy. This appeal is about a boy whose mother converted to Judaism in a way that did not satisfy the Orthodox requirements. He was refused entry to the school. His father challenged the admissions policy on the ground that in discriminating against those who had not been recognised as Jewish it breached the race relations act. That act forbids discrimination on the ground of ethnic origin. The majority of the court has concluded that the JFS admission policy does discriminate on the ground of ethnic origin and is in consequence unlawful. The minority disagrees considering that the admission requirement is exclusively a religious requirement that does not depend on ethnic origin. The majority have made it plain in their judgments that the fact that the JFS admission policy has fallen foul of the race relations act certainly does not mean that those responsible for the admission policy have behaved in a way that is racist as that word is generally understood. In the result the substantive appeal is dismissed. The appeal on costs of the United synagogue is allowed to the extent set out in the judgment of Lord Hope.</em></p>
+
+<p><strong>Run 1 – Word count 227</strong></p>
+
+<p>Alright application against the governing body of and against Dublin DSS and the united synagogue</p>
+
+<p>AVG free school has an admissions policy that gives preference to children who are recognised as Jewish according to the Orthodox Jewish religion to the child's mother but either be descended from a Jewish mother herself or have converted to Judaism in accordance with the requirements of Jewish Orthodox disappeared it's about a boy whose mother converted to Judaism in a way that did not satisfy the Orthodox work whilst he was refused entry to the school is Father challenge the admissions policy on the ground that indiscriminate  he best origin of the court has concluded that the jfs admissions policy does discriminate on the grounds of ethnic origin and in consequence and other minority disagrees considering that the admission requirement is exclusively a religious requirement that does not depend on ethnic origin the majority of made it playing in their judgments but the fact that the jfs admissions policy Has Fallen foul of the race relations act certainly does not mean that those responsible for the admission policy at behaved in a way that is racist as that word is generally understood in the result the substantive appeal is dismissed the appeal on cost of the united synagogue is allowed to the extent sit out in the judgement of a joke</p>
+
+<p><strong>19 errors in text actually produced. <em>If using the word count from the OUTPUT instead…</em></strong></p>
+
+<p><strong>19 / 227 ( = number of words in source) = 0.084 * 100 = 8.37% error. </strong></p>
+
+<p><strong>Areas of missing text identified:</strong></p>
+
+<p>Alright [------ missing text -------- ] application [------ missing text -------- ] against the governing body of [------ missing text -------- ] and against Dublin [------ missing text -------- ] DSS and the united synagogue</p>
+
+<p>[------ missing text -------- ] AVG free school has an admissions policy that gives preference to children who are recognised as Jewish according to the Orthodox Jewish religion to [------ missing text -------- ]  the child's mother but either be descended from a Jewish mother herself or have converted to Judaism in accordance with the requirements of Jewish Orthodox disappeared it's about a boy whose mother converted to Judaism in a way that did not satisfy the Orthodox work whilst he was refused entry to the school is Father challenge the admissions policy on the ground that indiscriminate [------ missing text -------- ] he best origin of the court has concluded that the jfs admissions policy does discriminate on the grounds of ethnic origin and in consequence and other minority disagrees considering that the admission requirement is exclusively a religious requirement that does not depend on ethnic origin the majority of made it playing in their judgments but the fact that the jfs admissions policy Has Fallen foul of the race relations act certainly does not mean that those responsible for the admission policy at behaved in a way that is racist as that word is generally understood in the result the substantive appeal is dismissed the appeal on cost of the united synagogue is allowed to the extent sit out in the judgement of a joke </p>
+
+<p><strong>19 errors in text actually produced. <em>If using the word count from the SOURCE instead…. 1</em>9 / 280 ( = number of words in source) = 0.068 * 100 = 6.8% error. <br>
+</strong></p>
+
+<p><strong><em>IF counting the missing words as errors: </em></strong></p>
+
+<p><strong><em>280 – 227 = 53 missing words </em></strong></p>
+
+<p><strong>19 errors in text actually produced + 53 <em>= 72</em></strong></p>
+
+<p><strong><em>72 </em>/ 280 ( = number of words in source) = 0.25 * 100 = 25% error.</strong></p>
+
+<p class="span-code
+">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</p>
+
+<p><strong>SOURCE TEXT – 280 words</strong></p>
+
+<p><em>All rise!</em></p>
+
+<p><em>Judgement to the appeal Queen on the application of the E against the governing body of JFS </em></p>
+
+<p><em>and Queen on the application of E against the governing body of JFS and the united synagogue.</em></p>
+
+<p><em>The JFS formerly the Jews free school has an admissions policy that gives preference to children who are recognized as Jewish according to the Orthodox Jewish religion. This means that the child's mother must either be descended from a Jewish mother herself or have converted to Judaism in accordance with the requirements of Jewish orthodoxy. This appeal is about a boy whose mother converted to Judaism in a way that did not satisfy the Orthodox requirements. He was refused entry to the school. His father challenged the admissions policy on the ground that in discriminating against those who had not been recognised as Jewish it breached the race relations act. That act forbids discrimination on the ground of ethnic origin. The majority of the court has concluded that the JFS admission policy does discriminate on the ground of ethnic origin and is in consequence unlawful. The minority disagrees considering that the admission requirement is exclusively a religious requirement that does not depend on ethnic origin. The majority have made it plain in their judgments that the fact that the JFS admission policy has fallen foul of the race relations act certainly does not mean that those responsible for the admission policy have behaved in a way that is racist as that word is generally understood. In the result the substantive appeal is dismissed. The appeal on costs of the United synagogue is allowed to the extent set out in the judgment of Lord Hope.</em></p>
+
+<p><strong>Run 2 – Word count 238</strong></p>
+
+<p>Alright against the government and against Dublin body of GSS and United Synagogue </p>
+
+<p>has an admissions policy that gives preference to children who are recognised as Jewish according to the Orthodox Jewish religion to  the child's mother from a Jewish mother herself or have converted to Judaism in accordance with the requirements of Jewish Orthodox is about a boy whose mother converted to Judaism in a way that did not satisfy the Orthodox requirements he was refused entry to the school is Father challenge the admissions policy on the ground that in discriminating against those who are not recognised as Jewish it breached the race relations act forbids discrimination on the ground of ethnic origin majority of the court has concluded that the jfs admissions policy does discriminate on the grounds of ethnic origin and it's in consequence unlawful the minority disagrees considering that the admission requirement is exclusively a religious requirement that does not depend on ethnic origin the majority of made it playing in their judgements but the fact that the jfs admissions policy Has Fallen foul of the race relations act certainly does not mean that those responsible for the admission policy have behaved in a way that is racist as that word is generally understood in the result they substantive appeal is dismissed the appeal on cost of the united synagogue is allowed to the extent sit out in the judgement of a joke</p>
+
+<p><strong>Areas of missing text identified:</strong></p>
+
+<p>Alright [------ missing text -------- ] against the government [------ missing text -------- ] and [------ missing text -------- ] against Dublin body of GSS and [------ missing text -------- ] United Synagogue </p>
+
+<p>[------ missing text -------- ] has an admissions policy that gives preference to children who are recognised as Jewish according to the Orthodox Jewish religion [------ missing text -------- ] to [------ missing text -------- ] the child's mother [------ missing text -------- ] from a Jewish mother herself or have converted to Judaism in accordance with the requirements of Jewish Orthodox [------ missing text -------- ] is about a boy whose mother converted to Judaism in a way that did not satisfy the Orthodox requirements he was refused entry to the school is Father challenge the admissions policy on the ground that in discriminating against those who are not recognised as Jewish it breached the race relations act [------ missing text -------- ] forbids discrimination on the ground of ethnic origin [------ missing text -------- ] majority of the court has concluded that the jfs admissions policy does discriminate on the grounds of ethnic origin and it's in consequence unlawful the minority disagrees considering that the admission requirement is exclusively a religious requirement that does not depend on ethnic origin the majority of made it playing in their judgements but the fact that the jfs admissions policy Has Fallen foul of the race relations act certainly does not mean that those responsible for the admission policy have behaved in a way that is racist as that word is generally understood in the result they substantive appeal is dismissed the appeal on cost of the united synagogue is allowed to the extent sit out in the judgement of a joke </p>
+
+<p><strong>13 errors in text actually produced. <em>If using the word count from the SOURCE instead…. 1</em>3 / 280 ( = number of words in source) = 0.046 * 100 = 4.6% error. <br>
+</strong></p>
+
+<p><strong><em>IF counting the missing words as errors: </em></strong></p>
+
+<p><strong><em>280 – 238 = 42 missing words </em></strong></p>
+
+<p><strong>13 errors in text actually produced + 42 <em>= 55</em></strong></p>
+
+<p><strong><em>55 </em>/ 280 ( = number of words in source) = 0.20 * 100 = 20% error.</strong></p>
+
+<p class="span-code
+">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</p>
+
+<p><strong>SOURCE TEXT – 280 words</strong></p>
+
+<p><em>All rise!</em></p>
+
+<p><em>Judgement to the appeal Queen on the application of the E against the governing body of JFS </em></p>
+
+<p><em>and Queen on the application of E against the governing body of JFS and the united synagogue.</em></p>
+
+<p><em>The JFS formerly the Jews free school has an admissions policy that gives preference to children who are recognized as Jewish according to the Orthodox Jewish religion. This means that the child's mother must either be descended from a Jewish mother herself or have converted to Judaism in accordance with the requirements of Jewish orthodoxy. This appeal is about a boy whose mother converted to Judaism in a way that did not satisfy the Orthodox requirements. He was refused entry to the school. His father challenged the admissions policy on the ground that in discriminating against those who had not been recognised as Jewish it breached the race relations act. That act forbids discrimination on the ground of ethnic origin. The majority of the court has concluded that the JFS admission policy does discriminate on the ground of ethnic origin and is in consequence unlawful. The minority disagrees considering that the admission requirement is exclusively a religious requirement that does not depend on ethnic origin. The majority have made it plain in their judgments that the fact that the JFS admission policy has fallen foul of the race relations act certainly does not mean that those responsible for the admission policy have behaved in a way that is racist as that word is generally understood. In the result the substantive appeal is dismissed. The appeal on costs of the United synagogue is allowed to the extent set out in the judgment of Lord Hope.</em></p>
+
+<p><strong>Run3 – Word count 239</strong></p>
+
+<p>Alright against against Dublin body of DFS and United Synagogue </p>
+
+<p>for free school has an admissions policy that gives preference to children who are recognised as Jewish according to the Orthodox Jewish religion of the child's mother but either be descended from a Jewish mother herself or have converted to Judaism in accordance with the requirements of Jewish Orthodox it's about a boy whose mother converted to Judaism in a way that did not satisfy the Orthodox requirements he was refused into the school is Father challenge the admissions policy on the ground that in discrimination against those who are not recognised as Jewish it breached the race relations act discrimination on the ground of ethnic origin majority of the court has concluded that the jfs admissions policy does discriminate on the grounds of ethnic origin and it's in consequence and other minority disagrees considering that the admission requirement is exclusively a religious requirement that does not depend on ethnic origin the majority of made it plain in their judgements but the fact that the jfs admissions policy Has Fallen foul of the race relations act certainly does not mean that those responsible for the admission policy have behaved in a way that is racist as that word is generally understood in the result the substantive appeal is dismissed the appeal on cost of the united synagogue izle out the extent sit out in the judgement of Lord hope </p>
+
+<p><strong>Areas of missing text identified:</strong></p>
+
+<p>Alright [------ missing text -------- ] against [------ missing text -------- ] against [------ missing text -------- ]  Dublin body of DFS and [------ missing text -------- ] United Synagogue</p>
+
+<p>[------ missing text -------- ] for free school has an admissions policy that gives preference to children who are recognised as Jewish according to the Orthodox Jewish religion [------ missing text -------- ] of the child's mother but either be descended from a Jewish mother herself or have converted to Judaism in accordance with the requirements of Jewish Orthodox [------ missing text -------- ]  it's about a boy whose mother converted to Judaism in a way that did not satisfy the Orthodox requirements he was refused into the school is Father challenge the admissions policy on the ground that in discrimination against those who are not recognised as Jewish it breached the race relations act [------ missing text -------- ] discrimination on the ground of ethnic origin [------ missing text -------- ] majority of the court has concluded that the jfs admissions policy does discriminate on the grounds of ethnic origin and it's in consequence and other minority disagrees considering that the admission requirement is exclusively a religious requirement that does not depend on ethnic origin the majority of made it plain in their judgements but the fact that the jfs admissions policy Has Fallen foul of the race relations act certainly does not mean that those responsible for the admission policy have behaved in a way that is racist as that word is generally understood in the result the substantive appeal is dismissed the appeal on cost of the united synagogue izle out the extent sit out in the judgement of Lord hope</p>
+
+<p><strong>18 errors in text actually produced. <em>If using the word count from the SOURCE instead…. 1</em>8 / 280 ( = number of words in source) = 0.064 * 100 = 6.4% error. <br>
+</strong></p>
+
+<p><strong><em>IF counting the missing words as errors: </em></strong></p>
+
+<p><strong><em>280 – 239 = 41 missing words </em></strong></p>
+
+<p><strong>13 errors in text actually produced + 41 <em>= 54</em></strong></p>
+
+<p><strong><em>54 </em>/ 280 ( = number of words in source) = 0.19 * 100 = 19% error.</strong></p>
+
+<p class="span-code
+">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</p>
+
+<p><strong>Run 1:</strong> <strong><em>72 </em>/ 280 ( = number of words in source) = 0.25 * 100 = 25% error.</strong></p>
+
+<p><strong>Run 2:</strong> <strong><em>55 </em>/ 280 ( = number of words in source) = 0.20 * 100 = 20% error.</strong></p>
+
+<p><strong>Run 3:</strong> <strong><em>54 </em>/ 280 ( = number of words in source) = 0.19 * 100 = 19% error.</strong></p>
+
+<p>Compare output/ ‘error rate’ of 1 to 2, 1 to 3 to estimate how consistent the results </p>
+ 
+       </div>
+<!-- HIDDEN CONTENT-->
+
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+        <h3>Subtitle format comparisons</h3>
+        
+        
+         <h4>WebVTT</h4>
+      <div class="box-div1">       
+            
+        <img src="images/captions_VTT-format.PNG" alt="auto_captions_from_YouTube_in_VTT_format" width="60%" class="float-left">
+        
+          <p>“The WebVTT format (Web Video Text Tracks) is a …W3C standard for displaying timed text in connection with the HTML5 <track> element… The WebVTT specification is still in draft stage but the basic features are already supported by all major browsers.” <a target=”_blank” href="https://en.wikipedia.org/wiki/WebVTT">https://en.wikipedia.org/wiki/WebVTT</a></p>
+        
+       </div>
+       
+        
+        
+        <h4>SRT (SubRip Text)</h4> 
+        
+      <div class="box-div1">   
+                   
+               <img src="images/captions_SRT-format.PNG" alt="" class="float-left">
+               <p>Subtitles are numbered sequentially (from 1).</p>
+               
+               </div>
+               
+               <div class="box-div1">   
+   <img src="images/captions_SBV-format.PNG" alt="" class="float-left">
+   <p><strong>SBV</strong> is a YouTube Captions file, developed by Google. It is limited to YouTube use but can be converted to SRT</p>
+   </div>
+   
+   <h3>Web Video Text Tracks Format (WebVTT)</h3>
+  <p><span class="quote">“Web Video Text Tracks Format (WebVTT) is a format for displaying timed text tracks (such as subtitles or captions) using the <span class="span-code">&lt;track&gt;</span> element. The primary purpose of WebVTT files is to add text overlays to a <span class="span-code">&lt;video&gt;.“</span></span>
+       <a target=”_blank” href="https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API">https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API</a></p>
+
+
+<h3>&lt;track&gt;: The Embed Text Track element</h3>
+<p>
+    Details from: <a target=”_blank” href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track</a>
+</p>
+<div class="box-div1"> 
+ 
+ <img src="images/HTML-5_track_element.PNG" alt="" class="float-left" width="45%">
+ <p>The HTML <span class="span-code">&lt;track&gt;</span> element is a child of the <span class="span-code">&lt;audio&gt;</span> and <span class="span-code">&lt;video&gt;</span>. elements,  It allows for time-based data to apply automatically handle subtitles. </p>
+ 
+ </div>
+  
+   <h4>Attribute: ‘kind’</h4>
+<ul>
+   <li>subtitles: intended for text translations of audio language not understood by the viewer.</li>
+   <li>captions: Closed Captions: to provide a transcription (and possibly a translation of the audio)</li>
+   <li>captions: Closed Captions: to provide a transcription (and possibly a translation of the audio)</li>
+   </ul>
+   
+<ul><li>1 run accuracy</li>
+    <li>Multiple run consistency </li></ul>
+<p>The text output from the second run when compared with the first is absolutely consistent, - the same errors, the same omitted text.</p>
+   
+ 
+   
+   
+   <h3>Consistency Checks</h3> 
+<p>Three transcription runs were made against the same video (UKSC video: cr1-09-12-16-judgements_imx30_1.mp4 (from <a target=”_blank” href="http://discovery.nationalarchives.gov.uk/VideoPlayer/?url=https://tna-video-player.s3.amazonaws.com/66/UKSC/1/cr1-09-12-16-judgements_imx30_1.mp4">http://discovery.nationalarchives.gov.uk/VideoPlayer/?url=https://tna-video-player.s3.amazonaws.com/66/UKSC/1/cr1-09-12-16-judgements_imx30_1.mp4</a>). The video was played from one Chrome browser instance, while GoogleDocs was used from a second. </p>
+<p>As a visual estimate of consistency of capture, the text of each run was compared with another in the online tool ‘DiffChecker’ (<a target=”_blank” href="https://www.diffchecker.com/diff">https://www.diffchecker.com/diff</a>). It can quickly be seen that there are particular points of inconsistency in capture, one is after the initial “All rise!” from a male usher, when a 2nd, female voice pronounces the initial case presentation (it should be noted that there is an extended pause in speech between the usher and the 2nd speaker). This section of speech is not very well recorded and when making a manual transcription I could not be certain as to all the words spoken. The initial few works spoken by a 3rd, male voice, which follows closely after the 2nd, are missed in all tests, - speculatively this may be due to a delay in the speech recognition engine becoming active from an ‘uncertainty’ in how to proceed. This 3rd voice is very clear and well recorded.</p>
+   <p class="img-cap">Run 1 compared with Run 2: ‘11 removals, 10 additions’</p>
+   
+   
+   <img src="images/100_50_oercent_compare.jpg" alt="" width=75%>
+   
+   <p class="img-cap">Run 1 compared with Run 3: ‘13 removals, 13 additions’</p>
+   <img src="images/100_50_oercent_compare_2nd_Run.jpg" alt="" width=75%>
+   
+   <br><br>
+   
+   
+   
+
+  <h3>Chrome Extension: ‘V2T - Voice To Text’</h3>
+ <div class="box-div1">
+  
+  <img src="images/V2T_Chrome_Ext_SCREENSHOT2.PNG" alt="" class="float-left" width="35%">
+  <p>‘V2T Voice To Text’ is a Chrome Browser Extension which appears as a pop-up from a browser tab. It uses Google’s speech recognition API and seems to replicate the same range and limitation as when using the Speech to Text feature available within Google Docs. <a target=”_blank” href="https://chrome.google.com/webstore/detail/v2t-voice-to-text/fidgcpajdfmndoamnjlpjkofgjebjhbb?hl=zh-CN&gl=GB">https://chrome.google.com/webstore/detail/v2t-voice-to-text/fidgcpajdfmndoamnjlpjkofgjebjhbb?hl=zh-CN&gl=GB</a></p>
+  
+       </div>
+  <div class="box-div1">
+  <img src="images/V2T_Chrome_Ext_SCREENSHOT.PNG" alt="" width="55%"  class="float-left">
+  <p><strong><em>Note:</em></strong> this Extension would not operate when attempting to operate from a tab addressed to TNA Discovery, this apparently due to Chrome Security restrictions and presumably due to the ‘Not Secure’ site declaration for the Discovery Video Player page.</p>
+   </div>
+   
+   
+   
+ 
+
+
+<h3>Transcriptive 2.0</h3>
+<p>Plugin for Premiere Pro – ‘Transcriptive’ from Digital Anarchy. Highly recommended by video host, reports up to 95% accuracy and fast turnaround (60 mins of radio in about 10 mins). <br>
+    Price: $299 - there a trial version</p>
+<p>
+<a target=”_blank” href="https://digitalanarchy.com/transcribe-video/transcriptive.html">https://digitalanarchy.com/transcribe-video/transcriptive.html</a>
+“Transcribe Everything! Easily Search Footage & Create Captions
+Transcriptive uses artificial intelligence and natural language processing to transcribe footage. This makes all that footage searchable and makes it easy to create captions or paper edits. It’ll help automate and accelerate your video workflow! <br>
+It's an inexpensive, fast, and flexible way of turning all your audio into transcripts.     <br>
+Request a Free Trial! ”</p>
+
+<p>New Features Overview (as of Nov 2019)
+    <a target=”_blank” href="https://www.youtube.com/watch?time_continue=8&v=wuVMDdXL5Cs&feature=emb_logo">https://www.youtube.com/watch?time_continue=8&v=wuVMDdXL5Cs&feature=emb_logo</a>
+    Would seem all textural elements are synched in with editing navigation within Premiere Pro timeline.</p>
+ 
+<p>However, you have to buy software AND subscribe to one of two transcription services: …“the AI and machine learning powered transcription software with a 97% accuracy rate! With precise results and two different Speech Services at your disposal you can get the fastest transcription for your project at the lowest cost...”</p>
+
+<p>Accurate - Cuts out the time of transcript edits by giving you up to 97% accuracy on your project's audio. You can use either of two AI Speech Services, Transcriptive AI or Speechmatics. Transcriptive AI is more accurate, up to 97%. Speechmatics is 95% accurate. Choose the one that best fits your needs and budget.</p>
+
+
+<p>Rev- manual transcription</p>
+
+
+   
+   
+ 
+  
+ <h3> Amazon Transcribe</h3>
+<p><a target=”_blank” href="https://docs.aws.amazon.com/transcribe/latest/dg/what-is-transcribe.html">https://docs.aws.amazon.com/transcribe/latest/dg/what-is-transcribe.html</a>
+    Amazon Transcribe uses advanced machine learning technologies to recognize speech in audio files and transcribe them into text. You can use Amazon Transcribe to convert audio to text and to create applications that incorporate the content of audio files. For example, you can transcribe the audio track from a video recording to create closed captioning for the video.</p>
+<p><a target=”_blank” href="https://eu-west-2.console.aws.amazon.com/transcribe/home?region=eu-west-2#welcome">https://eu-west-2.console.aws.amazon.com/transcribe/home?region=eu-west-2#welcome</a>
+    <span class="quote">“Amazon Transcribe uses a deep learning process called automatic speech recognition (ASR) to convert speech to text quickly and accurately. Amazon Transcribe can be used to transcribe customer service calls, to automate closed captioning and subtitling, and to generate metadata for media assets to create a fully searchable archive.”</span></p>
+<p>Amazon Transcribe automatically adds punctuation and formatting so that the output closely matches the quality of manual transcription”
+    You can process audio in batch or in near real-time. Using a secure connection, you can send a live audio stream to the service, and receive a stream of text in response.</p>
+<p>Amazon Transcribe returns a timestamp for each word, so that you can easily find a word or phrase in the original recording or add subtitles to video.</p>
+<p>You can add new words to the base vocabulary to generate more accurate transcriptions for domain-specific words and phrases... You can specify a list of words to remove from transcripts.
+    Speaker changes are automatically recognized and attributed in the text to capture scenarios like telephone calls, meetings, and television shows accurately.</p>
+<p>When instructed, Amazon Transcribe can identify and redact sensitive personally identifiable information (PII) from the supported language transcripts. </p>
+
+<h4>Create an Audio Transcript (tutorial):</h4> <p><a target=”_blank” href="https://aws.amazon.com/getting-started/hands-on/create-audio-transcript-transcribe/">https://aws.amazon.com/getting-started/hands-on/create-audio-transcript-transcribe/</a>
+    <span class="quote">“Transcribe is an automatic speech recognition (ASR) service…Using the Amazon Transcribe API, you can analyze audio files stored in Amazon Simple Storage Service (S3) and have the service return a text file of the transcribed speech… </span></p>
+<p class="quote">In this tutorial you will download a sample audio file then upload it to a S3 bucket that you will create. Then you will use Amazon Transcribe to create a transcript from the sample audio clip using the AWS Management Console…</p>
+<p class="quote">This tutorial is a demo of the functionality that is available when using the AWS CLI or the Transcribe API. For production or proof of concept implementations, we recommend using these programmatic interfaces rather than the Amazon Transcribe Console.”</p>
+
+<h4>Workflow</h4>
+ 
+ <ul>
+      
+     <li>Set up S3 Bucket, name: <span class="code-blue">transcription-test-ih</span></li>
+     <li>Custom Vocabulary as described on the tutorial page is not apparent from my test-job under ‘Specify Job Details’</li>
+     <li>Some of the elements described are slightly different in the job itself, e.g. the Output data location options on the job page are: Service-managed S3 bucket or Customer specified S3 bucket. In the tutorial ‘Amazon default’ or ‘Customer specified.’</li>
+     <li><span class="code-blue">Audio_identification</span> options not on this page, on next: <span class="quote">“If you enable Channel identification, Amazon Transcribe is able to process audio where each speaker is recorded on different channels and produce a single transcript annotated with channel labels..”</span> – could be very useful for LOCOG which definitely holds multi-channel audio</li>
+   <li>If you enable <span class="code-blue">Speaker identification</span>, Amazon Transcribe recognizes when the speaker changes and attributes the transcribed text appropriately. – feature not on this page: </li></ul>
+   
+  <p> All configuration options are now on the one page: </p>
+   <p><strong><em>Audio identification</em></strong> – If enabled you can select either:</p> 
+<ul>
+   <li><span class="code-blue">Channel identification</span> - for split of multi-channel audio in to separate channels for transcription</li>
+    <li><span class="code-blue">Speaker identification</span> – identify multiple speakers (you must enter a multiple: 2 or more) in a <span class="quote">“mono-channel audio recording”</span> – see how this copes with standard stereo channel arrangement.
+        Here you can provided a maximum number of speakers, to try and increase accuracy </li>
+        </ul>
+        <p><strong><em>Alternative results:</em></strong></p>
+<p>If enabled this returns multiple transcripts from the same audio.</p> 
+<p class="quote">“When Alternative results <em>are not</em> enabled, Amazon Transcribe creates a single transcript with the <em>highest relative confidence by default</em>. You can request up to 10 alternative transcriptions. Each transcription returned must reach a minimum confidence threshold set by Amazon Transcribe. While Amazon Transcribe may not have as much confidence in the alternative transcriptions, the results could be better suited for your needs.”</p>
+ 
+ <p><span class="code-blue">Automatic content redaction</span> can be used to try to automatically remove “personally identifiable information (PII)”, though these are apparently generic assumptions – credit card, possibly mobile number etc. </p>
+<p><span class="code-blue">Vocabulary filtering</span> – to remove specified words</p>
+
+<p><span class="code-blue">Custom Vocabulary</span> – to add specific words that might be niche and hard to transcribe, medical terms, legal etc.</p>
+ 
+ 
+<h4>output format</h4>
+  <p>JSON transcription</p>
+  
+ <h4>Sample output: </h4>
+  <p class="span-code">{"jobName":"sample-transcription-job","accountId":"281925702874","results":{"transcripts":[{"transcript":"machine learning is employed in a range of computing tasks where designing and program explicit algorithms with good performance is difficult or infeasible. Example. Applications include email filtering, detection of network intruders and computer vision. Machine learning is closely related to computational statistics, which also focuses on predictions making through the use of computer. It has strong ties to mathematical optimization, which delivers methods, theory and application domains to the field."}],</p>
+  
+     
+ 
+<h4>From Amazon test MP3 file (JSON file output):</h4>
+
+<div class="box-div1"><img src="AWS_Transcribe/JSON_output1.PNG" alt="" class="float-left">
+ <h4>
+     71 words, 9 punctuation items
+ </h4>
+   <p> Then ‘items’ – which include both words AND punctuation:</p>
+     <p class=span-code> "items":[{"start_time":"0.04","end_time":"0.37","alternatives":[{"confidence":"1.0","content":"machine"}],"type":"pronunciation"}, (item 0: = the single word: ‘machine’)</p>
+     <p class="span-code">
+      {"start_time":"0.37","end_time":"0.71","alternatives":[{"confidence":"1.0","content":"learning"}],"type":"pronunciation"}, (item 1: = the single word: ‘learning’)</p>
+      <p class="span-code">{"start_time":"0.71","end_time":"0.85","alternatives":[{"confidence":"1.0","content":"is"}],"type":"pronunciation"}, (item 2: = the single word: ‘is’)
+      <br>
+>>>>>>>></p>
+  
+ <p class="span-code"> {"start_time":"25.6","end_time":"25.98","alternatives":[{"confidence":"1.0","content":"field"}],"type":"pronunciation"}, (item 78: = the single word: ‘field’)</p>
+<p class="span-code">{"alternatives":[{"confidence":"0.0","content":"."}],"type":"punctuation"}]},</p>
+<p class="span-code">"status":"COMPLETED"}</p>
+ 
+  <img src="AWS_Transcribe/JSON_output-punctuation.PNG" alt=""></div>
+
+
+<h4>UKSC test file to AWS transcribe:</h4>
+<p>link to the sample file in your S3 bucket: <a target=”_blank” href="https://transcription-test-ih.s3-eu-west-1.amazonaws.com/cr1-09-12-16-judgements_imx30_1.mp4">https://transcription-test-ih.s3-eu-west-1.amazonaws.com/cr1-09-12-16-judgements_imx30_1.mp4</a>
+    s3://transcription-test-ih/cr1-09-12-16-judgements_imx30_1.mp4 (Location: Ireland)
+    Transcription Job Page freezing on 2 occasions – trying to pick up S3 bucket from wrong region – London instead of Ireland</p>
+<img src="AWS_Transcribe/UKSC_Trans_JOB.PNG" alt="" width="80%">
+  <img src="AWS_Transcribe/UKSC_Trans_JOB-2.PNG" alt="" width="80%">
+  <img src="AWS_Transcribe/UKSC_Trans_JOB-3.PNG" alt="" width="80%">
+<img src="AWS_Transcribe/UKSC_Trans_JOB-4.PNG" alt="" width="80%">
+ <img src="AWS_Transcribe/UKSC_Trans_JOB-5.PNG" alt="" width="80%">
+ <img src="AWS_Transcribe/UKSC_Trans_JOB-6.PNG" alt="" width="80%">
+ <img src="AWS_Transcribe/UKSC_Trans_JOB-7.PNG" alt="" width="80%">
+ <img src="AWS_Transcribe/UKSC_Trans_JOB-8.PNG" alt="" width="80%">
+ <img src="AWS_Transcribe/UKSC_Trans_JOB-9.PNG" alt="" width="80%">
+  <img src="AWS_Transcribe/UKSC_Trans_JOB-10.PNG" alt="" class="float-left" width="35%">
+  <p>WHEN IDENTIFY SPEAKERS FEATURE IS ENABLED THEN THERE ARE ADDITIONAL Speaker Segment and Items ELEMENTS AHEAD OF THE ‘WORD ITEMS</p>
+ 
+ <p>CR1-09-11-25-Judgements_IMX30_1.mxf (actually an MP4)
+     https://discovery.nationalarchives.gov.uk/details/r/be6dcb8e8b01432a9ac508e5153e0636
+     Test file: In order to make all test files for this consistent, the downloaded source file was re-encoded as a new MP4, and the noise containing files were derived from this, observing the same encoding settings.</p>
+     
+     <p>word-count: 202</p>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   <!--HIDE-UNHIDE-->
+         <p><a href="javascript:unhide('AWS-Check');" class="hidelink">Toggle AWS Tests</a></p>
+      
+       <!--HIDDEN-->
+    <div id="AWS-Check" class="hidden" class="img-cent" class="hidden-test">
+ 
+  <h1>AWS Transcribe_1st_RUN</h1>
+<p><strong>SOURCE TEXT – 280 words</strong></p>
+
+<p>All rise!</p>
+
+<p>Judgement to the appeal Queen on the application of the E against the governing body of JFS and Queen on the application of E against the governing body of JFS and the united synagogue.</p>
+
+<p>The JFS formerly the Jews free school has an admissions policy that gives preference to children who are recognized as Jewish according to the Orthodox Jewish religion. This means that the child's mother must either be descended from a Jewish mother herself or have converted to Judaism in accordance with the requirements of Jewish orthodoxy. This appeal is about a boy whose mother converted to Judaism in a way that did not satisfy the Orthodox requirements. He was refused entry to the school. His father challenged the admissions policy on the ground that in discriminating against those who had not been recognised as Jewish it breached the race relations act. That act forbids discrimination on the ground of ethnic origin. The majority of the court has concluded that the JFS admission policy does discriminate on the ground of ethnic origin and is in consequence unlawful. The minority disagrees considering that the admission requirement is exclusively a religious requirement that does not depend on ethnic origin. The majority have made it plain in their judgments that the fact that the JFS admission policy has fallen foul of the race relations act certainly does not mean that those responsible for the admission policy have behaved in a way that is racist as that word is generally understood. In the result the substantive appeal is dismissed. The appeal on costs of the United synagogue is allowed to the extent set out in the judgment of Lord Hope.</p>
+
+<p><strong>AWS Transcribe service: 24_07_2020 – 280 words</strong></p>
+
+<p>Copied from web page preview of output (‘Download Full transcript’ is JSON format only)</p>
+
+<p>2 speakers detected</p>
+
+<p>all rise</p>
+
+<p>Judgement </p>
+
+<p>on the application of <strong>the</strong> against the <strong>government.</strong></p>
+
+<p><strong>Um,</strong></p>
+
+<p><strong>she</strong> against the governing body of Jeff s <strong>on</strong> <strong>you</strong></p>
+
+<p><strong>Like a</strong> <strong>cynical</strong></p>
+
+<p>The J. F s, formerly the Jews Free School, has an admissions policy that gives preference to Children who are recognised as Jewish, according to the Orthodox Jewish religion.</p>
+
+<p>This means that the child's mother must either be descended from a Jewish mother herself or have converted to Judaism in accordance with the requirements of Jewish orthodoxy.</p>
+
+<p>This appeal is about a boy whose mother converted to Judaism in a way that did not satisfy the Orthodox <strong>requires</strong> he was refused entry to the school.</p>
+
+<p>His father challenged the admissions policy on the ground that in discriminating against those who are not recognised as Jewish, it breached the Race Relations Act.</p>
+
+<p>That act forbids discrimination on the ground of ethnic origin.</p>
+
+<p>The majority of the court has concluded that the JFX admission policy does discriminate on the ground of ethnic origin, and <strong>it's</strong> in consequence unlawful.</p>
+
+<p>The minority disagrees, considering that the admission requirement is exclusively a religious requirement that does not depend on ethnic origin,</p>
+
+<p>the majority have made it plain in their judgments that the fact that the JFX admission policy has fallen foul of the race relations <strong>at</strong> certainly does not mean that <strong>there is</strong> responsible for the admission policy have behaved in a way that is racist, as that word is generally understood</p>
+
+<p>in the result, the substantive appeal is dismissed. The <strong>P</strong> <strong>along</strong> costs of the United Synagogue is allowed to the extent set out in the judgement of Lord </p>
+
+<p><strong>Speaker 1:</strong></p>
+
+<p>all rise</p>
+
+<p><strong>Speaker 0:</strong></p>
+
+<p>Judgement [----missing words------]</p>
+
+<p><strong>Speaker 0:</strong></p>
+
+<p>on the application of <strong>the</strong> [----missing words------] against the <strong>government.</strong></p>
+
+<p><strong>Speaker 0:</strong></p>
+
+<p><strong>Um,</strong></p>
+
+<p><strong>Speaker 0:</strong></p>
+
+<p><strong>she</strong> against the governing body of Jeff s <strong>on</strong> <strong>you</strong></p>
+
+<p><strong>Speaker 1:</strong></p>
+
+<p><strong>Like a</strong> <strong>cynical</strong></p>
+
+<p><strong>Speaker 1:</strong></p>
+
+<p>The J. F s, formerly the Jews Free School, has an admissions policy that gives preference to Children who are recognised as Jewish, according to the Orthodox Jewish religion.</p>
+
+<p><strong>Speaker 1:</strong></p>
+
+<p>This means that the child's mother must either be descended from a Jewish mother herself or have converted to Judaism in accordance with the requirements of Jewish orthodoxy.</p>
+
+<p><strong>Speaker 1:</strong></p>
+
+<p>This appeal is about a boy whose mother converted to Judaism in a way that did not satisfy the Orthodox <strong>requires</strong> he was refused entry to the school.</p>
+
+<p><strong>Speaker 1:</strong></p>
+
+<p>His father challenged the admissions policy on the ground that in discriminating against those who are not recognised as Jewish, it breached the Race Relations Act.</p>
+
+<p><strong>Speaker 1:</strong></p>
+
+<p>That act forbids discrimination on the ground of ethnic origin.</p>
+
+<p><strong>Speaker 1:</strong></p>
+
+<p>The majority of the court has concluded that the JFX admission policy does discriminate on the ground of ethnic origin, and <strong>it's</strong> in consequence unlawful.</p>
+
+<p><strong>Speaker 1:</strong></p>
+
+<p>The minority disagrees, considering that the admission requirement is exclusively a religious requirement that does not depend on ethnic origin,</p>
+
+<p><strong>Speaker 1:</strong></p>
+
+<p>the majority have made it plain in their judgments that the fact that the JFX admission policy has fallen foul of the race relations <strong>at</strong> certainly does not mean that <strong>there is</strong> responsible for the admission policy have behaved in a way that is racist, as that word is generally understood</p>
+
+<p><strong>Speaker 1:</strong></p>
+
+<p>in the result, the substantive appeal is dismissed. The <strong>P</strong> <strong>along</strong> costs of the United Synagogue is allowed to the extent set out in the judgement of Lord [----missing words------].</p>
+
+<p><strong>13 errors in text actually produced. <em>If using the word count from the SOURCE instead of the OUTPUT text…. 1</em>3 / 270 ( = number of words in source) = 0.048 * 100 = 4.8% error. <br>
+<em>IF counting the missing words as errors: 280 – 270 = 10 missing words <br>
+</em>13 errors in text actually produced + 10 <em>= 23<br>
+23 </em>/ 280 ( = number of words in source) = 0.08 * 100 = 8% error.</strong></p>
+
+
+ 
+   </div>
+ 
+ 
+ 
+ 
+  <h4> Amazon Transcribe pricing</h4>
+<p>“With Amazon Transcribe, you pay-as-you-go based on the seconds of audio transcribed per month. It’s easy to get started with the Amazon Transcribe Free Tier. Upon signup, start analyzing up to 60 minutes of audio monthly, free for the first 12 months.”  
+    <a target=”_blank” href="https://aws.amazon.com/transcribe/pricing/">https://aws.amazon.com/transcribe/pricing/</a>
+    </p>
+<p>Free tier <br>
+    60 minutes per month for 12 months <br>
+    The Amazon Transcribe Free Tier is available to you for 12 months, starting from the date on which you create your first transcription request. When your free usage expires, or if your application use exceeds the free usage tier, you simply pay standard, pay-as-you-go service rates.</p>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <h3>Google Cloud: Speech to Text</h3>
+ <p>
+     <a target=”_blank” href="https://cloud.google.com/speech-to-text">https://cloud.google.com/speech-to-text</a>
+ </p>
+<p>1 min limit on file duration for test upload.
+    “Accurately convert speech into text using an API powered by Google’s AI technologies…</p>
+<p>Apply Google’s most advanced deep learning neural network algorithms for automatic speech recognition (ASR).</p>
+M<p>eet your users where they are, globally, with voice recognition that supports more than 125 languages and variants.
+    Combine with the best of Google’s technologies in Text-to-Speech and Natural Language to unlock use cases like voice bots and sentiment analysis for speech.”</p>
+<p>Documentation:<a target=”_blank” href="https://cloud.google.com/speech-to-text/docs">https://cloud.google.com/speech-to-text/docs</a></p>
+<p>Pricing:<a target=”_blank” href="https://cloud.google.com/speech-to-text/pricing">https://cloud.google.com/speech-to-text/pricing</a></p>
+ 
+ <h3>Watson Speech to Text</h3>
+ <p>
+     <a target=”_blank” href="https://www.ibm.com/cloud/watson-speech-to-text">https://www.ibm.com/cloud/watson-speech-to-text</a>
+ </p>
+ 
+ 
+ <h3>PINK NOISE tests</h3>
+ <p>Pink Noise (description here: <a target=”_blank” href="https://www.audiocheck.net/">https://www.audiocheck.net/</a>) audible magnetic emulates tape noise.
+    Sample audio file obtained from <a target=”_blank” href="https://www.arcaudio.com/node/245">https://www.arcaudio.com/node/245</a></p>
+  
+  <div class="div-box1">
+  <video controls width="500px" class="vid-left float-left">
+  <source src="Tests/media/pink_noise_tests_demo.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+
+<p>4 files produced:</p>
+<ul class="indent">
+   <li>UKSC, with no pink noise with volume reduced down 1dB as the master level was peaking and beyond ‘0’ (results in digital clipping, then into distortion)</li>
+    <li>With Pink Noise sample at -30dB (of its original level). This would emulate noticeable tape hiss</li>
+    <li>With Pink Noise sample at -20dB (of its original level). This would emulate promient tape hiss</li>
+    <li>With Pink Noise sample at -15dB (of its original level). This would emulate extreme tape hiss</li>
+    </ul>
+    <br>
+<p>Tested on GoogleDocs – see emailed docx</p>
+<p>Testing on YouTube 14/09/2020</p>
+<br>
+
+
+
+  <!--HIDE-UNHIDE-->
+         <p><a href="javascript:unhide('pink-noise-tests');" class="hidelink">Toggle Pink Noise Tests</a></p>
+      
+       <!--HIDDEN-->
+    <div id="pink-noise-tests" class="hidden" class="img-cent" class="hidden-test">
+ 
+
+<!-- HIDDEN CONTENT-->
+
+<h3>Pink Noise Tests</h3>
+ <p>Results:</p>
+
+<p>From PURE: <span class="code-blue">24/ 213 (= number of words in source) = 0.11 * 100 = 11.2% erro</span>r</p>
+
+<p>at_-30dB.mp4: <span class="code-blue">34/ 213 ( = number of words in source) = 0.16 * 100 = 15.6% error.</span></p>
+
+<p>at_-20dB.mp4: <span class="code-blue">69 / 213 ( = number of words in source) = 0.32 * 100 = 32.4% error.</span></p>
+
+<p>at_-15dB.mp4: <span class="code-blue">102 / 213 ( = number of words in source) = 0.48 * 100 = 48% error.</span></p>
+
+
+<p>SOURCE TEXT <br>
+Manual transcription from video: word-count: 213</p>
+
+<p><em>All rise!</em></p>
+
+<p><em>Judgement in the appeal Office of Fair Trading against Abbey National PLC and others.</em></p>
+
+<p><em>This appeal was not about whether bank charges for those who overdraw on their current accounts are fair. It was about a much narrower issue. On what basis can the OFT, that is the Office of Fair Trading, investigate the fairness of those charges. The relevant regulation says that the OFT is not allowed to assess the fairness of a charge by the test of whether or not it represents a fair price or remuneration for the goods or services provided in exchange.</em></p>
+
+<p><em>The Court of Appeal had held that this exclusion only applied to core terms and that overdraft charges did not constitute core terms. The Supreme Court did not agree with this approach. We have held that overdraft charges form part of the price or remuneration for the package of services that the banks provide to their current account customers. This means that the OFT cannot consider whether in imposing those charges the banks are giving fair value for money. It may still be open to the OFT to assess the fairness of the charges by other criteria.</em></p>
+
+<p><em>For these reasons the Appeal is allowed, the order will be in the terms agreed by council.</em></p>
+
+<p>cr1-09-11-25-judgements_imx30_1_PURE_-1dB – Premiere Pro export, no noise applied </p>
+
+<p>word-count: 202</p>
+
+<p><span class="highlight">Alright</span></p>
+
+<p><span class="span-code">[--- missing text ---]</span> office of Fair Trading against Abbey National PLC and others </p>
+
+<p><span class="span-code">[--- missing text ---]</span> was not about <span class="highlight">with a</span> bank charges for those who overdraw on their current accounts <span class="highlight">off it</span> it was about a much narrower issue on what basis can the oft that is the office of Fair Trading investigate the fairness of those charges the relevant regulations <span class="span-code">[--- missing text ---]</span> <span class="highlight">ft</span> is not allowed to assess the fairness of a charge by the test of whether or not it represents a fair price or remuneration for the goods or services provided in exchange </p>
+
+<p>the court of Appeal <span class="highlight">at</span> held that this exclusion only applied to <span class="highlight">court</span> and [<span class="span-code">--- missing text ---]</span> overdraft charges did not constitute <span class="highlight">call turns</span> the Supreme Court did not agree with this approach we have held <span class="highlight">the</span> overdraft charges form part of the price or remuneration for the package of services for the banks provide to their current account customers this means that the oft cannot consider whether in imposing those charges the banks are giving fair value for money it may still be open to the <span class="highlight">OT</span> to assess the fairness of the charges by other criteria </p>
+
+<p>for these reasons the appeal is allowed the order will be in the terms agreed by Council </p>
+
+<p>13 errors in text produced. <em>Using the word count from the SOURCE (instead of the OUTPUT text)…. 1</em>3 / 213 (= number of words in source) = 0.061 * 100 = 6.10% error. <br>
+<em>IF counting the missing words as errors: 213 – 202 = 11 missing words <br>
+</em>13 errors in text produced + 11 <em>= 24<br>
+24 </em>/ 213 ( = number of words in source) = 0.11 * 100 = 11.2% error.</p>
+
+<p>Manual transcription from video: word-count: 213</p>
+
+<p><em>All rise!</em></p>
+
+<p><em>Judgement in the appeal Office of Fair Trading against Abbey National PLC and others.</em></p>
+
+<p><em>This appeal was not about whether bank charges for those who overdraw on their current accounts are fair. It was about a much narrower issue. On what basis can the OFT, that is the Office of Fair Trading, investigate the fairness of those charges. The relevant regulation says that the OFT is not allowed to assess the fairness of a charge by the test of whether or not it represents a fair price or remuneration for the goods or services provided in exchange.</em></p>
+
+<p><em>The Court of Appeal had held that this exclusion only applied to core terms and that overdraft charges did not constitute core terms. The Supreme Court did not agree with this approach. We have held that overdraft charges form part of the price or remuneration for the package of services that the banks provide to their current account customers. This means that the OFT cannot consider whether in imposing those charges the banks are giving fair value for money. It may still be open to the OFT to assess the fairness of the charges by other criteria.</em></p>
+
+<p><em>For these reasons the Appeal is allowed, the order will be in the terms agreed by council.</em></p>
+
+<p>Cr1-09-11-25-judgements_imx30_1_PINK_at_-30dB.mp4</p>
+
+<p>Word-count: 200</p>
+
+<p>Alright </p>
+
+<p><span class="span-code">[--- missing text ---]</span> office of Fair Trading against Abbey National PLC and others </p>
+
+<p><span class="span-code">[--- missing text ---]</span> was not about <span class="highlight">with a</span> bank charges for those who overdraw on their current accounts <span class="highlight">off it</span> it was about a much narrower issue on what basis can the oft that is the office of Fair Trading investigate the <span class="highlight">furnace</span> of those charges the relevant <span class="span-code">[--- missing text ---]</span> <span class="highlight">ft</span> is not allowed to assess the <span class="highlight">furnace</span> <span class="highlight">the</span> charge by the test of whether or not it represents a fair price or remuneration for the goods or services provided in exchange </p>
+
+<p>the court of Appeal held that this exclusion only applied to <span class="highlight">quarter</span> and <span class="highlight">the</span> overdraft charges did not constitute <span class="highlight">call turns</span> the Supreme Court did not agree with this approach we have held the overdraft charges form part of the price for remuneration of the package of services that the banks provide to their current account customers this means that the oft cannot consider whether he imposing those charges the banks are giving fair value for money it may still be open to the earth to to assess the fairness of the charges by other criteria </p>
+
+<p>for these reasons the appeal is allowed before order will be in the terms agreed by comes </p>
+
+<p>20 errors in text produced. <em>Using the word count from the SOURCE (instead of the OUTPUT text)…. 20</em> / 213 (= number of words in source) = 0.094 * 100 = 9.4% error. <br>
+<em>IF counting the missing words as errors: 213 – 200 = 13 missing words <br>
+</em>20 errors in text produced + 13 <em>= 34<br>
+34 </em>/ 213 ( = number of words in source) = 0.16 * 100 = 15.6% error.</p>
+
+<p>Manual transcription from video: word-count: 213</p>
+
+<p><em>All rise!</em></p>
+
+<p><em>Judgement in the appeal Office of Fair Trading against Abbey National PLC and others.</em></p>
+
+<p><em>This appeal was not about whether bank charges for those who overdraw on their current accounts are fair. It was about a much narrower issue. On what basis can the OFT, that is the Office of Fair Trading, investigate the fairness of those charges. The relevant regulation says that the OFT is not allowed to assess the fairness of a charge by the test of whether or not it represents a fair price or remuneration for the goods or services provided in exchange.</em></p>
+
+<p><em>The Court of Appeal had held that this exclusion only applied to core terms and that overdraft charges did not constitute core terms. The Supreme Court did not agree with this approach. We have held that overdraft charges form part of the price or remuneration for the package of services that the banks provide to their current account customers. This means that the OFT cannot consider whether in imposing those charges the banks are giving fair value for money. It may still be open to the OFT to assess the fairness of the charges by other criteria.</em></p>
+
+<p><em>For these reasons the Appeal is allowed, the order will be in the terms agreed by council.</em></p>
+
+<p>cr1-09-11-25-judgements_imx30_1_PINK_at_-20dB.mp4</p>
+
+<p>word-count: 184<br>
+Alright </p>
+
+<p><span class="span-code">[--- missing text ---]</span> office of Fair Trading against Abbey National PLC and others </p>
+
+<p><span class="span-code">[--- missing text ---]</span> was not about with a bank charges for those who overdraw on their current accounts on  death it was about a much narrower it on what basis can the oft that is the office of Fair Trading investigate the furnace charged the relevant <span class="span-code">[--- missing text ---]</span>  ft is not enough to assess the furnace the charge by the test of whether or not it represents a fair price or remuneration with the goods or services provided [--- missing text ---]  change </p>
+
+<p>the court of Appeal upheld <span class="span-code">[--- missing text ---]</span> the exclusion only applied to quarter and the  photograph charges did not constitute call tunes <span class="span-code">[--- missing text ---]</span> Supreme Court did not agree with this approach we have helped of the overdraft charges form part of the price for remuneration <span class="span-code">[--- missing text ---]</span> the package of services that the bank provide to the current account customers this means that the oft cannot come to the weather in imposing those charges the banks are giving <span class="span-code">[--- missing text ---]</span> value for money if they still <span class="span-code">[--- missing text ---]</span> the <span class="span-code">[--- missing text ---]</span> sister Furness of the charges I have a prior to </p>
+
+<p><span class="span-code">[--- missing text ---]</span> these recently before they will be in the terms [<span class="span-code">--- missing text ---]</span> </p>
+
+<p>40 errors in text produced. <em>Using the word count from the SOURCE (instead of the OUTPUT text)…. 40</em> / 213 (= number of words in source) = 0.187 * 100 = 18.7% error. <br>
+<em>IF counting the missing words as errors: 213 – 184 = 29 missing words <br>
+</em>40 errors in text produced + 29 <em>= 69<br>
+69 </em>/ 213 ( = number of words in source) = 0.32 * 100 = 32.4% error.</p>
+
+<p>cr1-09-11-25-judgements_imx30_1_PINK_at_-15dB.mp4 <em>1<sup>st</sup> RUN -</em> <em>GOT MESSAGE “GOOGLE HEARD…” BUT LOST OUTPUT</em></p>
+
+<p>Manual transcription from video: word-count: 213</p>
+
+<p><em>All rise!</em></p>
+
+<p><em>Judgement in the appeal Office of Fair Trading against Abbey National PLC and others.</em></p>
+
+<p><em>This appeal was not about whether bank charges for those who overdraw on their current accounts are fair. It was about a much narrower issue. On what basis can the OFT, that is the Office of Fair Trading, investigate the fairness of those charges. The relevant regulation says that the OFT is not allowed to assess the fairness of a charge by the test of whether or not it represents a fair price or remuneration for the goods or services provided in exchange.</em></p>
+
+<p><em>The Court of Appeal had held that this exclusion only applied to core terms and that overdraft charges did not constitute core terms. The Supreme Court did not agree with this approach. We have held that overdraft charges form part of the price or remuneration for the package of services that the banks provide to their current account customers. This means that the OFT cannot consider whether in imposing those charges the banks are giving fair value for money. It may still be open to the OFT to assess the fairness of the charges by other criteria.</em></p>
+
+<p><em>For these reasons the Appeal is allowed, the order will be in the terms agreed by council.</em></p>
+
+<p></p>
+
+<p><em>RUN 2: </em>cr1-09-11-25-judgements_imx30_1_PINK_at_-15dB.mp4</p>
+
+<p>word-count: 151</p>
+
+<p>Call Ryan</p>
+
+<p>[--- missing text ---] office of Fair Trading against Abbey National PLC and others </p>
+
+<p><span class="span-code">[--- missing text ---]</span> was not about with a bank charges for those who overdraw on their current account on <span class="span-code">[--- missing text ---]</span> it was about a much narrower it on what basis can the oft that is the pockets of purgatory investigate the first <span class="span-code">[--- missing text ---]</span> charge the relevant [--- missing text ---] ft is not <span class="span-code">[--- missing text ---]</span> to assess <span class="span-code">[--- missing text ---]</span> whether or not it represents a fair price <span class="span-code">[--- missing text ---]</span> for the goods or services provided <span class="span-code">[--- missing text ---]</span> </p>
+
+<p><span class="span-code">[--- missing text ---]</span> court of Appeal Patel's assistant food only upside to Porter <span class="span-code">[--- missing text ---]</span> overdraft charges did not constitute call son is not agreed <span class="span-code">[--- missing text ---]</span> we have<span class="span-code">[--- missing text ---]</span>  the overdraft charges form part of the price or remuneration [--- missing text ---] the package of services that the banks provide to the current account <span class="span-code">[--- missing text ---]</span> this means that <span class="span-code">[--- missing text ---]</span> cannot<span class="span-code">[--- missing text ---]</span>  be imposing those charges thanks I couldn't stand still be open to the O2 <span class="span-code">[--- missing text ---]</span> charge my tablet </p>
+
+<p>right you please resend you feel loved before des will be in the Stone </p>
+
+<p>39 errors in text produced. <em>Using the word count from the SOURCE (instead of the OUTPUT text)…. 39</em> / 213 (= number of words in source) = 0.183 * 100 = 18.3% error. <br>
+<em>IF counting the missing words as errors: 213 – 151 = 62 missing words <br>
+</em>40 errors in text produced + 62 <em>= 102<br>
+102 </em>/ 213 ( = number of words in source) = 0.48 * 100 = 48% error.</p>
+</div>
+       </div>
+
+
+<!--END OF HIDDEN CONTENT-->
+
+
+
+
+
+<br><br><br><br><br>
+ 
+ 
+ 
+  
+   </div>
+ 
+  
+  <!--SCRIPT-->
+        <script type="text/javascript">
+        function unhide(playpricing) {
+        var item = document.getElementById(playpricing);
+        if (item) {
+        item.className=(item.className=='hidden')?'unhidden':'hidden';
+        }
+        }
+        </script> 
+  
+  
+
+  <!--   </div> -->
+    </body>
+    </html>
