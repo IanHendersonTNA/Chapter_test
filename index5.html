@@ -4,22 +4,24 @@
   <meta charset="UTF-8">
   <title>Chapter Markers</title>
   <style>
-    body {margin:0; padding:0;}
+    body {margin:0; padding:0; background-color: black;}
     video {background: black; cursor: pointer; padding: 0;}
 
     .container {
       display: flex;
       flex-direction: column;
-      background-color: DodgerBlue;
+      background-color: black;
       justify-content: center;
       align-items: center;
+     
     }
 
     .container > div {
       background-color: orange;
       width: 640px;
       display: inline-flex;
-      font-size: 14px;
+      font-size: 12px;
+     
     }
 
       #bar {
@@ -32,7 +34,7 @@
     }
 
     span {
-        padding: 4px 40px;
+        padding: 4px 34px;
         margin: 0px;
         line-height: 40px;
         font: 18px sans-serif; font-weight:600;
@@ -56,10 +58,7 @@
 
     <div class="video">
       <video width="100%" controls>
-      <!--  <source src="https://content.jwplatform.com/videos/q1fx20VZ-kNspJqnJ.mp4" type="video/mp4">
-        <source src="https://content.jwplatform.com/videos/q1fx20VZ-27m5HpIu.webm" type="video/webm">
-        <track src="assets/chapters.vtt" kind="chapters" default>-->
-        <source src='https://tna-video-player.s3.amazonaws.com/66/UKSC/1/cr1-09-10-19-session-1_imx30_1.mp4' type='video/mp4'>
+          <source src='https://ds-live-videos.s3.amazonaws.com/66/UKSC/1/cr1-09-10-19-session-1_imx30_1.mp4'>
         <track src="chapters_num2.vtt" kind="chapters" srclang="en" label="English" default>
       </video>
     </div>
@@ -67,31 +66,6 @@
   <div id="bar"></div>
 </div>
 </div>
-
-
-<!--
-<section>
-
-  <video width="100%" controls>
-  <!--  <source src="https://content.jwplatform.com/videos/q1fx20VZ-kNspJqnJ.mp4" type="video/mp4">
-    <source src="https://content.jwplatform.com/videos/q1fx20VZ-27m5HpIu.webm" type="video/webm">
-    <track src="assets/chapters.vtt" kind="chapters" default>-->
-  <!--  <source src='https://tna-video-player.s3.amazonaws.com/66/UKSC/1/cr1-09-10-19-session-1_imx30_1.mp4' type='video/mp4'>
-    <track src="chapters_num2.vtt" kind="chapters" srclang="en" label="English" default>
-
-    A browser with <a href="http://www.jwplayer.com/html5/">HTML5 text track support</a> is required.
-  </video>
-
-  <div id="bar"></div>
-
-</section>
-
-<footer>
-  These code examples feature <a href="http://sintel.org/">Sintel</a>, the third Blender Open Movie Project.<br>
-  Permalinks: <a href="chapters.html">Chapter Markers</a>, <a href="thumbs.html">Preview Thumbnails</a>, <a href="search.html">Timeline Search</a>.
-</footer>
--->
-
 
 <script type="text/javascript">
   var v = document.querySelector("video");

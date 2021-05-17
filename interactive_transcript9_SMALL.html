@@ -1,0 +1,463 @@
+<html lang="en">
+
+<head>
+  <meta charset=utf-8>
+  <title>Video player with clickable transcript</title>
+  <script src="interactive_transcript4.js" type="text/javascript"></script>
+
+<!-- STYLES ADDED FROM interactive_transcript4.css-->
+
+
+<!-- ADD FEATURES
+      1 TURN OFF TRANSCRIPT
+      2 ADD 25secs >> and 10secs <<
+      3 PLAYBACK SPEED controls
+
+-->
+  <style>
+      
+      body {
+          padding: 0%;
+/*          margin: -3%;*/
+          width: 100%;
+            max-width: 1000px;
+          max-height: 720px;
+                margin-right: auto;          
+            margin-left: auto;
+        
+      }
+
+  #all {
+     background-color: #000;
+     border-radius:6px;
+     padding: 10px;
+     border:1px solid;
+     display:inline-block;
+/*     margin:30px;*/
+     width: 907px;
+     height: 720px;
+     position: relative;
+  }
+
+#header {
+  font: 18px sans-serif; font-weight:500;
+  background-color: #000;
+  color: #fff;
+  padding: 5px 0 8px 0px;
+}
+
+#chapter_header {
+  font: 12px sans-serif; font-weight:600;
+  background-color: #000;
+  color: skyblue;
+  padding: 2px 4px 0px 0px;
+  margin-left: 0;
+}
+
+#buttonbar {
+  display: inline-block;
+  background-color: #000;
+  padding: 0;
+  margin-left: 0;
+  font: 14px sans-serif; font-weight: 600;
+  height: 27px;
+}
+
+button {
+  color: black;
+  background-color: #ff8080;
+  border-radius:4px;
+  border: 1px solid #000;
+  padding: 2px 5px 3px 5px;
+  margin: 2px 0px 3px 0px;
+}
+
+button:hover {
+  color: black;
+  background-color: skyblue;
+  border-radius:4px;
+  border: 1px solid #000;
+  padding: 2px 5px 3px 5px;
+  margin: 2px 0px 3px 0px;
+}
+
+#playspeed_label {
+  float: right;
+  font: 13px sans-serif; font-weight: normal;
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 2px 5px 3px 5px;
+  margin: 2px 2px 0px 0px;
+  color: skyblue;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  background: transparent;
+  width: 100px;
+  margin: 0 5px;
+  }
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: skyblue;
+  border-radius: 1.3px;
+  border: 0.2px solid rgba(1, 1, 1, 0);
+  box-shadow: inset 2px 1px 2px 1px black;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  background: #ff8080;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -3.5px;
+  box-shadow: 2px 1px 2px 1px black;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: skyblue;
+  box-shadow: inset 2px 1px 2px 1px black;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+  background: skyblue;
+  border-radius: 1.3px;
+  border: 0.2px solid rgba(1, 1, 1, 0);
+
+}
+
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(13, 13, 13, 0);
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  background: #fff;
+  cursor: pointer;
+}
+
+
+  .cues {
+     color:#fff;
+     font-family: sans-serif;
+     font-weight: normal;
+     line-height: 24px;
+   }
+
+  .cues:hover {
+     text-decoration: none;
+     color: black;
+     background-color: lightgrey;
+  }
+
+  .cues.current {
+     color: darkorange;
+     font-weight: normal;
+  }
+
+  .cues span {
+     font-weight: 600;
+     padding: 0 0 15px 0;
+     margin: 0;
+     color: skyblue;
+     background-color: #222;
+     border: 0;
+     width: 100%;
+     display: block;
+     font-size: 14px;
+     font-style: normal;
+  }
+
+  #myVideo { /* ESSENTIAL FOR RESOLUTION OF TRANSCRIPT */
+     display: inline-block;
+     margin-right: 0;
+     width: 55%;
+     background-color: #000;
+     margin-left: 0;
+     margin-right: 0;
+     border: 1px solid skyblue;
+     border-radius: 6px;
+
+  }
+
+  #transcript {
+     display: inline-block;
+     padding-left: 3px;
+     padding-right: 6px;
+    padding-top: 0px;
+     border: 0 solid #ccc;
+     float: right;
+     max-height: 590px;
+     overflow: auto;
+     width: 41%;
+     margin-left: 8px;
+     margin-right: 0;
+     font-size: 14px;
+     list-style: none;
+     background-color: #000;
+     position: absolute;
+     top: 93px;
+    }
+
+  #text_description {
+    display: inline-block;
+    color: #fff;
+    float: left;
+    font-weight: normal;
+    width: 51.75%;
+    background-color: #000;
+    height: 350px;
+    overflow: auto;
+    padding-top: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 8px;
+    margin-left: 0;
+    margin-right: 0;
+    border: 1px solid skyblue;
+    border-radius: 6px;
+    scrollbar-color: skyblue black;
+  }
+
+#text_description span {
+  background-color: skyblue;
+  margin-left: -2px;
+  margin-right: 0;
+  padding: 0 2px 1px 2px;
+    }
+}
+/* STYLES BELOW FROM index5.html - Chapter model */
+
+    body {margin:0; padding:0;}
+    video {background: black; cursor: pointer; padding: 0;}
+
+    #bar {
+      display: flex;
+      overflow: hidden;
+      margin-bottom: 0px;
+      cursor: pointer;
+      background-color: black;
+      height:22px;
+      width: 100%
+    }
+
+    span {
+        padding: 1px 10px 5px 10px;
+        margin: 0px;
+        line-height: 35px;
+        font: 14px sans-serif; font-weight:600;
+        color: black;
+        background-color: #ff8080;
+        border: 2px solid black;
+        border-radius: 6px;
+    }
+
+  #bar span:hover {
+      color: #fff;
+    }
+    #bar span:nth-child(1) {
+      border-left: none;
+    }
+
+
+
+
+  </style>
+
+</head>
+
+<body>
+
+  <!--<div class="container">-->
+
+  <!--  <div class="video">-->
+  <div id="all">
+
+<div id="header">Title: CR1-09-10-19-Session 1_IMX30_1.mxf</div>
+    <div id="bar">
+      <div id="chapter_header">Chapters: </div>
+    </div>
+
+
+
+<div id="buttonbar">
+<button disabled id="buttonEnglish" onclick="loadTranscript('en');">
+  English transcript</button>
+<button disabled id="buttonDeutsch" onclick="loadTranscript('cy');">
+  Welsh transcript</button>
+  <button data-skip="-30" class="player__button">« 30s</button>
+       <button data-skip="-60" class="player__button">« 1min</button>
+       <button data-skip="30" class="player__button">30s »</button>
+       <button data-skip="60" class="player__button">1min »</button>
+
+      <div id="playspeed_label">Play Speed<input type="range" name="playbackRate" class="player__slider" id="speedslide" min="0.5" max="2" step="0.1" value="1">
+
+</div>
+<video  id="myVideo" controls>
+<!--  <source src="https://content.jwplatform.com/videos/q1fx20VZ-kNspJqnJ.mp4" type="video/mp4">
+  <source src="https://content.jwplatform.com/videos/q1fx20VZ-27m5HpIu.webm" type="video/webm">
+  <track src="assets/chapters.vtt" kind="chapters" default>-->
+  <source src='https://ds-live-videos.s3.amazonaws.com/66/UKSC/1/cr1-09-10-19-session-1_imx30_1.mp4' type='video/mp4'>
+  <track src="chapters_num2.vtt" kind="chapters" srclang="en" label="English" default>
+  <track label="English subtitles" kind="subtitles" srclang="en" src="subtitles-en2.vtt">
+  <track label="Welsh subtitles" kind="subtitles" srclang="cy" src="subtitles-wls.vtt">
+</video>
+<div id="transcript"></div>
+<div id="text_description" class="scrollable-element">
+  <h4>Catalogue description</h4>
+  <p>Reference: UKSC 1/2/Z</p>
+  <p>Title: CR1-09-10-19-Session 1_IMX30_1.mxf</p>
+  <p>Description: Session: am</p>
+  <p>Session date: 2009 Oct 19</p>
+  <p>CASE ID: UKSC 2009/0020</p>
+  <p>Case name: R (on the application of A) (Appellant) v B (Respondent)</p>
+  <p><span>Case summary:</span>
+ Judgment: The Supreme Court unanimously dismissed A’s appeal. Lord Brown, with whom all the members of the Court agreed,
+ gave the leading judgment. Lord Hope gave a concurring opinion.</p>
+
+<p>Reasons for the judgment: Two alternative arguments were advanced by A: Section 65(2)(a) excludes the section 7(1)(a)
+  jurisdiction of any other tribunal but not that of the courts. Even if section 65(2)(a) is to be construed as conferring
+  exclusive section 7(1)(a) jurisdiction on the IPT, it does so only in respect of proceedings against the intelligence
+  services arising out of the exercise of one of the investigatory powers regulated by RIPA.
+
+  <p>As to the first argument, Lord Brown noted that the language of section 7(2) of the 1998 Act and the use of the word
+    "only” before “appropriate tribunal”   in section 65(2)(a) indicated that it was unlikely that Parliament was intending to
+    leave it to a complainant to choose for   himself whether to bring proceedings in court or before the IPT (Para 13).
+    Whilst the IPT rules made under RIPA were restrictive (e.g. in relation to the limited disclosure of information to a
+    complainant), there were various provisions in RIPA and the IPT rules which were designed to ensure that, even in the most
+    sensitive cases, disputes could be properly determined. None of these provisions would be available in the courts (Para 14).
+    A further telling consideration against A’s construction was that there were in fact no other tribunals with section 7(1)(a)
+    jurisdiction over the categories of claim listed in section 65(3) of RIPA (Para 15). </p>
+
+  <p>As to the second argument, Lord Brown considered that A’s submission would involve reading
+  into section 65(3)(a) (which contains the phrase “proceedings against any of the intelligence services”) words which
+  were simply not there. There were, in addition, other provisions in RIPA which were more obviously directed to complaints
+  of abuse of the intelligence services’ regulatory power which made it impossible to adopt A’s construction (Para 18).
+  It also did not seem right to regard proceedings of the kind intended here as immune from the same requirement for
+  non-disclosure of information as other proceedings against the intelligence services (Para 19). Lord Brown then went
+  on to consider whether there were sufficiently strong arguments available to A which would require the Court to construe
+  section 65 in a way which was contrary to Lord Brown’s initial conclusions as to its construction.</p>
+
+  <p>For the reasons set out below, Lord Brown concluded that there were no such arguments available to A. Lord Brown rejected A’s argument to
+  the effect that to construe section 65 as conferring exclusive jurisdiction on the IPT would constitute an ouster of the
+  jurisdiction of the courts that would be constitutionally objectionable (Para 21). RIPA, the 1998 Act and the
+  Civil Procedure Rules all came into force at the same time as part of a single legislative scheme and it could not be
+  said that section 65(2)(a) was ousting some pre-existing right (Paras 21-22). Parliament had not ousted judicial
+  scrutiny of the acts of the intelligence services, but had simply allocated that scrutiny (as to
+  section 7(1)(a) proceedings) to the IPT (Para 23-24). </p>
+
+  <p>Lord Brown also rejected the argument that forcing A’s article 10 challenge into the IPT would result in breaches of article 6
+    of the Convention. Claims against intelligence services inevitably raise special problems that cannot be dealt with in the same
+    way as other claims and this was recognised both domestically and by the European Court of Human Rights (Para 26).
+    The Court would be going further than the Strasbourg jurisprudence if it were to hold that the IPT procedures are necessarily
+    incompatible with article 6(1) and it would decline to do so here (Para 30). Even if the IPT’s rules are in any way incompatible
+    with article 6, the remedy would be to modify them, instead of adopting some artificially limited construction of the IPT’s
+    jurisdiction (Para 31). The anomalies which A alleged would arise if the Court of Appeal’s construction were to be adopted also did
+    not cast doubt on the correctness of the Court of Appeal’s decision (Paras 32-37).</p>
+
+<p>Hearing start date: 2009 Oct 19</p>
+<p>Hearing end date: 2009 Oct 20</p>
+  <p></p>
+
+</div>
+
+
+
+
+
+<!--<section id="all" class="video">
+      <p></p>
+    <video id="myVideo" preload="metadata" controls crossOrigin="anonymous">
+    <source src='https://tna-video-player.s3.amazonaws.com/66/UKSC/1/cr1-09-10-19-session-1_imx30_1.mp4' type='video/mp4'>
+      <track label="English subtitles" kind="subtitles" srclang="en" src="http://mainline.i3s.unice.fr/mooc/elephants-dream-subtitles-en.vtt">
+      <track label="Deutsch subtitles" kind="subtitles" srclang="de" src="http://mainline.i3s.unice.fr/mooc/elephants-dream-subtitles-de.vtt">
+      <track id="chapters" label="English chapters" kind="chapters" srclang="en" src="chapters_num2.vtt" default>
+    </video>
+    <button disabled id="buttonEnglish" onclick="loadTranscript('en');">
+      Display English transcript
+    </button>
+    <button disabled id="buttonDeutsch" onclick="loadTranscript('de');">
+      Display Deutsch transcript
+    </button>
+
+<!-- bar element below added in from index5.html - chapters-->
+<!--<div id="bar"></div>
+
+
+      <div id="transcript"></div>-->
+
+
+
+<!-- CHAPTERS - SCRIPT BELOW ADDED CHAPTER FROM index5.html-->
+    <script type="text/javascript">
+        var v = document.querySelector("video");
+        var t = document.querySelector("track");
+        var b = document.querySelector("#bar");
+
+        const skipButtons = all.querySelectorAll('[data-skip]');
+        const ranges = all.querySelectorAll('.player__slider');
+
+
+        v.addEventListener('click',play,false);
+        v.addEventListener('timeupdate',update,false);
+        t.addEventListener('loaded',render,false); // Bug in FF31 MAC: wrong event name
+        t.addEventListener('load',render,false);
+
+        skipButtons.forEach(button => button.addEventListener('click', skip));
+        ranges.forEach(range => range.addEventListener('change', handleRangeUpdate));
+
+        function play() {
+          if(v.paused) { v.play(); } else { v.pause(); }
+        }
+
+        function update() {
+          var p = v.currentTime/v.duration*100;
+          /*b.style.background = "linear-gradient(to right, #880 "+p+"%, #555 "+p+"%)";*/
+        }
+
+        function render() {
+          var c = v.textTracks[0].cues;
+          for (var i=0; i<c.length; i++) {
+            var s = document.createElement("span");
+            s.innerHTML = c[i].text;
+            s.setAttribute('data-start',c[i].startTime);
+            s.style.width = ((c[i].endTime-c[i].startTime)/888*480-7)+'px';
+            s.addEventListener("click",seek);
+            b.appendChild(s);
+          }
+        }
+
+        function seek(e) {
+          v.currentTime = this.getAttribute('data-start');
+          if(v.paused) { v.play(); }
+        }
+
+        /* This works with the dataskip buttons in the html */
+        function skip() {
+          v.currentTime += parseFloat(this.dataset.skip);
+        }
+
+        function handleRangeUpdate() {
+        video[this.name] = this.value;
+        console.log(this.name);
+        console.log(this.value);
+        }
+
+      </script>
+  </section>
+
+
+
+</html>
