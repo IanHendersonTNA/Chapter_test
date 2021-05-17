@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Guide to HTML5 video: chapter 9: example 2</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+  html {
+      --scrollbarBG: #8BA4AE;
+      --thumbBG: #DEE5E8;
+    }
+
+    body::-webkit-scrollbar {
+      width: 15px;
+    }
+
+    body::-webkit-scrollbar-track {
+      background: var(--scrollbarBG);
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background-color: var(--thumbBG);
+      border-radius: 20px;
+      border: 1px solid var(--scrollbarBG);
+    }
+
+        
+        body {
+      font-family: "Segoe UI", Helvetica, sans-serif !important;
+       font-family: roboto mono; !important;
+     scrollbar-width: thin;
+      scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+      
+    }
+        
+        
+        
+      .box-div1 {
+          overflow: visible;
+          padding-bottom: 0px;
+          padding-top: 0px;
+          margin-top: 0px;
+          margin-bottom: 0px;
+          
+/*          background-color: orchid;*/
+      }
+        
+         .float-left {
+      float: left;
+        position: relative;
+        padding-right: 20px;
+        margin-right: 10px;
+             margin-left: 10px;
+
+        }
+        
+        
+           .float-left2 {
+      float: left;
+/*        position: relative;*/
+        padding-right: 20px;
+        margin-right: 10px;
+             margin-left: 10px;
+
+        }
+    
+
+    p {
+      margin: 5px 15px 5px 15px;
+      line-height: 20px;
+         /*font-family: roboto mono; !important;*/
+    }
+        
+    h1 {
+      margin: 30px 15px 15px 10px;
+      font-weight: 700;
+        font-family: 'roboto mono medium', roboto mono;
+      
+        color: #F6D553;
+        
+        color: black;
+       /* color: #F6D553;*/
+    text-shadow: -1px 0 #F6D553, 0 1px #F6D553, 1px 0 #F6D553, 0 -1px #F6D553;
+        text-shadow: 2px 2px 4px #000000;
+        text-shadow: -1px 0 #F6D553, 0 1px #F6D553, 1px 0 #F6D553, 0 -1px #F6D553;
+    }
+
+    h2 {
+      margin: 15px 15px 5px 15px;
+      font-weight: 600;
+    
+    font-family: 'roboto mono medium', roboto mono;
+      font-size: 28px;
+        color: #F6D553;
+        
+        color: black;
+       /* color: #F6D553;*/
+    text-shadow: -1px 0 #F6D553, 0 1px #F6D553, 1px 0 #F6D553, 0 -1px #F6D553;
+        text-shadow: 2px 2px 4px #000000;
+        text-shadow: -1px 0 #F6D553, 0 1px #F6D553, 1px 0 #F6D553, 0 -1px #F6D553;
+    }
+
+    h3 {
+      margin: 5px 15px 0px 10px;
+      font-weight: 700;
+    }
+
+    h4 {
+      margin: 15px 15px -5px 10px;
+      font-weight: 600;
+    }
+
+h5 {
+      margin: 15px 15px -5px 10px;
+      font-weight: 400;
+    text-decoration: underline;
+    }
+
+.img-cap {
+      margin: 15px 15px -5px 10px;
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+  ul,
+    ol {
+      margin: 5px 5px 0px 0px;
+      font-weight: normal;
+    }
+
+ul>li>p,
+    ol >li>p {
+      margin: 10px 0px 0px 0px;
+      font-weight: normal;
+        /*font-family: roboto mono; !important;*/
+    }
+
+ ul.no-dec >li,
+    ol.no-dec {
+      margin: 5px 5px 0px 0px;
+        /*font-family: roboto mono; !important;*/
+        
+      font-weight: normal;
+      list-style-type: none;
+    }
+
+    li {
+      margin: 0px 5px 10px 0px;
+      font-weight: normal;
+        /*font-family: roboto mono; !important;*/
+    }
+
+ .credit{
+          font-size: 12px;
+          font-weight: 700;
+          margin-top: -5px;
+          
+      }
+
+        
+        
+        
+        
+      
+      </style>
+  </head>
+  <body>
+    <h3>Video Presented with Simple Interactive Transcript</h3>
+    
+    <style type="text/css">
+      div#transcriptText {
+        cursor: pointer;
+      }
+    </style>
+    
+    <div class="box-div1">
+    <div id="videoBox">
+      <video poster="" controls style="width:430px; border-radius: 6px; padding-right: 15px;" class="float-left">
+        <source src="https://ds-live-videos.s3.amazonaws.com/66/UKSC/1/cr1-09-10-19-session-1_imx30_1.mp4"  type="video/mp4">
+      </video>
+    <div id="speaking" aria-live="rude" style="display: none;"  class="float-left"> 
+    </div>
+     <h5>Features</h5>
+       <ul>
+           <li>Text transcript is presented alongside the video</li>
+           <li>Transcript is synched with video playback via HTML encoded cues. Cues are located within HTML &lt;p&gt; tag elements. 
+           <li>The transcript is retained within the page content. As such it is easy to edit or add to if page encoding is accessible but the transcript is not directly accessible for easy copying or viewing.</li>
+           <li>The transcript is totally independent of any subtitles or captions for the video.</li>
+           
+       </ul>
+             
+    <div id="transcriptBox" style="width:450px; padding-right: 15px;">
+      
+      
+      <div id="transcriptText" class="float-left2" style="height:250px; overflow-y:scroll; padding:0px; background-color:#FAF9F8; border:2px black solid; border-radius: 6px;">
+        <p id="c1" class="cue" data-time="0.0" aria-live="rude" tabindex="1">
+          [Image: UKSC logo on black background]
+        </p>
+        <p id="c2" class="cue" data-time="3.0" aria-live="rude" tabindex="1">
+          [Introductory titles and count-down clock.]
+        </p>
+        <p id="c3" class="cue" data-time="17.0" aria-live="rude" tabindex="1">
+          [Change of scene: Courtroom, those present stand as Justices enter the room.]
+        </p>
+        <p id="c4" class="cue" data-time="38.0" tabindex="1">
+          [As Justices take their seats all others take theirs. Usher makes indistinct statement of case details.]
+        </p>
+        <p id="c5" class="cue" data-time="42.0" tabindex="1">
+          Lord Phillips of Worth Matravers, KG: "Yes, Mr Moore."
+        </p>
+        <p id="c6" class="cue" data-time="44.0" aria-live="rude" tabindex="1">
+          Mr Moore, lawyer: "My Lords, I appear on behalf of uh, the appellant - I'll refer to simply as 'A', along with Mr Vasal Adams. My learned friends: Mr Jonathan Crow, Mr Jason Copel appear for the respondent and my learned friends: Lord Panic and Mr Higgin uh, appear on behalf of justice as an intervener in this appeal."
+        </p>
+        <p id="c7" class="cue" data-time="68.0" aria-live="rude" tabindex="1">
+          "Lords, this is an appeal against a decision of the court of appeal of the 18th of February of this year, that the Administrative Court has no jurisdiction to hear proceedings brought by 'A' against the respondent pursuant to Section 7-1A of the Human Rights Act."
+        </p>
+        <p id="c8" class="cue" data-time="87.0" aria-live="rude" tabindex="1">
+          [--------- Demo transcript extract cut at this point  ------------------------------------]
+        </p>
+        
+        <p id="c9" class="cue" data-time="100.0" aria-live="rude" tabindex="1">[--------- Demo transcript extract cut at this point  ------------------------------------]</p>
+        <p id="c10" class="cue" data-time="110.0" aria-live="rude" tabindex="1">[--------- Demo transcript extract cut at this point  ------------------------------------]</p>
+        <p id="c11" class="cue" data-time="120.0" aria-live="rude" tabindex="1">[--------- Demo transcript extract cut at this point  ------------------------------------]</p>
+        
+         <p id="c12" class="cue" data-time="130.0" aria-live="rude" tabindex="1">[--------- Demo transcript extract cut at this point  ------------------------------------]</p>
+        <p id="c13" class="cue" data-time="140.0" aria-live="rude" tabindex="1">[--------- Demo transcript extract cut at this point  ------------------------------------]</p>
+        <p id="c14" class="cue" data-time="150.0" aria-live="rude" tabindex="1">[--------- Demo transcript extract cut at this point  ------------------------------------]</p>
+        </div>         
+          </div>
+        
+        <p>Note that the active cue is not highlighted or otherwise differentiated from succeeding cue text apart from scrolling to the top of the transcript.</p>
+         
+          <p>Clicking on an individual snippet of transcript text will navigate the video to the appropriate point of playback, as determined by the relevant time-data stamp in the underlying cues.</p> 
+        <br><br>
+         <p class="credit">Model derived from Chapter 9: example 2 of 'Definitive Guide to HTML Video' by Silvia Pfeiffer. Published by Apress, 2010</p>
+          
+           </div> 
+           
+    </div>
+     <script type="text/javascript">
+    window.onload = function() {
+      // get video element
+      var video = document.getElementsByTagName("video")[0];
+      var transcript = document.getElementById("transcriptBox");
+      var speaking = document.getElementById("speaking");
+      
+      // register events for the clicks on the text
+      var cues = document.getElementsByClassName("cue");
+      for (i=0; i<cues.length; i++) {
+        cues[i].addEventListener("click", function(evt) {
+          var start = parseFloat(this.getAttribute("data-time"));
+          video.currentTime = start;
+          video.play();
+        }, false);
+      }
+      
+//      // pause video as you mouse over transcript
+//      transcript.addEventListener("mouseover", function(evt) {
+//        video.pause();
+//      }, false);
+      
+      // scroll to text as video time changes
+      video.addEventListener("timeupdate", function(evt) {
+        if (video.paused || video.ended) {
+          return;
+        }
+        // scroll to currently playing time offset
+        for (i=0; i<cues.length; i++) {
+          if (video.currentTime >= parseFloat(cues[i].getAttribute("data-time")) &&
+              video.currentTime < parseFloat(cues[i+1].getAttribute("data-time"))) {
+            document.getElementById("transcriptText").scrollTop = cues[i].offsetTop -
+              document.getElementById("transcriptText").offsetTop;
+            if (cues[i].getAttribute("aria-live") == "rude") {
+              speaking.innerHTML = cues[i].innerHTML;
+            }
+          }
+        }
+      }, false);
+    }
+    </script>
+    
+  </body>
+</html>

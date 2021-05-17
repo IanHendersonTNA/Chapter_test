@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Player Models</title>
+    
+        <!-- Able_Player Dependencies -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="../ableplayer/thirdparty/js.cookie.js"></script>
+
+
+        <!-- VideoJS Player Dependencies -->
+
+<link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet" />
+<script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script>
+
+
+<!-- CSS -->
+<link rel="stylesheet" href="../ableplayer/build/ableplayer.min.css" type="text/css"/>
+
+<!-- JavaScript -->
+ <script src="../ableplayer/build/ableplayer.min.js"></script>
+    
+    
+    
+    
+    
+    
+    
+    <!--MAIN CSS -->
+ 
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+ <link rel="stylesheet" href="style.css">
+  <style>
+    html {
+      --scrollbarBG: #8BA4AE;
+      --thumbBG: #DEE5E8;
+    }
+
+    body::-webkit-scrollbar {
+      width: 15px;
+    }
+
+    body::-webkit-scrollbar-track {
+      background: var(--scrollbarBG);
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background-color: var(--thumbBG);
+      border-radius: 20px;
+      border: 1px solid var(--scrollbarBG);
+    }
+
+ 
+  /*--END OF MAIN PAGE CSS --*/
+   
+   /*--PLAYER CSS --*/
+   
+   
+           
+      
+      #flex-parent>.demo-container{
+      border: 2px solid black;
+        border-radius: 6px;  
+      text-align: left;
+    }
+      
+      #flex-parent>.demo-container-black{
+      border: 2px solid black;
+        border-radius: 6px;  
+      text-align: left;
+    }
+      
+         .demo-container {
+/*                margin: auto;*/
+/*                width: 720px;*/
+                background-color: #8BA4AE;
+                margin: 0px 15px 0px 15px;
+                border: 3px solid black; 
+            }
+      
+       .demo-container-black {
+/*                margin: auto;*/
+/*                width: 720px;*/
+                background-color: black;
+                margin: 0px 15px 0px 15px;
+                border: 3px solid black; 
+         }
+      
+      .demo-head {
+          margin: 0px 15px 0px 15px;
+      }
+
+    
+            video {
+                display: block;
+                margin: auto;
+            }
+
+            .highlighted {
+                background-color: yellow;
+            }
+
+            .synchronized-subtitle-display ol {
+                max-height: 10em;
+
+                position: relative;
+                overflow-y: scroll;
+
+                padding: 2px;
+                margin: 0px 15px 0px 15px;
+            }
+
+            .synchronized-subtitle-display.expanded ol {
+                max-height: 30em;
+            }
+
+            .synchronized-subtitle-display li {
+                list-style-type: none;
+            }
+
+            .synchronized-subtitle-display li:before {
+                content: attr(data-start-time) "\": ";
+                font-weight: bold;
+            }
+
+            #cite {
+                text-align: left;
+                font-size: smaller;
+            }
+      
+      
+      #cont0 {
+        width: 930px;
+          height: 565px;
+          padding: 0;
+          margin: 0px 0px 0px 15px;
+ 
+
+      }
+      
+      #obj0 {
+          overflow: hidden;
+          width: 920px;
+          height: 565px;
+          margin: 0;
+          padding: 0;
+          margin: 0px 0px 0px 0px;
+/*
+           border: solid 2px black;
+          border-radius: 6px;
+*/                  
+      }
+            
+       #cont1 {
+        width: 930px;
+          height: 570px;
+          padding: 0;
+          margin: 0px 0px 0px 15px;
+ 
+
+      }
+      
+      #obj1 {
+          overflow: hidden;
+          width: 920px;
+          height: 570px;
+          margin: 0;
+          padding: 0;
+          margin: 0px 0px 0px 0px;
+/*
+           border: solid 2px black;
+          border-radius: 6px;
+*/                  
+      }
+      
+    
+      #cont2 {
+        width: 900px;
+          height: 730px;
+          padding: 0;
+/*          margin: 0px 0px 0px -106px;*/
+          margin-left: 15px;
+      }
+      
+      #obj2 {
+          overflow: hidden;
+          width: 940px;
+          height: 880px;
+          margin: 0;
+          padding: 0;
+          margin: 0px 0px 0px 0px;
+     }
+      
+      
+        #cont3 {
+        width: 950px;
+          height: 760px;
+          padding: 0;
+/*          margin: 0px 0px 0px -106px;*/
+          margin-left: -40px;
+      }
+      
+      #obj3 {
+          overflow: hidden;
+          width: 1050px;
+          height: 880px;
+          margin: 0;
+          padding: 0;
+          margin: 0px 0px 0px 0px;
+     }
+      
+      
+          #cont4 {
+        width: 900px;
+          height: 500px;
+          padding: 0;
+/*          margin: 0px 0px 0px -106px;*/
+          margin-left: 15px;
+      }
+      
+      #obj4 {
+          overflow: hidden;
+          width: 930px;
+          height: 500px;
+          margin: 0;
+          padding: 0;
+          margin: 0px 0px 0px 0px;
+          border: 2px solid black;
+          border-radius: 6px;
+     }
+      
+       #cont5 {
+        width: 930px;
+          height: 393px;
+          padding: 0;
+          margin: 0px 0px 0px 15px;
+         background-color: :black;
+       }
+      
+      #obj5 {
+          overflow: hidden;
+          width: 920px;
+          height: 390px;
+          margin: 0;
+          padding: 0;
+          margin: 0px 0px 0px 0px;/*
+           border: solid 2px black;
+          border-radius: 6px;
+*/                  
+      }
+      
+     #cont6 {
+        width: 940px;
+          height: 400px;
+          padding: 0;
+          margin: 0px 0px 0px 15px;
+         background-color: :black;
+       }
+      
+      #obj6 {
+          overflow: hidden;
+          width: 940px;
+          height: 400px;
+          margin: 0;
+          padding: 0;
+          margin: 0px 0px 0px 0px;/*
+           border: solid 2px black;
+          border-radius: 6px;
+*/                  
+      }
+      
+        #cont7 {
+        width: 920px;
+          height: 1410px;
+          padding: 0;
+          margin: 0px 0px 0px 15px;
+         background-color: :black;
+            border: 1px solid red;
+       }
+      
+      #obj7 {
+          overflow: hidden;
+          width: 930px;
+          height: 1410px;
+          margin: 0;
+          padding: 0;
+          margin: 0px 0px 0px 0px;/*
+           border: solid 2px black;*/  
+          border-radius: 6px;   
+          border: 3px solid #607D8B;
+             
+      }
+      
+      
+             .float-left-text1 {
+      float: left;
+        position: relative;
+        /*padding-right: 20px;*/
+        margin-right: 10px;
+       width: 380px;
+       height: 220px;
+}
+      
+        </style>
+   
+   
+   
+   
+   <!-- ENDS OF PLAYER CSS -->
+   
+
+   
+   
+   
+   
+   
+   
+    
+</head>
+<body style="font-family: sans-serif;">
+  <div class="page">
+    <!--NAVBAR-->
+  
+    
+     
+       <div class="w3-top">
+<div class="navbar w3-blue-grey">
+  <a href="index.html" class="w3-bar-item w3-button w3-mobile navbar-link">Home</a>
+  
+  <!--<div class="w3-dropdown-hover w3-mobile navbar-link">
+    <button class="w3-button">Research Proposals <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+        <a href="Research_Proposal_Transcription.html" class="w3-bar-item w3-button w3-mobile navbar-link">AV Transcription</a>
+        <a href="Research_Proposal_Chaptering.html" class="w3-bar-item w3-button w3-mobile navbar-link">AV Chaptering</a>
+        <a href="Work_Plan.html" class="w3-bar-item w3-button w3-mobile navbar-link">Work Plan</a>
+      </div>
+    </div>
+    -->
+    
+     <a href="Research_Project_Overview.html" class="w3-bar-item w3-button w3-mobile navbar-link">Project Overview</a>
+    
+<!--
+    
+  <a href="HowSpeechToTextWorks.html" class="w3-bar-item w3-button w3-mobile navbar-link">Speech to Text</a>
+-->
+   
+   
+    <div class="w3-dropdown-hover w3-mobile navbar-link">
+    <button class="w3-button navbar-link-dropdown">Speech to Text <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+        <a href="HowSpeechToTextWorks.html" class="w3-bar-item w3-button w3-mobile navbar-link">Speech &amp; Speech Recogntion</a>
+        <a href="Automated_Transcription_Service_Testing.html" class="w3-bar-item w3-button w3-mobile navbar-link">Testing Transcription Services</a>
+       <!-- <a href="Work_Plan.html" class="w3-bar-item w3-button w3-mobile navbar-link">Work Plan</a>-->
+      </div>
+    </div>
+   
+   
+   
+   
+   
+   <div class="w3-dropdown-hover w3-mobile navbar-link">
+    <button class="w3-button navbar-link-dropdown">AV Transcription &amp; Chaptering <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+       
+       
+        <a href="Sub_Cap_Transcp.html" class="w3-bar-item w3-button w3-mobile navbar-link">Textural Representation of Speech</a>
+        <a href="Player_Models.html" class="w3-bar-item w3-button w3-mobile navbar-link">AV Player Models</a>
+       
+       <!-- <a href="Work_Plan.html" class="w3-bar-item w3-button w3-mobile navbar-link">Work Plan</a>-->
+      </div>
+    </div>
+ 
+   
+<!--
+   <div class="w3-dropdown-hover w3-mobile navbar-link">
+    <button class="w3-button navbar-link-dropdown">Testing &amp; Models <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+        <a href="Automated_Transcription_Service_Testing.html" class="w3-bar-item w3-button w3-mobile navbar-link">Testing Services</a>
+        <a href="Player_Models.html" class="w3-bar-item w3-button w3-mobile navbar-link">Player Models</a>
+       <a href="Work_Plan.html" class="w3-bar-item w3-button w3-mobile navbar-link">Work Plan</a>
+      </div>
+    </div>
+-->
+   
+   
+   
+   
+   
+   
+   
+    <!--<a href="Automated_Transcription_Services.html" class="w3-bar-item w3-button w3-mobile navbar-link">Transcription Services</a>
+    
+    <a href="index_RENAME.html" class="w3-bar-item w3-button w3-mobile navbar-link">Player Work</a>
+    
+  <a href="Work_Plan.html" class="w3-bar-item w3-button w3-mobile navbar-link">Work Plan</a>-->
+</div>
+   </div>
+   <!--NAVBAR-->
+   
+   
+ <!--   <div class="w3-top">
+    <div class="navbar w3-blue-grey">
+    <a href="index.html" class="w3-bar-item w3-button w3-mobile navbar-link w3-black">Home</a>
+    
+     <div class="w3-dropdown-hover w3-mobile navbar-link">
+      <button class="w3-button dropdown-link">Digital Formats<i class="fa fa-caret-down"></i></button>
+      <div class="w3-dropdown-content w3-bar-block w3-dark-grey navbar-link">
+        <a href="Apple_ProRes_LT.html" class="w3-bar-item w3-button w3-mobile navbar-link">Apple ProRes LT</a>
+        <a href="Work_Plan.html" class="w3-bar-item w3-button w3-mobile navbar-link">---2</a>
+        <a href="#" class="w3-bar-item w3-button w3-mobile navbar-link">---3</a>
+      </div>
+      </div>-->
+   
+   
+   <div id="flex-parent" class="double-border">
+ 
+        <h1 id="model-links">Player Models with Transcripts &amp; Chapters</h1>
+            <p class="explain">Page content best viewed at a browser width of 980px or higher</p>
+            
+            <p><strong>This page deals with methods of presenting text transcripts of audio associated with AV files displayed within HTML web pages.</strong></p>
+            
+           
+            
+            <h2>Transcript Types</h2>
+    <p>Full-text transcripts derived from the audio track of AV (audio-visual) files are a means of making this sound content accessible to hard-of-hearing users,- and visually-impaired users via screen-reading devices. It  also presents a more interopable and,- where a text transcript can be used or accessed independent of the AV, a more portable manifestation that can then be used in many applications.</p>
+    <p>For TNA transcripts would be particularly useful in the presentation of our video collections such as UKSC or LEV, which consist generally of long duration files containing footage of court-session, or inquiry proceedings, where near continual recorded speech is the primary information component.</p>
+    
+    
+    
+                   <!-- TRANSCRIPT DESCRIPTION -->   
+           
+    <p>Two types of transcripts can be provided:</p>
+    <ul>
+      <li><strong><em>Static or Plain transcripts</em></strong> - where the transcript is provided in text form but is independent of the AV source.
+        These could simply be provided as downloads or presented alongside the AV player</li>
+      <li><strong><em>Interactive transcripts</em></strong>, - where the transcript is delivered, integrated as part of AV file playback, and the display of text is time-synched to speech in the AV source. This is enabled by means of underlying, encoded time-indexes (- a sequence of characters or encoded information designating a particular event in time). These time-indexes can potentially be used to navigate playback along the AV duration timeline - clicking a particular text 'snippet' would navigate playback to the relevant point along the AV timeline. The automated scrolling of transcript to keep the current text within visual focus is a possible feature.</li>
+    </ul>
+    
+    <h3>Static/ Plain Transcripts</h3> 
+    <p>It is of course, possible to just provide a transcript in the form of a block of text, either written within the body of the HTML page itself, or otherwise sourced from content of a separate document. Presenting a 'static' or 'plain' transcript in this manner is a simple arrangement but does not carry the benefits of interactive transcripts.</p> 
+                   
+    <!-- MODEL code_c9_2 - Plain_transcript.html -->
+    <div id="cont0" class="demo-container">
+    <object id="obj0" type="text/html" data="code_c9_2 - Plain_transcript.html"></object>  
+    </div>
+       <br>
+                  
+       <h3>Text Support for AV in HTML5 via the <span style="color: brown;">&lt;track&gt;</span> Element</h3> 
+       
+          <h4>HTML5</h4>
+       <p>HTML5 is the fifth and latest major HTML version, and a W3C (World Wide Web Consortium) recommendation. The specification was designed to improve HTML structure and implementation, and added native support for multimedia. It ensures greater interopability and more consistent rendering in browsers and apps across different platforms and devices. HTML5 introduced the <span class="span-code">&lt;audio&gt;</span> and <span class="span-code">&lt;video&gt;</span> tags, which provide a simple methods of embedding AV within compliant webpages.</p> 
+
+    <!--HTML5 ELEMENTS-->
+
+    <h4>The <span style="color: brown;">&lt;track&gt;</span> Element</h4>
+    <p><span class="span-code">&lt;track&gt;</span> is a component element that can be used inside HTML5 <span class="span-code">&lt;audio&gt;</span> and <span class="span-code">&lt;video&gt;</span> tags and is used to reference external time-synced text files (such as WebVTT format) and thereby allow interaction with AV time-based events.</p>
+    
+    
+   
+    <p>Within the <span class="span-code">&lt;track&gt;</span> element there is a  <span class="code-blue">kind=""</span> declaration that relates to how the external source file is being applied:</p>
+    <ul>
+     <li><strong>captions</strong> - a transcription of speech but can also include details of other sound events
+        </li>
+      <li><strong>subtitles</strong> - transcription of speech in translation</li>
+      
+      <li><strong>descriptions</strong> - text descriptions of scenario and sound events</li>
+      <li><strong>chapters</strong> - navigation to pre-set points along the the AV timeline</li>
+      <li><strong>metadata</strong> - metadata tracks are used to carry additional data (JSON, XML  etc.) based on time-indexes. An app can then 'listen' for these cue events and as they arrive extract the text from each (e.g. processing or interaction by JavaScript via a <span class="span-code">TimedTrackCueList</span>) and use the results to perform scripted changes or actions timed to playback.</li>
+    </ul>
+    <p>It is possible to use multiple instances of tracks within a single video element. In the example shown in the image below there are 3 instances employed: 
+     <ol>
+         <li>chapters for navigation</li>
+         <li>captions in English</li>
+         <li>subtitles in Welsh</li>
+         
+       
+     </ol>  
+       <p class="img-cap">Image below: An HTML5 <span class="span-code">&lt;video&gt;</span> element incorporating 3 <span class="span-code">&lt;track&gt;</span> elements:</p>
+       <img src="images\video_tag_track_example.PNG" />     
+
+    <p>Captions or subtitles will normally render within the player's view-port. Where tracks are declared <strong><em>'descriptions'</em></strong> the text will then be available to screen readers, and via screen-readers it is then possible for a Braille devices to access that information.</p>        
+                  
+     <div class="box-div1-25 explain">
+                
+<div class="float-left-text1">
+<p class="span-code">
+    <br>
+     VTT - Description for a Court Session Video <br>
+      <br>
+       Beginning of the Court Session <br>
+        00:00:01.000 --> 00:00:52.000<br>
+        Justices enter the room<br>
+        All stand<br>
+        00:00:53.000 --> 00:01:12.000<br>
+        Justices take their seats <br>
+        All others take their seats</p>
+       </div>
+       
+        <h4><strong>Example of 'descriptions' from a WebVTT format file</strong></h4>
+        <p>Descriptions are intended to be accessed by assistive-technology equipment. The text describes the visual content, set by time-code references. The text can be used for speech synthesis by screen-reader to provide vision-impaired users with an audio guide to establish a scenario and to describe events in context. </p>
+            
+        <p>Descriptions can be employed featuring the same markup formatting as captions or subtitles, and using this screen readers can convey emphasis to the user.
+            </p>
+             </div>
+   
+   
+   
+   
+    <h4>WebVTT files</h4>
+    <p>Web Video Text Tracks (WebVTT) originally WebSRT (Web Subtitle Resource Tracks) is a W3C (World Wide Web Consortium) standard to be used in conjunction with the HTML5 <span class="span-code">&lt;track&gt;</span> element, and are used as source files for the display of text to appear in time-sync with AV playback. The format employs a simple data arrangement. The functional part of WebVTT encoding is a 'WebVTT cue block' consists of the following elements, in sequence order:</p>
+    <ol>
+      <li><strong>cue identifier</strong> - placed on the initial line (above each sequential time-index) this can be denoted simply by  sequential number, or a text string can be applied (e.g. 'Radcliffe-1', 'Outdoor-scene-1') e.g. to declare a speaker's name, or denote a scene change.</li>
+      <li><strong>cue timings</strong> - each timecode <strong><em>'cue'</em></strong> value-pair are declared in <strong><em>hr: min: sec, msec</em></strong> format:
+        <span class="span-code">00:00:00,000 --&gt; 00:00:05,000</span>, the starting point and end-point of the timecode period being separated by a textural arrow.
+      </li>
+      <li><strong>cue payload</strong> - the associated text to appear during the specified timecode period is written directly below the timecode. HTML style text formatting markup and CSS styling can be applied to text.</li>
+    </ol>
+   <p class="img-cap">Example WebVTT 'cue block' from a simple caption file</p> 
+<p class="span-code">1 <br>
+    00:00:41.700 --> 00:00:43.000<br>
+    Yes, Mr Moore</p>
+    
+    
+   <p><strong>Links</strong>
+   <br>
+    <a target=”_blank” href="https://www.w3.org/WAI/WCAG21/Techniques/html/H95.html">Using the track element to provide captions</a> <br>
+   <a target=”_blank” href="https://w3c.github.io/webvtt/#webvtt-cue-text" >WebVTT: The Web Video Text Tracks Format</a>
+   <br>
+         <a target=”_blank” href="https://www.w3.org/wiki/VTT_Concepts#Chapter_Tracks">VTT Concepts</a>
+         <br>
+         <a target=”_blank” href="https://dev.opera.com/articles/an-introduction-to-webvtt-and-track/">An Introduction to WebVTT and &lt;track&gt;</a>
+   </p>
+
+
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                   
+    <h3>Interactive Transcripts from WebVTT Files</h3>
+       <p>As well as supplying the text for captions and subtitles within the confines of the media player, WebVTT files can also be referenced in order to generate interactive transcripts. An interactive transcript contains time-synched blocks of text designated by time-indexes, generally called '<span class="code-blue">cues</span>'. These can be used to affect AV playback and control transcript text scrolling, highlighting etc. in the following manner:</p> 
+       <ul>
+       <li>clicking on a particular text block within the transcript would cause AV file playback to be targeted to the corresponding point along the file's timeline </li>
+       <li>as playback progresses and the next point along the timeline is reached that corresponds with a cue's time-index, then the corresponding block of text in the transcript, aligned with that cue is displayed</li>
+       </ul>
+       
+       <p> In coded implementations the current text is often brought into focus and to the viewer's attention in some visual manner e.g. the text formatting may change from normal style, the text may be highlighted, and the text automatically scrolled to retain the visibility of the current and immediately succeeding text.</p>
+      
+      <p>In order to employ interactive transcripts as described in the following models, programmatic interaction with HTML page elements is required, as enabled through the <strong>HTML DOM (Document Object Model)</strong>.  </p>
+    
+            
+            
+                   <!-- HTML DOM DESCRIPTION -->   
+            
+             
+             <h3>The HTML DOM Model</h3>
+             
+              <div class="box-div1">
+              <img src="images/HTML_TAGS.PNG" alt="image of HTML tags" width="484px" class="float-left">
+            
+              <p>HTML is a 'markup language' standard for the creation of web documents, which are structured by a hierarchical arrangement of  element tags. The DOM (Document Object Model) is a W3C (World Wide Web Consortium) standard that defines methods for accessing and interacting with particular document objects. HTML DOM is a programming interface that defines an object-oriented representation of the hierarchical structure of a web-page and ensures consistency of behaviour across browsers.</p>
+                   </div>
+                            
+              <h4>Interacting with elements: the DOM Element Tree</h4>
+             <div class="box-div1">
+             <img src="images/HTML_DOM_ELEMENT_TREE.PNG" alt="" width=24% class="float-left">
+              <p class="">When a web page is loaded into a browser its 'layout engine' then creates a DOM of the page structure, the various elements of which form a tree of (element or node) <strong><em>'objects'</em></strong>. These objects are then identifiable by:</p>
+                                                               
+                                                                
+        <ul class="indent"> <li class="indent">element type (e.g. <span class="span-code">&lt;h1&gt;, &lt;div&gt;, &lt;p&gt; </span>etc.),</li>
+        <li class="indent">or as multiple elements defined as 'classes' (e.g. <span class="span-code">&lt;h1 class="red-header"&gt;, &lt;div class="box1"&gt;, &lt;p class="these-paragraphs"&gt; </span>) </li>
+        <li class="indent">or as individual items, identified by 'id.' (e.g. <span class="span-code">&lt;h1 id="this-one-only"&gt;</span> etc.).</li>
+        </ul>
+       </div>
+            
+            
+         
+    <p>To access a video's property or associated event, you identify it via the specific 'id' or 'class' selector specific to that video element.</p>    
+            
+           <p><span class="span-code">  &lt;video <span class="highlight">id="video"</span>&gt;<br>
+                      &lt;source src="video.mp4" type="video/mp4"&gt;<br>
+                      &lt;track label="English" kind="captions" srclang="en" src="captions.vtt" default&gt;<br>
+                         &lt;/video&gt;</span> 
+                </p>     
+            
+            <p>When extended by the use of script (JavaScript/ JQuery) and in combination with CSS styling interaction further extended functionality is possible, beyond standard playback operation.</p>
+            
+                
+            <h3>Enabling Interactive Transcripts with JavaScript &amp; JQuery via the DOM</h3>
+            <p>JavaScript and JQuery (JQuery - MS's open-source 'dialect' library implementation of the ECMAScript standard that 'vanilla' Javascript is also implementation of) are the scripting languages used to manipulate and control HTML DOM elements, - frequently in combination with CSS (Cascading Style Sheets) in order to effect visual change or animation.</p>
+             <div class="explain">
+                 
+                 <h4>JQuery</h4> 
+                 <p>JQuery is a JavaScript library that was designed to be simple to use, and to overcome the issue of variable interaction and behaviour between 'vanilla' JavaScript and different browser versions. The syntax is simpler and more easily understood, and with generally much less code required to perform a task than would be needed with JavaScript. </p>
+                  <p>Reportedly however, with an increasing tendency for web development work to be performed with libraries such as React and Vue, and using web application frameworks such as Bootstrap and Angular, JQuery implementation may be on the decline.</p>  
+                  
+                      <p>
+            The JQuery library can be instantiated from a hosted copy of the script, or simply as a call to a CDN (Content Delivery Network) by adding this script source reference in the active HTML page:   
+                  <span class="span-code">&lt;script src="https://code.jquery.com/jquery-2.1.0.js"&gt;&lt;/script&gt;</span> <br><br>
+              </p>
+                            
+                   
+                     </div>
+                  
+       <p>JavaScript interfaces with HTML via the DOM, which exposes HTML elements as objects along with their <strong><em>attribute</em></strong> values and access functions. Javascript can then interact with these objects and access attribute values. 'WebIDL' (Web Interface Definition Language) specifies the interfaces that are implemented by browser by which objects are exposed to JavaScript.</p>
+          
+            
+            
+         
+             
+           
+           
+    <h4>Content Attributes &amp; IDL attributes</h4>
+    <p>There are different types of attribute that can be applied to HTML elements. Attributes are values that can be used to allow HTML elements to be configured or their behaviour altered. </p>
+    
+    <h5>Content Attributes</h5>
+    <p><strong><em>Content Attributes</em></strong> are those that can be written  within the HTML code and applied to relevant elements e.g. width, height, color etc. (Content Attributes are always string data types).</p>
+    
+   <h5>IDL Attributes</h5>
+    <p><strong><em>IDL (Interface Definition Language) Attributes</em></strong> (also called DOM Attributes or JavaScript property) reflect the <strong><em>state</em></strong> that an element is in and can be read or set using JavaScript. This DL attribute will use (and may also alter) an underlying content attribute for the targeted HTML element. IDL attributes may be data-types other than string. Only a few can be set that allow changing the playback of the media element.</p>
+    
+    <h5>AV Playback-Related Attributes</h5>
+    <ul>
+      <li>seeking</li>
+      <li>paused</li>
+      <li>ended</li>
+      <li>defaultPlaybackRate</li>
+      <li>playbackRate</li>
+      <li>currentTime - currentTime can be set by JS to cause navigation to a designated playback point, this then triggers a <span class="span-code">timeupdate</span> event</li>
+    </ul>
+    
+     <p>(There are also <strong><em>'Boolean'</em></strong> attributes, representing the current, switchable state of an HTML element. For example the <span class="span-code">autoplay</span> and <span class="span-code">loop</span> attribute can be applied to the <span class="span-code">&lt;video&gt;</span> element to affect default playback behaviour).</p>
+
+     <h4>The HTMLMedia API</h4>          
+    <p>The <strong><em>'HTMLMedia API'</em></strong> is a JavaScript API and part of the  HTML5 standard. Implemented in browsers it allows interaction with the HTML5 <strong><em>media elements</em></strong> -  <span class="span-code">&lt;audio&gt;</span> and <span class="span-code">&lt;video&gt;</span> elements, and it provides a programming interface 'HTMLMediaElement', implemented in the browser, which provides developer access to the control of native HTML5 AV players. The W3C.org's <a target=”_blank” href="https://www.w3.org/2010/05/video/mediaevents.html">HTML5 Video Events and API</a> page presents the HTML5 video element, media API, and demonstrates <strong><em>media events</em></strong>, allowing the viewer to implement changes in video playback operation, and observe the associated changes in the displayed 'Media Property' values. </p> 
+            
+
+
+<h4>Events</h4> 
+     <p>Events are actions or occurrences that happen to HTML elements, which generate
+        a 'signal' to notify when an event has occurred, and then provides a means by which a resulting, automated action may be taken - JavaScript can react to the notification and potentially a coded reaction is fired.</p>  
+           
+        <p> There are two levels of events on a web-page</p>  
+           <ul>
+           <li>
+           browser level events (load, resize, scroll etc.) and</li>
+           <li>DOM level events applied to individual element objects or classes of DOM objects: e.g. onclick, input</li></ul>
+
+        <p>A DOM event relevant to AV playback could be when the user clicks the play/ pause button, that action is an event. In the case of implementing an interactive transcript, an event could be when the user clicks on a block of text in the transcript which carries an underlying time-indexed cue. When a user clicks on that particular cue an associated time value is referenced to then target playback to that point along the video's timeline. </p>
+                 
+                
+              
+            
+          
+            
+                    
+            
+            <!--JAVASCRIPT INTERACTION DESCRIPTION --> 
+            
+                   
+            <h5>EventListeners</h5>
+                <p><strong><em>Event listeners</em></strong> are elements of the DOM which can be added to a web-page script in order to allow the browser to register an action or interaction performed with a page element, - such as a mouse click on a button. In the example below an eventListener is added to the &lt;video&gt; element. </p>   
+                   
+                   
+                     
+                       <p>Example: When a play event occurs this then alerts a JavaScript <strong><em>'interpreter'</em></strong> to trigger a response - a JavaScript function runs: <br>          
+                    
+                         <span class="span-code">video.addEventListener('play', exampleFunction)</span></p>
+                  
+                  
+                  
+                   <p>An event can be explicitly tied to a HTML element. This is known as '<strong><em>binding</em></strong>'. In this case, if an event involving that element is detected then the eventListener directs the JavaScript interpreter to a particular function (when a function runs as a result of an event it is known as 'handler function').</p>  
+                   
+      <h5>eventHandlers</h5>
+          <p>EventHandlers are used to handle actions when something happens to a registered DOM element, e.g. an action to be performed when a user clicks a button. A particular portion of code (a JavaScript function) is run e.g. <span class="span-code">btn.onclick = Toggle;</span></p>
+    
+    <p>In the HTML5 video example below, which features a simple interactive transcript, a JavaScript <strong><em>'onclick'</em></strong> eventHandler is registered against the <strong><em>cues</em></strong> when a user navigates along the video time-line by clicking on a particular <span class="code-blue">cue</span>. The video will them jump to the related time-index obtained from that cue's <span class="code-blue">data-time</span> value (e.g. <span class="span-code">data-time="5.0"</span> - here measured in seconds).</p>
+          
+                <p>An on <strong><em>timeupdate</em></strong> event handler checks the relative positioning of the transcript text and scrolls to the top as a currently active cue is reached in playback.</p>  
+                
+                        
+ <h5>duration, currentTime &amp; timeupdate IDL attributes</h5>                     <p>In order to synch the text within an interactive transcript with the playback position of the AV file's it corresponds to, there has to be an encoded identification of relative position along the timeline by which JavaScript can action a response to a positional or time-based interaction between user navigation, either by targeted point along the AV's timeline, or from cues associated with text blocks within the transcript.</p>
+         <ul>
+          <li>The <strong><em>duration</em></strong> IDL attribute returns the actual duration in seconds (as a float value)</li> 
+           <li>The <strong><em>currentTime</em></strong> IDL attribute returns current time in seconds (as a float value) and the currentTime value can be used to allow script-based control of playback or to trigger an event when a particular value is met. currentTime can be set by JavaScript to cause navigation to a particular playback point, which then triggers a timeupdate event
+           <li>The <strong><em>timeupdate</em></strong> IDL event is triggered whenever the current position changes, either by progressive playback or from user navigation</li>
+        </ul>
+                         
+            
+             <h4>Links:</h4>
+             <p>
+                  <a target=”_blank” href="https://html.spec.whatwg.org/multipage/media.html#timed-text-tracks">HTML Living Standard — Last Updated 10 May 2021</a><br>
+                  <a target=”_blank” href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes">HTML attribute reference</a> <br>   
+                  <a target=”_blank” href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a><br> 
+                   <a target=”_blank” href="https://dev.opera.com/articles/everything-you-need-to-know-html5-video-audio/">Everything You Need to Know About HTML5 Video and Audio</a> <br>
+                   <a target=”_blank” href="https://www.jqueryscript.net/other/Responsive-Interactive-HTML5-Video-Player-With-jQuery-CSS3.html">Responsive Interactive HTML5 Video Player With jQuery / CSS3</a>
+                    
+              </p>
+            
+                   <!-- MODEL code_c9_2.html -->
+                    
+          
+            
+       <h3>Interactive Transcript Model - Transcript Embedded Within HTML <span style="color: brown;">&lt;p&gt;</span> Elements </h3>
+       <p>The <span class="hidelink-note">green button</span> below toggles an overview of the HTML and JavaScript code taken from the <em>'Video Presented with Simple Interactive Transcript'</em> model directly below, and includes details of principle elements and attributes involved in enabling the presentation of the transcript. </p>
+       <br>
+       
+       
+       
+       <p><a href="javascript:unhide('playcode');" class="hidelink">Unhide Example Code from this Model</a></p>
+
+      <div id="playcode" class="hidden" class="img-cent">
+               <p>The principal elements/ attributes in HTML are printed in <span class="code-blue">blue</span> in the HTML section and the associated references or attributes <span class="highlight code-blue">highlighted</span> within the JavaScript code.</p>
+                
+                
+                 <h5> HTML Structure &amp; Elements</h5> 
+                  
+                  
+                 <p class="span-code"> &lt;<span class="code-blue">video</span> poster="image.png" controls style="width:430px; border-radius: 6px;" class="float-left"&gt;<br>
+                    &lt;source src="https://ds-live-videos.s3.amazonaws.com/66/UKSC/1/cr1-09-10-19-session-1_imx30_1.mp4"  type="video/mp4"&gt;<br>
+                  &lt;/video&gt;...<br> <br>
+                  &lt;div id="<span class="code-blue">transcriptBox</span>"  style="width:450px;"&gt;<br>
+                    &lt;div id="transcriptText"
+                 class="float-left"
+           style="height:250px; overflow-y:scroll; padding:5px; background-color:#FAF9F8; border:2px black solid; border-radius: 6px;"&gt;...</p>
+              <p class="span-code">&lt;p <span class="code-blue">id="c1"</span> class="cue" data-time="0.0"  tabindex="1"&gt; [Screen text: "The orange open movie project presents"]&lt;/p&gt;<br>
+              &lt;p id="c2" <span class="code-blue">class="cue"</span> data-time="41.0"  tabindex="1"&gt;
+                [Yes, Mr Moore]
+              &lt;/p&gt; <br>
+              &lt;p id="c3" class="cue" <span class="code-blue">data-time="12"</span>  tabindex="1"&gt;
+                [Screen text: "Elephant's Dream"]
+              &lt;/p&gt;<br>
+             &lt;p id="c4" class="cue" data-time="15.0" <span class="code-blue">tabindex="1"</span>&gt;...</p>
+             
+            
+            
+            
+            <h5> JavaScript Structure &amp; Elements</h5>
+             <p class="span-js-code">
+                         
+                          &lt;script type="text/javascript"&gt;<br>
+                    window.onload = function() {<br>
+                       <span class="explain-code">// get video element</span><br>
+            <span class="tab">var video = document.getElementsByTagName("<span class="highlight code-blue">video</span>")[0];</span> <span class="explain-code">This creates a variable <em>'video'</em> and targets the HTML &lt;video&gt; element.</span><br>
+                 <span class="tab">var transcript = document.getElementById("<span class="highlight code-blue">transcriptBox</span>");</span><br>
+                    <span class="explain-code">// register events for clicks on the transcript text</span><br>
+                      <span class="tab">var cues = document.getElementsByClassName("<span class="highlight code-blue">cue</span>");</span><span class="explain-code">This creates a variable <em>'cues'</em> and selects the HTML &lt;p&gt; elements with the <strong><em>class</em></strong> of 'cue'.</span><br>
+                      <span class="tab">for (i=0; i&lt;cues.length; i++) {</span><span class="explain-code">Iterate through the sequence of numbered cues...</span><br>
+                 <span class="tab">cues[i].addEventListener("<span class="highlight code-blue">click</span>", function(evt) {</span><span class="explain-code">Attach a <em>click event</em> to the cues &lt;p&gt; elements. When a user clicks on a particular cue the associated 'data-time' value is referenced to jump playback to that point in time along the video duration.</span><br>
+                          <span class="tab">var start = parseFloat(this.getAttribute("<span class="highlight code-blue">data-time</span>"));</span> <span class="explain-code">The variable <em>'start'</em> is created and assigned the value of the attribute '<em>data-time'</em> as declared within the &lt;p&gt; cue elements. </span> <br>
+                 <span class="tab"><span class="highlight code-blue">video.currentTime</span> = start;</span><span class="explain-code">The currentTime property either  sets or returns the current playback position (seconds). This allows script control over playback position or the triggering of event upon reaching a particular value.</span><br>
+                          <span class="tab">video.play();</span><br>
+                        }, false);<br>
+                      }<br>
+                
+                <br>
+                     <span class="explain-code"> // scroll to timed text as the video time-code changes.</span><br>
+                 <span class="tab">video.addEventListener("<span class="highlight code-blue">timeupdate</span>", function(evt) {</span> <span class="explain-code"> The <em>'timeupdate'</em> event occurs when the playback position has changed.</span><br>
+                        <span class="tab">if (video.paused || video.ended) {</span><br>
+                          return;<br>
+                        }<br>
+                        <span class="tab">for (i=0; i&lt;cues.length; i++) {</span><br>
+                          <span class="tab">if (video.currentTime &gt;= parseFloat(cues[i].getAttribute("data-time")) &amp;&amp;
+                              video.currentTime &lt;</span><br>
+                 <span class="tab">parseFloat(cues[i+1].getAttribute("data-time"))) {</span>span><span class="explain-code"> If the video.currentTime value is greater or equal to a cue's data-time value and the video.currentTime value is less than the next cue's data-time value...</span><br>
+                 <span class="tab">document.getElementById("transcriptText").scrollTop = cues[i].offsetTop - </span><br> <span class="tab">document.getElementById("transcriptText").offsetTop;</span><span class="explain-code"> ...then scroll the visible portion of the transcript to display the relevant text associated with the data-time value.</span> <br>
+                                <span class="tab"> }</span><br>
+                                <span class="tab">}</span><br>
+                        }<br>
+                      }, false);<br>
+                    }<br>
+                    &lt;/script&gt;<br>
+            
+                 </p>
+            
+             </div> 
+           
+            
+            <!-- DEMO PLAYER -->
+<!--
+            <div class="demo-container">
+              <h3 class="demo-head">Demonstration: synchronized subtitles with HTML5 video</h3>
+              <p>Sourced from:  
+                  JS file: html5-media-synchronized-subtitles.js</p>
+            
+              <video id="player" itemprop="video" crossorigin="anonymous" controls preload="auto" poster="https://content.wdl.org/media/4048/thumbnail/308x255.jpg" class="float-left" style="padding-left: 15px; padding-bottom: 20px;">
+                  <source type="video/mp4" src="https://dl.wdl.org/4048/service/CA167_Ross_Allen_Reptile_Institute.mp4">
+                  <track default label="Subtitles" kind="subtitles" type="text/vtt" src="https://dl.wdl.org/4048/service/4048.vtt">
+              </video>
+            
+              <div hidden class="synchronized-subtitle-display" data-player-id="player" data-click-to-time="true">
+                  <h4 class="collapse-toggle">
+                      Transcript
+                  </h4>
+              </div>
+            
+              <p>
+                  <a href="https://github.com/acdha/html5-media-synchronized-subtitles#notes--browser-compatibility">Notes and Browser Compatibility</a>
+              </p>
+            
+              <p id="cite">
+                  Source: <a href="https://www.wdl.org/en/item/4048/">WDL #4048: Ross Allen Reptile Institute</a>
+              </p>
+                    </div>
+-->
+            
+                
+            <!-- END OF DEMO PLAYER -->
+            
+      
+                <div id="cont1" class="demo-container">
+             <object id="obj1" type="text/html" data="code_c9_2.html"></object>  
+                   </div>          
+                     
+             
+             <br><br><br>
+                
+                <h2>Video Chapters</h2>
+                
+              <p>Video chaptering is the division of a video file's entire playback duration into shorter lengths, these designated to indicate distinct point of interest or significant scene changes along the timeline. It is generally a non-edited, virtual segmentation or division of the file's overall duration into shorter sections, navigation by which is made available in an AV player, chapters appearing as demarcations along the timeline, or a button-array etc.</p> 
+                <p>Chapters can be annotated to provide the viewer with a short text-based synopsis, providing the user with an overview of a videos overall content. In the player model below (<em>'Model AV Player with Chapters'</em>)  the chapters are declared simply by number sequence: 1, 2 etc. </p>
+                
+        
+      <h4>Adding Chapters to YouTube Videos</h4>
+      <p>Online video platforms such as YouTube may feature the option to add chapters to uploaded video. To add chapters to a video uploaded to YouTube all that has to be done is to add time-indexes with titles in the form: 0:00 (mins: secs) into the ‘Description’ field for the video, one for each scene change or other aspect of the footage to be chaptered. This can be done within ‘YouTube Studio’, which is a feature of a 'sign-up' YouTube account. The video timeline can be navigated from the player as shown to the right of the video Description field.
+    </p>
+      <p class="img-cap">Screenshot from YouTube Studio, showing Chapters applied to an uploaded video</p>
+<img src="images/YouTube_Description%20for%20Chapters.PNG" width="1115px" />
+
+     
+     <p><strong>Links</strong> <br>
+<a target=”_blank” href="https://www.youtube.com/watch?v=pvkTC2xIbeY">How to Add Chapters to YouTube Videos | Chapters Explained</a> <br>
+<a target=”_blank” href="https://www.youtube.com/watch?v=8OeETNVoO94">How to add chapters to YouTube video</a>
+</p>
+      
+                
+         <div class="box-div1">
+                
+                   <div class="float-left-text">
+                         
+                    <h3>WebVTT Chapters</h3>
+<p>WebVTT files, which are used for captions and subtitles can also be used for setting chapters.  This is possible by referencing the WebVTT in conjunction with the <span class="span-code">&lt;track&gt;</span> element, and setting type to <strong><em>chapters</em></strong>. Chapters should also be made available to vision-impaired users. WebVTT chapters provide for this via screen reader access.</p>
+
+  <p>In the player model below the chapters are designated by time-indexes held within an external WebVTT file. Each individual chapter is detailed on three lines within the WebVTT content (see sample WebVTT chapter content to the right): </p>
+                   
+  <ol>
+        <li>the name of the chapter</li>
+     <li>each time-stamp declares a start time point to an end time point for each chapter, seperated by <span class="span-code">--></span> and with time-index values defined in <span class="span-code">hr:min:sec.milsec</span> format</li> 
+    <li>the Chapter titles as displayed to the user (in the example simply designated <span class="span-code">C1</span> to <span class="span-code">C5</span></li></ol>
+                                       </div>
+ 
+             <p class="img-cap"><br><br><br> Example WebVTT Chapters file </p>
+              <span class="span-code">  <p>WEBVTT</p>
+                    <p>1 <br>  
+                                   00:00:00.000 --> 00:05:00.000
+                    <br>
+                    C1</p>
+                    
+                                        <p>2 <br>
+                    00:04:48.300 --> 00:05:30.000
+                    <br>
+                    C2</p>
+                    
+                                        <p>3 <br>
+                    00:05:31.000 --> 00:30:00.000
+                    <br>
+                    C3</p>
+                    
+                                        <p>4
+                    00:30:01.000 --> 00:50:00.000
+                    <br>
+                    C4
+                    </p>
+                                        <p>5
+                    00:50:01.000 --> 01:20:00.000
+                    <br>
+                    C5</p></span>
+            
+             </div>
+             
+   
+            
+                 <h3>Video Player with Chapters </h3>
+                 <p>This model player incorporates a clickable chapter array, chapters and time-indexes sourced from an external WebVTT file.</p>
+               
+             <!-- MODEL index5.html -->  
+                    <div id="cont5" class="demo-container-black">
+             <object id="obj5" type="text/html" data="/index5.html"></object>  
+                   </div>
+                
+                
+                <br>
+                
+                
+               <h3 id="int-trans-chap-player">Video Player with Interactive Transcript &amp; Chapters </h3>
+       <p>This model makes use of 3 external WebVTT files: </p>
+              <ol>
+              <li>one is the source for both the English captions and transcript</li>
+               <li>the second is for an alternative language caption and transcript, - in this case Welsh language</li>
+               <li>the third contains the titles and time-indexes for chapters</li>
+              </ol> 
+               
+               <p>The captions are available via the 'hamburger menu' within the player controls. Chapters in this case have been arranged as a button array at the top of the player.</p> 
+               <p>Some thought has been given to providing an improved experience to users in this model, particularly with regards to the viewing of longer duration videos such as court sessions, and additional features have been added:</p>
+               
+               <ul>
+                   <li>Button to show the English transcript, or switch to this if the Welsh transcript is already loaded</li>
+                   <li>Button to show the Welsh transcript, or switch to this if the English transcript is already loaded</li>
+                   <li>Buttons to jump 30secs or 1min backward or forward along the timeline. This is to allow the user to listen over again to content within a short time-frame and without the need to resort to the standard progress bar, as it can be difficult to navigate with this by small increments, - particularly when it is of a limited width, and representing a long playback duration.</li>
+                   <li>A Play Speed control has been provided so the user can slow the playback to better determine an exact statement, or to speed playback in order to scan for a reference or to reach an upcoming point of interest</li>
+                   
+                   
+               </ul>
+               
+                 
+                
+                
+                    <!-- MODEL interactive_transcript9 -->
+                    
+                <div id="cont2">
+             <object id="obj2" type="text/html" data="/interactive_transcript9_SMALL.html"></object>  
+                   </div> <br>
+         <p><strong>Links:</strong><br>
+      <a target=”_blank” href="http://thenewcode.com/977/Create-Interactive-HTML5-Video-with-WebVTT-Chapters">Create Interactive HTML5 Video with WebVTT Chapters</a> <br>
+          <a target=”_blank” href="http://www.kaizou.org/2013/03/subtitles-and-chaptering-using-text-tracks.html">Subtitles and Chaptering using Timed Text Tracks</a><br>
+          <a target=”_blank” href="https://web.dev/media-accessibility/">Media accessibility</a><br>
+          <a target=”_blank” href="https://www.brightcove.com/en/blog/2016/01/how-chapterize-your-videos-using-webvtt-files">How To: Chapterize Your Videos Using WebVTT Files</a> <br>
+            <a target=”_blank” href="http://html5videoguide.net/BeginningHTML5Video/CH4/index.html">Beginning HTML5 media (Player Examples)</a>
+            </p>
+            
+               <br> 
+               <br>  
+                        
+<h2>Using Pre-Built Players with Transcript Support</h2>
+<p>As an alternative to building upon the native HTML5 video player, there are a variety of ready-built embeddable, or downloadable AV players that can be used to supply transcripts on playback. Many such as <a target=”_blank” href="https://www.jwplayer.com/">JWPlayer</a> are proprietary but there are also open source versions such as <a target=”_blank” href="https://ableplayer.github.io/ableplayer/">Able Player</a> <a href="https://videojs.com/">VideoJS</a> and <a target=”_blank” href="http://player.kaltura.com/">Kaltura</a>.  
+<p>Rather than having to download and install, VideoJS and Kaltura players can be embedded by the addition of links to <strong><em>'dependencies'</em></strong> (external files or libraries) in the <span class="span-code"> &lt;head&gt;</span> of the html document. These instantiate the player, which is served from a CDN (Content Delivery Network). One benefit of this is that you don't need to consider potential updates as these will be applied directly from the CDN. Conversely, there is a limited risk that an applied change or update may disable or disrupt some functionality that has a dependency on library elements supplied from the CDN source, or possible loss of playback service in the case of server or network issues, where local caching doesn't prevent an issue arising. </p>
+
+<p><strong>Example of links required to instantiate VideoJS Player into an HTML5 page: </strong>   
+    <br>
+<span class="span-code">&lt;link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet" /&gt;</span>
+<br>
+<span class="span-code">&lt;script src="https://vjs.zencdn.net/7.10.2/video.min.js"&gt;&lt;/script&gt;</span>
+</p>
+
+<p class="img-cap">Example of an embedded instance of VideoJS Player</p>
+<!-- MODEL: VideoJS Player -->
+<div style="margin-left: 15px;">
+    
+     <video
+        id="my-video"
+        class="video-js"
+        controls
+        preload="auto"
+        width="465"
+        height="264"
+        poster="MY_VIDEO_POSTER.jpg"
+        data-setup="{}"
+      >
+        <source src="https://ds-live-videos.s3.amazonaws.com/66/UKSC/1/cr1-09-10-19-session-1_imx30_1.mp4"  type="video/mp4" type="video/mp4" />
+        <source src="MY_VIDEO.webm" type="video/webm" />
+        <p class="vjs-no-js">
+          To view this video please enable JavaScript, and consider upgrading to a
+          web browser that
+          <a href="https://videojs.com/html5-video-support/" target="_blank"
+            >supports HTML5 video</a
+          >
+        </p>
+      </video>
+</div>
+
+
+ <h4>Able Player</h4>  
+ <p>Able Player is an easy to implement, downloadable player. Documented player options and features are relatively well described. The download Zip contains the required JS and CSS, plus numerous sample HTML pages and WebVTT documents. References out  to external 'dependencies' are also required: <br>
+
+<span class="span-code">&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"&gt;&lt;/script&gt;</span>
+<br>
+<span class="span-code">&lt;script src="thirdparty/js.cookie.js"&gt;&lt;/script&gt; </span>
+
+                                   
+ 
+                        
+    <p><span class="quote">"Able Player is a fully accessible cross-browser media player created by accessibility specialist Terrill Thompson. It uses the HTML5 <span class="span-code">&lt;audio&gt;</span> or <span class="span-code">&lt;video&gt;</span> element for browsers that support them. The Able Player module integrates the jQuery Able Player plugin as a file formatter with support for captions, transcripts, and audio description"</span>. <a target=”_blank” href="https://ableplayer.github.io/ableplayer/">https://ableplayer.github.io/ableplayer/ </a></p> 
+                        
+
+<h3>Able Video Player with Interactive Transcript</h3>
+<p>Able Player interactive transcripts are automatically generated from WebVTT chapters, descriptions, and captions/subtitles files. If a transcript is available, a transcript button is added to the Able Player controls.</p>
+                         
+    <!-- MODEL: Able_Player.html -->
+           <div style="margin-left: 15px;"> 
+        <video id="video1" data-able-player="" preload="auto" width="480" height="360" poster="path_to_image.jpg">
+    <!--  <source type="video/webm" src="path_to_video.webm" data-desc-src="path_to_described_video.webm"/>-->
+          <source type="video/mp4" src="https://ds-live-videos.s3.amazonaws.com/66/UKSC/1/cr1-09-10-19-session-1_imx30_1.mp4" data-desc-src="https://ds-live-videos.s3.amazonaws.com/66/UKSC/1/cr1-09-10-19-session-1_imx30_1.mp4"/>
+                         
+  
+<!--<track kind="captions" src="../../ableplayer/media/wwa_captions_en.vtt" srclang="en" label="English captions"/>-->
+<track kind="captions" src="captions-en2_1.vtt" label="English captions"/>
+<!--
+<track kind="descriptions" src="../../HTML5_Video_How_To/captions-en2.vtt"/>
+
+<track kind="chapters" src="../../HTML5_Video_How_To/chapters_num3.vtt"/>
+-->
+</video>
+   </div>
+   
+   <h4>Player Features</h4>
+   <ul>
+       <li>WebVTT captions</li>
+       <li>descriptions can be added</li>
+       <li>auto transcript generation from captions with Auto-Scroll on and off (its also possible to target a custom DIV for transcript presentation</li>
+       <li>playback speed setting</li>
+       <li>the user has control over turning options such as auto-scroll on and off, and can reconfigure the transcript window dimensions etc.</li>
+       <li>it is relatively easy to implement the player with transcript and documented configuration options are well described</li>
+   </ul>
+   
+
+<!--
+                <div id="cont6">
+             <object id="obj6" type="text/html" data="JQuery/Able_Player.html"></object>  
+                   </div>
+-->
+                 
+                          
+                <br>         
+                          
+               <h3>JWPlayer Featuring Transcript Search</h3> 
+       <p>The JWPlayer model below includes an interactive transcript derived from a captions WebVTT file, and WebVTT chapters - upon initialing playback these are visible within the playback progress bar.</p> 
+         
+         <p>The player has the additional feature of an integrated, JavaScript driven search; each query resulting in a search for a match through the caption text content (all strings set to lower case to ensure matches are not missed due to text case differences): </p>
+          <p class="span-code">return q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&amp;'); </p>                  
+                         
+                                               
+                          
+              <!-- MODEL interactive_transcript11 -->
+                    
+<!--
+                <div id="cont3">
+             <object id="obj3" type="text/html" data="/interactive_transcript11 - small.html"></object>  
+                   </div>
+-->  
+                          
+      <p>The embedded page content immediately below <a target=”_blank” href="https://www.jwplayer.com/developers/web-player-demos/interactive-transcripts/">'Interactive Transcripts'</a> is sourced from the  from the <a target=”_blank” href="https://www.jwplayer.com/">JWPlayer website</a>.</p>                    
+                 
+    
+    <div id="cont7">
+             <object id="obj7" type="text/html" data="https://www.jwplayer.com/developers/web-player-demos/interactive-transcripts/"></object>  
+                   </div>       
+                     
+           <p><strong>Links</strong>
+             <br>
+                <a target=”_blank” href="https://www.jwplayer.com/developers/web-player-demos/interactive-transcripts/ ">Interactive Transcripts (JWPlayer demo)</a> <br>
+                 <a target=”_blank” href="https://www.3playmedia.com/learn/how-to-guides/video-js-captions-subtitles/">How to Add Captions, Subtitles, and Interactive Transcripts in Video.js</a>
+             </p>
+                     
+                                  
+                     
+                     
+                     
+       <br><br><br>
+                           
+               <h2>Enhanced Presentation Possibilities</h2>
+                           
+                           
+                           
+                <!--TODO-->
+                   
+            <h3>Model Animated Video Gallery</h3>  
+              <p>Below is a model Video Gallery for the presentation of associated videos, i.e. those pertaining to the same event, or otherwise linked by topic or theme etc. An example would be those UKSC collection files containing footage from the same court case, or recorded on the same day of sessions. These could be arranged within a gallery contained one one HTML page so the user is able to access all relevant files in one space, and without further navigation. </p>
+                
+            <p>With the addition of the <a target=”_blank” href="https://lvivski.com/animatic/">Animatic</a> JS animation library it is possible to animate video previews upon mouse-over of video thumbnails. When one thumbnail is clicked it is loaded to the player, should the user click another thumbnail the video currently playing back will be succeeded by the newly selected video. The original video can then be seen back in the thumbnail array but the image is paused at the point where the viewer left off. Should they recommence that video it will play back from where they left off. This could be a very useful arrangement where multiple videos are to be reviewed. </p>
+            
+            <p>It might be possible to create and populate a gallery where the selection of related videos to be included are programmaticly selected by associated metadata references.  </p>
+   
+                           <br>
+                            
+                <p class="credit"> The model immediately below is derived from script sourced from the video chapter: 'Controlling Videos with JavaScript' from '<em>Native Video in HTML5</em>' by David Griffiths, <a href="https://learning.oreilly.com/">learning.oreilly.com</a>. Published by O'Reilly Media.</p>
+                             
+              
+                          
+              <!-- MODEL nativevideo/index.html -->
+                    
+                <div id="cont4">
+             <object id="obj4" type="text/html" data="video_gallery.html"></object>  
+                   </div>
+                   <br>
+              
+     
+                   
+                   
+                    
+            
+              <h3>Biographies for Speakers Within Video</h3>
+              <p>It is possible to add name-tags or short biographies to video to inform the user as to who speakers are. A transparent or semi-transparent overlay can be placed over an individual's face, and upon
+              clicking some textural information can be brought up in a convenient screen area This will need testing to see if it's useful or a complication when used at mobile screen-resolutions.</p>
+              
+              <video controls class="vid-left">
+  <source src="images/hotspot_biog_export.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+              
+              
+              
+              
+              
+              <p>
+              On-screen notices can also be triggered as they reach predefined time-indexes along the timeline. These could be used (in conjunction with chapters) to notify a viewer as to a change or noteworthy event.
+            </p>
+                    
+                    <br><br><br><br><br>
+                     
+             
+                    
+
+             
+             
+             
+             
+          
+                    
+            
+
+      </div></div>
+  <!--BODY-->
+  
+  <!--<div id="text1" style="top: 100px; width: 200px; ">
+<p>
+  I'm here!
+</p>
+        </div>-->
+<!--SCRIPT-->
+       
+       <!-- DEMO PLAYER SCRIPT --> 
+       <script async crossorigin="anonymous" src="html5-media-synchronized-subtitles.js"></script>
+       <!-- END OF DEMO PLAYER SCRIPT --> 
+       
+       
+        <script type="text/javascript">
+        function unhide(playpricing) {
+        var item = document.getElementById(playpricing);
+        if (item) {
+        item.className=(item.className=='hidden')?'unhidden':'hidden';
+        }
+        }
+        </script> 
+        
+            <script type="text/javascript">
+        function unhide(playcode) {
+        var item = document.getElementById(playcode);
+        if (item) {
+        item.className=(item.className=='hidden')?'unhidden':'hidden';
+        }
+        }
+        </script> 
+
+    
+<!--
+    <script type="text/javascript">
+    $(document).ready(function(){
+
+    $("#obj").width($("#cont").width());
+    $("#obj").height($("#cont").height());
+
+});
+    
+    </script>
+-->
+    
+    
+    
+</body>
+</html>
