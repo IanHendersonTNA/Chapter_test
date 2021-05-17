@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<meta charset="utf-8">
+<head>
+ 
+ <!--CSS -->
+ 
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+ 
+ <link rel="stylesheet" href="style.css">
+  <style>
+  html {
+      --scrollbarBG: #8BA4AE;
+      --thumbBG: #DEE5E8;
+    }
+
+    body::-webkit-scrollbar {
+      width: 15px;
+    }
+
+    body::-webkit-scrollbar-track {
+      background: var(--scrollbarBG);
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background-color: var(--thumbBG);
+      border-radius: 20px;
+      border: 1px solid var(--scrollbarBG);
+    }
+      
+      
+      /*W3CSchool Zoom*/
+* {box-sizing: border-box;}
+
+* {box-sizing: border-box;}
+    
+    #myimage {
+    border-radius: 10px;
+    }
+    
+
+.img-zoom-container {
+  position: relative;
+  margin: 0px 0px 0px 15px;
+    
+ }
+
+.img-zoom-lens {
+  position: absolute;
+  border: 1px solid white;
+  /*set the size of the lens:*/
+  width: 120px;
+  height: 90px;
+    border: 1px solid white;
+}
+
+.img-zoom-result {
+  border: 1px solid #d4d4d4;
+  /*set the size of the result div:*/
+  width: 930px;
+  height: 650px;
+border-radius: 10px;
+}
+      
+img {
+      margin: 0px 0px 0px 0px;
+      border: 1px solid black;
+      border-radius: 6px;
+      max-width: 850px;
+        
+    }
+      
+   #flex-parent>.img-zoom-container div {
+      border: 1px solid white;
+      text-align: left;
+    }    
+      
+      
+    .img-note {
+        float: right;
+        padding: 0 0 0 0;
+        margin: 0px 220px 0px 0px;
+        
+
+}
+
+   
+
+      
+  </style>
+  <!--CSS -->
+  
+ 
+     
+  <title>Transcription and Chaptering Research Report Index</title>
+</head>
+   
+    <!--BODY-->
+
+
+<body style="font-family: sans-serif;">
+  <div class="page">
+    <!--NAVBAR-->
+  
+    
+     
+       <div class="w3-top">
+<div class="navbar w3-blue-grey">
+  <a href="#" class="w3-bar-item w3-button w3-mobile navbar-link">Home</a>
+  
+  <!--<div class="w3-dropdown-hover w3-mobile navbar-link">
+    <button class="w3-button">Research Proposals <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+        <a href="Research_Proposal_Transcription.html" class="w3-bar-item w3-button w3-mobile navbar-link">AV Transcription</a>
+        <a href="Research_Proposal_Chaptering.html" class="w3-bar-item w3-button w3-mobile navbar-link">AV Chaptering</a>
+        <a href="Work_Plan.html" class="w3-bar-item w3-button w3-mobile navbar-link">Work Plan</a>
+      </div>
+    </div>
+    -->
+    
+     <a href="Research_Project_Overview.html" class="w3-bar-item w3-button w3-mobile navbar-link">Project Overview</a>
+    
+<!--
+    
+  <a href="HowSpeechToTextWorks.html" class="w3-bar-item w3-button w3-mobile navbar-link">Speech to Text</a>
+-->
+   
+   
+    <div class="w3-dropdown-hover w3-mobile navbar-link">
+    <button class="w3-button navbar-link-dropdown">Speech to Text <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+        <a href="HowSpeechToTextWorks.html" class="w3-bar-item w3-button w3-mobile navbar-link">Speech &amp; Speech Recogntion</a>
+        <a href="Automated_Transcription_Service_Testing.html" class="w3-bar-item w3-button w3-mobile navbar-link">Testing Transcription Services</a>
+       <!-- <a href="Work_Plan.html" class="w3-bar-item w3-button w3-mobile navbar-link">Work Plan</a>-->
+      </div>
+    </div>
+   
+   
+   
+   
+   
+   <div class="w3-dropdown-hover w3-mobile navbar-link">
+    <button class="w3-button navbar-link-dropdown">AV Transcription &amp; Chaptering <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+       
+       
+        <a href="Sub_Cap_Transcp.html" class="w3-bar-item w3-button w3-mobile navbar-link">Textural Representation of Speech</a>
+        <a href="Player_Models.html" class="w3-bar-item w3-button w3-mobile navbar-link">AV Player Models</a>
+       
+       <!-- <a href="Work_Plan.html" class="w3-bar-item w3-button w3-mobile navbar-link">Work Plan</a>-->
+      </div>
+    </div>
+ 
+   
+<!--
+   <div class="w3-dropdown-hover w3-mobile navbar-link">
+    <button class="w3-button navbar-link-dropdown">Testing &amp; Models <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+        <a href="Automated_Transcription_Service_Testing.html" class="w3-bar-item w3-button w3-mobile navbar-link">Testing Services</a>
+        <a href="Player_Models.html" class="w3-bar-item w3-button w3-mobile navbar-link">Player Models</a>
+       <a href="Work_Plan.html" class="w3-bar-item w3-button w3-mobile navbar-link">Work Plan</a>
+      </div>
+    </div>
+-->
+   
+   
+   
+   
+   
+   
+   
+    <!--<a href="Automated_Transcription_Services.html" class="w3-bar-item w3-button w3-mobile navbar-link">Transcription Services</a>
+    
+    <a href="index_RENAME.html" class="w3-bar-item w3-button w3-mobile navbar-link">Player Work</a>
+    
+  <a href="Work_Plan.html" class="w3-bar-item w3-button w3-mobile navbar-link">Work Plan</a>-->
+</div>
+   </div>
+   <!--NAVBAR-->
+   
+   
+ <!--   <div class="w3-top">
+    <div class="navbar w3-blue-grey">
+    <a href="index.html" class="w3-bar-item w3-button w3-mobile navbar-link w3-black">Home</a>
+    
+     <div class="w3-dropdown-hover w3-mobile navbar-link">
+      <button class="w3-button dropdown-link">Digital Formats<i class="fa fa-caret-down"></i></button>
+      <div class="w3-dropdown-content w3-bar-block w3-dark-grey navbar-link">
+        <a href="Apple_ProRes_LT.html" class="w3-bar-item w3-button w3-mobile navbar-link">Apple ProRes LT</a>
+        <a href="Work_Plan.html" class="w3-bar-item w3-button w3-mobile navbar-link">---2</a>
+        <a href="#" class="w3-bar-item w3-button w3-mobile navbar-link">---3</a>
+      </div>
+      </div>-->
+   
+   
+   
+   
+   <div id="flex-parent" class="double-border">
+   <br><br>
+   
+   <h1 class="header-cent">AV Transcription &amp; Video Chaptering with Models</h1>
+   
+   
+   <video src="images/animation_vid2_Export2.mp4" autoplay muted width="600px" class="header-cent"></video>
+
+   <h2 class="header-cent">Research Report. Ian Henderson 2021</h2>
+    
+<br><br><br>
+       </div>
+
+
+
+
+
+    </div>
+    
+     <!--W3C School Zoom-->
+     <script type="text/javascript">
+ document.addEventListener("DOMContentLoaded", function(){
+  // Handler when the DOM is fully loaded
+});
+     
+         
+function imageZoom(imgID, resultID) {
+  var img, lens, result, cx, cy;
+  img = document.getElementById(imgID);
+  result = document.getElementById(resultID);
+  /*create lens:*/
+  lens = document.createElement("DIV");
+  lens.setAttribute("class", "img-zoom-lens");
+  /*insert lens:*/
+  img.parentElement.insertBefore(lens, img);
+  /*calculate the ratio between result DIV and lens:*/
+  cx = result.offsetWidth / lens.offsetWidth;
+  cy = result.offsetHeight / lens.offsetHeight;
+  /*set background properties for the result DIV:*/
+  result.style.backgroundImage = "url('" + img.src + "')";
+  result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+  /*execute a function when someone moves the cursor over the image, or the lens:*/
+  lens.addEventListener("mousemove", moveLens);
+  img.addEventListener("mousemove", moveLens);
+  /*and also for touch screens:*/
+  lens.addEventListener("touchmove", moveLens);
+  img.addEventListener("touchmove", moveLens);
+  function moveLens(e) {
+    var pos, x, y;
+    /*prevent any other actions that may occur when moving over the image:*/
+    e.preventDefault();
+    /*get the cursor's x and y positions:*/
+    pos = getCursorPos(e);
+    /*calculate the position of the lens:*/
+    x = pos.x - (lens.offsetWidth / 2);
+    y = pos.y - (lens.offsetHeight / 2);
+    /*prevent the lens from being positioned outside the image:*/
+    if (x > img.width - lens.offsetWidth) {x = img.width - lens.offsetWidth;}
+    if (x < 0) {x = 0;}
+    if (y > img.height - lens.offsetHeight) {y = img.height - lens.offsetHeight;}
+    if (y < 0) {y = 0;}
+    /*set the position of the lens:*/
+    lens.style.left = x + "px";
+    lens.style.top = y + "px";
+    /*display what the lens "sees":*/
+    result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
+  }
+  function getCursorPos(e) {
+    var a, x = 0, y = 0;
+    e = e || window.event;
+    /*get the x and y positions of the image:*/
+    a = img.getBoundingClientRect();
+    /*calculate the cursor's x and y coordinates, relative to the image:*/
+    x = e.pageX - a.left;
+    y = e.pageY - a.top;
+    /*consider any page scrolling:*/
+    x = x - window.pageXOffset;
+    y = y - window.pageYOffset;
+    return {x : x, y : y};
+  }
+}
+</script>
+
+  
+    
+
+<script>
+    /* Zoo1 model (*/)
+    
+var zoomBoxes = document.querySelectorAll('.detail-view');
+    // Extract the URL
+zoomBoxes.forEach(function(image) {
+  var imageCss = window.getComputedStyle(image, false),
+    imageUrl = imageCss.backgroundImage
+                       .slice(4, -1).replace(/['"]/g, '');
+
+  // Get the original source image
+  var imageSrc = new Image();
+  imageSrc.onload = function() {
+    var imageWidth = imageSrc.naturalWidth,
+        imageHeight = imageSrc.naturalHeight,
+        ratio = imageHeight / imageWidth;
+
+    // Adjust the box to fit the image and to adapt responsively
+    var percentage = ratio * 100 + '%';
+    image.style.paddingBottom = percentage;
+
+    // Zoom and scan on mousemove
+    image.onmousemove = function(e) {
+      // Get the width of the thumbnail
+      var boxWidth = image.clientWidth,
+          // Get the cursor position, minus element offset
+          x = e.pageX - this.offsetLeft,
+          y = e.pageY - this.offsetTop,
+          // Convert coordinates to % of elem. width & height
+          xPercent = x / (boxWidth / 100) + '%',
+          yPercent = y / (boxWidth * ratio / 100) + '%';
+
+      // Update styles w/actual size
+      Object.assign(image.style, {
+        backgroundPosition: xPercent + ' ' + yPercent,
+        backgroundSize: imageWidth + 'px'
+      });
+    };
+
+    // Reset when mouse leaves
+    image.onmouseleave = function(e) {
+      Object.assign(image.style, {
+        backgroundPosition: 'center',
+        backgroundSize: 'cover'
+      });
+    };
+  }
+  imageSrc.src = imageUrl;
+});
+    
+    /*W3C School Zoom */
+     <script type="text/javascript">
+function imageZoom(imgID, resultID) {
+  var img, lens, result, cx, cy;
+  img = document.getElementById(imgID);
+  result = document.getElementById(resultID);
+  /*create lens:*/
+  lens = document.createElement("DIV");
+  lens.setAttribute("class", "img-zoom-lens");
+  /*insert lens:*/
+  img.parentElement.insertBefore(lens, img);
+  /*calculate the ratio between result DIV and lens:*/
+  cx = result.offsetWidth / lens.offsetWidth;
+  cy = result.offsetHeight / lens.offsetHeight;
+  /*set background properties for the result DIV:*/
+  result.style.backgroundImage = "url('" + img.src + "')";
+  result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+  /*execute a function when someone moves the cursor over the image, or the lens:*/
+  lens.addEventListener("mousemove", moveLens);
+  img.addEventListener("mousemove", moveLens);
+  /*and also for touch screens:*/
+  lens.addEventListener("touchmove", moveLens);
+  img.addEventListener("touchmove", moveLens);
+  function moveLens(e) {
+    var pos, x, y;
+    /*prevent any other actions that may occur when moving over the image:*/
+    e.preventDefault();
+    /*get the cursor's x and y positions:*/
+    pos = getCursorPos(e);
+    /*calculate the position of the lens:*/
+    x = pos.x - (lens.offsetWidth / 2);
+    y = pos.y - (lens.offsetHeight / 2);
+    /*prevent the lens from being positioned outside the image:*/
+    if (x > img.width - lens.offsetWidth) {x = img.width - lens.offsetWidth;}
+    if (x < 0) {x = 0;}
+    if (y > img.height - lens.offsetHeight) {y = img.height - lens.offsetHeight;}
+    if (y < 0) {y = 0;}
+    /*set the position of the lens:*/
+    lens.style.left = x + "px";
+    lens.style.top = y + "px";
+    /*display what the lens "sees":*/
+    result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
+  }
+  function getCursorPos(e) {
+    var a, x = 0, y = 0;
+    e = e || window.event;
+    /*get the x and y positions of the image:*/
+    a = img.getBoundingClientRect();
+    /*calculate the cursor's x and y coordinates, relative to the image:*/
+    x = e.pageX - a.left;
+    y = e.pageY - a.top;
+    /*consider any page scrolling:*/
+    x = x - window.pageXOffset;
+    y = y - window.pageYOffset;
+    return {x : x, y : y};
+  }
+}
+</script>
+
+<script type="text/javascript">
+// Initiate zoom effect:
+imageZoom("myimage", "myresult");
+</script>
+
+      
+       
+           
+               
+                   
+                       
+                           
+                               
+                                       
+
+  <!--BODY-->
+<!--SCRIPT-->
+        <script type="text/javascript">
+        function unhide(playpricing) {
+        var item = document.getElementById(playpricing);
+        if (item) {
+        item.className=(item.className=='hidden')?'unhidden':'hidden';
+        }
+        }
+        </script> 
+
+
+</body>
+
+</html>
