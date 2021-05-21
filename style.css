@@ -452,8 +452,9 @@ ul>li>p,
       .todo {
           background-color: yellow;
           font-weight: 700;
-          padding: 5px 5px 5px 5px;
-          margin: 5px 8px 5px 7px;
+          padding: 5px 5px 8px 5px;
+          margin: 5px 8px 5px 9px;
+          text-align: center;
       }  
 
 
