@@ -642,10 +642,12 @@ This is highly relevant to our digital collections as we receive particularly lo
     <p>This 'Mind-Map' presents a visual representation of various inter-related aspects of AV transcription and chaptering considered within the research conducted during the course of the projects. </p><br>
     <!--
     <!--Zoom-1-->
+<!--
     <div class="box-div1">
     <div class="detail-view" class="img-zoom-source" style="background-image: url(images/Project_MindMap.png);"></div>
 
  </div>
+-->
    
   <!--Zoom-2 W3School-->
     
@@ -704,8 +706,8 @@ function imageZoom(imgID, resultID) {
   lens.addEventListener("mousemove", moveLens);
   img.addEventListener("mousemove", moveLens);
   /*and also for touch screens:*/
-  lens.addEventListener("touchmove", moveLens);
-  img.addEventListener("touchmove", moveLens);
+  lens.addEventListener("touchmove", moveLens,{passive: true});
+  img.addEventListener("touchmove", moveLens,{passive: true});
   function moveLens(e) {
     var pos, x, y;
     /*prevent any other actions that may occur when moving over the image:*/
@@ -740,13 +742,14 @@ function imageZoom(imgID, resultID) {
     return {x : x, y : y};
   }
 }
+         
 </script>
 
   
     
 
 <script>
-    /* Zoo1 model (*/)
+    /* Zoo1 model (*/
     
 var zoomBoxes = document.querySelectorAll('.detail-view');
     // Extract the URL
@@ -794,7 +797,7 @@ zoomBoxes.forEach(function(image) {
   }
   imageSrc.src = imageUrl;
 });
-    
+    </script>  
     /*W3C School Zoom */
      <script type="text/javascript">
 function imageZoom(imgID, resultID) {
@@ -816,8 +819,8 @@ function imageZoom(imgID, resultID) {
   lens.addEventListener("mousemove", moveLens);
   img.addEventListener("mousemove", moveLens);
   /*and also for touch screens:*/
-  lens.addEventListener("touchmove", moveLens);
-  img.addEventListener("touchmove", moveLens);
+  lens.addEventListener("touchmove", moveLens,{passive: true});
+  img.addEventListener("touchmove", moveLens,{passive: true});
   function moveLens(e) {
     var pos, x, y;
     /*prevent any other actions that may occur when moving over the image:*/

@@ -466,6 +466,11 @@ ul>li>p,
           margin: 0px 0px 0px 0px;
         margin: 0px 0px 0px 0px;
       }  
+
+.missing-words {
+    color: red;
+    font-weight: 700;
+}
       
       .quote {
           font-style: italic;
