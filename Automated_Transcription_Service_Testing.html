@@ -201,7 +201,7 @@
    
    <div id="flex-parent" class="double-border">
    <br>
-    <h1 class="todo">Please Note: this page in DRAFT, content to be revised</h1>
+   
             <h1>Testing Automated Transcription Services</h1>
             
            
@@ -227,6 +227,8 @@
          
          <p>In order to achieve optimal results from services the audio source should carry clearly recorded voices <span class="highlight"><strong>*</strong>without strong accents</span>, and with little to no background noise. Where the audio source is unclear, there are high levels of noise, or speakers do hold strong accents then automated transcription services may struggle, in which case a manual transcription service would be the correct alternative.</p>
          <p><span class="highlight"><strong>*Re: accents:</strong></span> some services such as Amazon transcribe do make provision for English spoken with regional accents: e.g. Australian English (en-AU, Indian English (en-IN), Scottish English (en-AB), Welsh English (en-WL) <a href="https://docs.aws.amazon.com/transcribe/latest/dg/what-is-transcribe.html" target="_blank">What is Amazon Transcribe?</a></p>
+         
+      <p><strong><em>To note: </em></strong> <br>Automated services should be considered a means by which an approximate text transcription can be  quickly generated. No matter the supposed accuracy rating they should not be expected to produce wholly complete or accurate results. It is strongly recommended that all text outputs are automatically or manually checked ad validated, especially where a high level of accuracy is important.</p>
         
         <h3>Testing Plan</h3>
         
@@ -240,7 +242,7 @@
         <h4>Test 1: Librivox public domain audio file</h4>
         <p><a href="https://librivox.org/">Librivox</a> audio-book readings were one (public domain) source of isolated, single voice recordings for initial testing. They are recorded largely by amateur readers using domestic rather than professional equipment or studio conditions, which provide a more challenging test of speech processing performance.</p>
         
-        <p>Services tested with these files were <a href="https://otter.ai/">Otter.ai</a> and <a href="https://vocalmatic.com/">vocalmatic.com</a></p>
+        <p>Services tested with these files were <a href="https://otter.ai/">Otter.ai</a> and <a href="https://vocalmatic.com/">Vocalmatic.com</a></p>
         
                  
           <h5>Audio Only Test Files</h5>
@@ -268,15 +270,22 @@
            <li>get the number of errors: 
          <ul>
            <li>count number of errors from output text (with any timecode or other ‘non-written text’ removed), as compared with the online text version (with quotation marks removed as these are not generally created in processed text).</li>
-            <li>divide number of errors by total of words and multiply by 100 to give the error percentage</li>    
+            <li>divide number of errors by total of words</li>
+             <li>multiply the figure by 100, and then subtract this figure from 100 to give the error percentage</li>    
           </ul>
           </ol>
            
           <br>
           
           
+        <h4>Comparison of Results: Otter.ai vs. Vocalmatic</h4>   
+        <p>The two 'toggle-links' below hide or unhide the individual transcription outputs from two services: Otter.ai and Vocalmatic.com, where the same text (Saki's short story 'Louise') had been submitted in audio file format (mp3). In both cases a copy of the complete and correct text has been included at the head of the section  for comparison with the transcription service's text output. Uncommon personal names such as 'Beanford', 'Thropplestance' and 'Clovis Sangrail' were excluded from error ratings</p>  
+                
+        <p>It can be seen that the Otter.ai return was generally more able to provide a more complete return (the Vocalmatic output contains several instances of missing text) and more accurate results, and it is interesting to note the difference between the two services as to how well they handled particular words and phrases. It may be that, where an initial word is misidentified then further errors within the phrase or otherwise in close proximity may produce other errors as attempts are made to identify other words in context with the original error.</p>    
+                 
+        
                   <!--HIDE-UNHIDE-->
-         <p><a href="javascript:unhide('OtterAI-Check');" class="hidelink">Toggle Otter.ai Test</a> Click to reveal text output with percentage of error results.</p>
+         <p>Click to reveal text output with percentage of error results: <a href="javascript:unhide('OtterAI-Check');" class="hidelink">Toggle Otter.ai Test</a></p>
       
        <!--HIDDEN-->
     <div id="OtterAI-Check" class="hidden" class="img-cent" class="hidden-test">
@@ -414,15 +423,101 @@
 
  
  
- <p><a href="https://vocalmatic.com/">vocalmatic.com</a></p>
+ 
  
     <!--HIDE-UNHIDE-->
-         <p><a href="javascript:unhide('vocalmatic-Check');" class="hidelink">Toggle VocalMatic Test</a> Click to reveal text output with percentage of error results.</p>
+         <p> Click to reveal text output with percentage of error results: <a href="javascript:unhide('vocalmatic-Check');" class="hidelink">Toggle VocalMatic Test</a></p>
       
        <!--HIDDEN-->
     <div id="vocalmatic-Check" class="hidden" class="img-cent" class="hidden-test">
 
  <h2>Vocalmatic.com output from Audio file (Louise by Saki)</h2>
+ 
+ <h4>Speech Source: Librivox, public domain: Saki Toys of Peace/ ‘Louise’ toysofpeace_02_saki_64kb from Internet Archive. </h4>
+
+<h5>Story text below sourced from the Internet Archive, and manual corrections from source OCR made for correct comparison with service text output:</h5>
+<br>
+<p><em>Story number two of The Toys of Peace. This is a Librivox recording. All Librivox recordings are in the public domain. For more information or to volunteer please visit Librivox.org.</em></p>
+
+<p>Recording by Graham Redman. </p>
+
+<p>The Toys of Peace. Short stories by Saki.</p>
+<br>
+<h4>'LOUISE' (correct and complete text)</h4>
+
+<p>“The tea will be quite cold, you'd better ring for some more," said the Dowager Lady Beanford. </p>
+
+<p>Susan Lady Beanford was a vigorous old woman who had coquetted with imaginary ill-health for the greater part of a lifetime; Clovis Sangrail irreverently declared that she had caught a chill at the Coronation of Queen Victoria and had never let it go again. Her sister, Jane Thropplestance, who was some years her junior, was chiefly remarkable for being the most absent-minded woman in Middlesex. </p>
+
+<p>"I've really been unusually clever this afternoon," she remarked gaily, as she rang for the tea. "I've called on all the people I meant to call on, and I've done all the shopping that I set out to do. I even remembered to try and match that silk for you at Harrod's, but I'd forgotten to bring the pattern with me, so it was no use. I really think that was the only important thing I forgot during the whole afternoon. Quite wonderful for me, isn't it?" </p>
+
+<p>"What have you done with Louise?" asked her sister. "Didn't you take her out with you? You said you were going to." </p>
+
+<p>"Good gracious," exclaimed Jane, "what have I done with Louise? I must have left her somewhere." </p>
+
+<p>"But where?" </p>
+
+<p>"That's just it. Where have I left her? I can't remember if the Carrywoods were at home or if I just left cards. If they were at home I may have left Louise there to play bridge. I'll go and telephone to Lord Carrywood and find out." </p>
+
+<p>"Is that you, Lord Carrywood?" she queried over the telephone; "it's me, Jane Thropplestance. I want to know, have you seen Louise?" </p>
+
+<p>"'Louise,'" came the answer, "it's been my fate to see it three times. At first, I must admit, I wasn't impressed by it, but the music grows on one after a bit. Still, I don't think I want to see it again just at present. Were you going to offer me a seat in your box?" </p>
+
+<p>"Not the opera 'Louise' -my niece, Louise Thropplestance. I thought I might have left her at your house." </p>
+
+<p>“You left cards on us this afternoon, I understand, but I don't think you left a niece. The footman would have been sure to have mentioned it if you had. Is it going to be a fashion to leave nieces on people as well as cards? I hope not; some of these houses in Berkeley-square have practically no accommodation for that sort of thing." </p>
+
+<p>"She's not at the Carrywoods'," announced Jane, returning to her tea; "now I come to think of it, perhaps I left her at the silk counter at Selfridge's. I may have told her to wait there a moment while I went to look at the silks in a better light, and I may easily have forgotten about her when I found I hadn't your pattern with me. In that case she's still sitting there. She wouldn't move unless she was told to; Louise has no initiative." </p>
+
+<p>"You said you tried to match the silk at Harrod's," interjected the dowager. </p>
+
+<p>"Did I? Perhaps it was Harrod's. I really don't remember. It was one of those places where every one is so kind and sympathetic and devoted that one almost hates to take even a reel of cotton away from such pleasant surroundings." </p>
+
+<p>"I think you might have taken Louise away. I don't like the idea of her being there among a lot of strangers. Supposing some unprincipled person was to get into conversation with her." </p>
+
+<p>"Impossible. Louise has no conversation. I've never discovered a single topic on which she'd anything to say beyond 'Do you think so? I dare say you're right.' I really thought her reticence about the fall of the Ribot Ministry was ridiculous, considering how much her dear mother used to visit Paris. This bread and butter is cut far too thin; it crumbles away long before you can get it to your mouth. One feels so absurd, snapping at one's food in mid-air, like a trout leaping at may-fly." </p>
+
+<p>"I am rather surprised," said the dowager, "that you can sit there making a hearty tea when you've just lost a favourite niece." </p>
+
+<p>"You talk as if I'd lost her in a churchyard sense, instead of having temporarily mislaid her. I'm sure to remember presently where I left her."</p>
+
+<p>"You didn't visit any place of devotion, did you? If you've left her mooning about Westminster Abbey or St. Peter's, Eaton Square, without being able to give any satisfactory reason why she's there, she'll be seized under the Cat and Mouse Act and sent to Reginald McKenna." </p>
+
+<p>"That would be extremely awkward," said Jane, meeting an irresolute piece of bread and butter halfway; "we hardly know the McKennas, and it would be very tiresome having to telephone to some unsympathetic private secretary, describing Louise to him and asking to have her sent back in time for dinner. Fortunately, I didn't go to any place of devotion, though I did get mixed up with a Salvation Army procession. It was quite interesting to be at close quarters with them, they're so absolutely different to what they used to be when I first remember them in the 'eighties. They used to go about then unkempt and dishevelled, in a sort of smiling rage with the world, and now they're spruce and jaunty and flamboyantly decorative, like a geranium bed with religious convictions. Laura Kettleway was going on about them in the lift of the Dover Street Tube the other day, saying what a lot of good work they did, and what a loss it would have been if they'd never existed. ‘If they had never existed,' I said, 'Granville Barker would have been certain to have invented something that looked exactly like them.' If you say things like that, quite loud, in a Tube lift, they always sound like epigrams." </p>
+
+<p>"I think you ought to do something about Louise," said the dowager. </p>
+
+<p>"I'm trying to think whether she was with me when I called on Ada Spelvexit. I rather enjoyed myself there. Ada was trying, as usual, to ram that odious Koriatoffski woman down my throat, knowing perfectly well that I detest her, and in an unguarded moment she said: 'She's leaving her present house and going to Lower Seymour Street.' 'I dare say she will, if she stays there long enough,’ I said. Ada didn't see it for about three minutes, and then she was positively uncivil. No, I am certain I didn't leave Louise there." </p>
+
+<p>"If you could manage to remember where you did leave her, it would be more to the point than these negative assurances," said Lady Beanford; "so far, all that we know is that she is not at the Carrywoods', or Ada Spelvexit's, or Westminster Abbey." </p>
+
+<p>"That narrows the search down a bit," said Jane hopefully; "I rather fancy she must have been with me when I went to Mornay's. I know I went to Mornay's, because I remember meeting that delightful Malcolm What's-his-name there -you know whom I mean. That's the great advantage of people having unusual first names, you needn't try and remember what their other name is. Of course I know one or two other Malcolms, but none that could possibly be described as delightful. He gave me two tickets for the Happy Sunday Evenings in Sloane Square. I've probably left them at Mornay's, but still it was awfully kind of him to give them to me." </p>
+
+<p>"Do you think you left Louise there?" </p>
+
+<p>"I might telephone and ask. Oh, Robert, before you clear the tea-things away I wish you'd ring up Mornay's, in Regent Street, and ask if I left two theatre tickets and one niece in their shop this afternoon." </p>
+
+<p>“A niece, ma'am?" asked the footman. </p>
+
+<p>“Yes, Miss Louise didn't come home with me, and I'm not sure where I left her." </p>
+
+<p>"Miss Louise has been upstairs all the afternoon, ma'am, reading to the second kitchenmaid, who has the neuralgia. I took up tea to Miss Louise at a quarter to five o'clock, ma'am." </p>
+
+<p>"Of course, how silly of me. I remember now, I asked her to read the Faerie Queene to poor Emma, to try to send her to sleep. I always get some one to read the Faerie Queene to me when I have neuralgia, and it usually sends me to sleep. Louise doesn't seem to have been successful, but one can't say she hasn't tried. I expect after the first hour or so the kitchenmaid would rather have been left alone with her neuralgia, but of course Louise wouldn't leave off till some one told her to. Anyhow, you can ring up Mornay's, Robert, and ask whether I left two theatre tickets there. Except for your silk, Susan, those seem to be the only things I've forgotten this afternoon. Quite wonderful for me.” </p>
+
+<p>End of Louise, recorded by Graham Redman.</p>
+
+<p><span class="highlight"><strong>WORD COUNT: 1,532</strong></span></p>
+
+
+<br>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  <p>[0:00:02-0:00:06]</p>
 
@@ -430,7 +525,7 @@
 
 <p>[0:00:07-0:00:22]</p>
 
-<p>This is a LibriVox recording. All LibriVox recordings are in the public domain for more information or to volunteer, please visit librivox.org recording by Graham, <span class="highlight"><strong>Redmond</strong></span>.</p>
+<p>This is a LibriVox recording. All LibriVox recordings are in the public domain for more information or to volunteer, please visit librivox.org recording by Graham, Redmond.</p>
 
 <p>[0:00:23-0:00:27]</p>
 
@@ -442,27 +537,27 @@
 
 <p>[0:00:31-0:00:38]</p>
 
-<p>The <span class="highlight"><strong>TV</strong></span> will get quite cold <span class="highlight"><strong>your</strong></span> best ring for some more said The Dowager lady being food.</p>
+<p>The <span class="highlight"><strong>TV</strong></span> will get quite cold <span class="highlight"><strong>your</strong></span> best ring for some more said The Dowager lady being food. <strong>(<em>2 errors</em>)</strong></p>
 
 <p>[0:00:39-0:00:56]</p>
 
-<p>Susan lady being fed <span class="highlight"><strong>with</strong> a <strong>bigger assaulted</strong></span> woman who had <span class="highlight"><strong>calculated</strong></span> with imaginary ill-health for the greater part of a Lifetime movies Shangri-La <span class="highlight"><strong>it reverently</strong></span> declared that she <span class="highlight"><strong>would</strong> <strong>call</strong> <strong>to let</strong></span> the coronation of Queen Victoria and <span class="highlight"><strong>have</strong></span> never let it go again.</p>
+<p>Susan lady being fed <span class="highlight"><strong>with</strong> a <strong>bigger assaulted</strong></span> woman who had <span class="highlight"><strong>calculated</strong></span> with imaginary ill-health for the greater part of a Lifetime movies Shangri-La <span class="highlight"><strong>it reverently</strong></span> declared that she <span class="highlight"><strong>would</strong> <strong>call</strong> <strong>to let</strong></span> the coronation of Queen Victoria and <span class="highlight"><strong>have</strong></span> never let it go again. <strong>(<em>12 errors</em>)</strong></p>
 
 <p>[0:00:57-0:01:36]</p>
 
-<p><span class="highlight"><strong>A</strong></span> sister James Ruble students who was some <span class="highlight"><strong>guys</strong> <strong>have</strong></span> Junior was chiefly remarkable for being the most absent-minded woman in Middlesex. <span class="highlight"><strong>I</strong></span> really <span class="highlight"><strong>being</strong></span> unusually <span class="highlight"><strong>clip of</strong></span> this afternoon. She remarked <span class="highlight"><strong>Kaylee</strong> <strong>or</strong></span> she rang for the T. I <span class="highlight"><strong>pulled</strong></span> on all the people I meant to call <span class="highlight"><strong>them</strong></span> and I've done all the shopping that I set out to do I even <span class="highlight"><strong>remember</strong></span> to try and match that <span class="highlight"><strong>suit</strong></span> for you <span class="highlight"><strong>and</strong> <strong>herons</strong></span> but I'd forgotten to bring the <span class="highlight"><strong>packing</strong></span> with me. So it was no use I really think that was the only important thing. I forgot during the afternoon quite wonderful for me. Isn't it?</p>
+<p><span class="highlight"><strong>A</strong></span> sister James Ruble students who was some <span class="highlight"><strong>guys</strong> <strong>have</strong></span> Junior was chiefly remarkable for being the most absent-minded woman in Middlesex. <span class="highlight"><strong>I</strong></span> really <span class="highlight"><strong>being</strong></span> unusually <span class="highlight"><strong>clip of</strong></span> this afternoon. She remarked <span class="highlight"><strong>Kaylee</strong> <strong>or</strong></span> she rang for the T. I <span class="highlight"><strong>pulled</strong></span> on all the people I meant to call <span class="highlight"><strong>them</strong></span> and I've done all the shopping that I set out to do I even <span class="highlight"><strong>remember</strong></span> to try and match that <span class="highlight"><strong>suit</strong></span> for you <span class="highlight"><strong>and</strong> <strong>herons</strong></span> but I'd forgotten to bring the <span class="highlight"><strong>packing</strong></span> with me. So it was no use I really think that was the only important thing. I forgot during the afternoon quite wonderful for me. Isn't it? <strong>(<em>16 errors</em>)</strong></p>
 
 <p>[0:01:37-0:01:53]</p>
 
-<p>What have you done with Louise <span class="missing-words">[--- missing words---]</span> sister, didn't you take her out with you? You said you were going to good gracious. <span class="highlight"><strong>Explain</strong></span> Jane. What have I done with Louise? I must have left her somewhere.</p>
+<p>What have you done with Louise <span class="missing-words">[--- missing words---]</span> sister, didn't you take her out with you? You said you were going to good gracious. <span class="highlight"><strong>Explain</strong></span> Jane. What have I done with Louise? I must have left her somewhere. <strong>(<em>1 error</em>)</strong></p>
 
 <p>[0:01:54-0:02:12]</p>
 
-<p><span class="highlight"><strong>About</strong> <strong>12</strong></span>. That's just it <span class="highlight"><strong>when</strong></span> I have I left her. I can't remember if the camera ones were at home or if I just left cards if they <span class="highlight"><strong>would</strong> <strong>have</strong></span> home. I may have left Louise there to play bridge. I'm <span class="highlight"><strong>giving</strong></span> telephone to <span class="highlight"><strong>know</strong></span> what county will <span class="highlight"><strong>then</strong></span> find out.</p>
+<p><span class="highlight"><strong>About</strong> <strong>12</strong></span>. That's just it <span class="highlight"><strong>when</strong></span> I have I left her. I can't remember if the camera ones were at home or if I just left cards if they <span class="highlight"><strong>would</strong> <strong>have</strong></span> home. I may have left Louise there to play bridge. I'm <span class="highlight"><strong>giving</strong></span> telephone to <span class="highlight"><strong>know</strong></span> what county will <span class="highlight"><strong>then</strong></span> find out. <strong>(<em>8 errors</em>)</strong></p>
 
 <p>[0:02:13-0:02:44]</p>
 
-<p>Is that you Lord Carrie? Would she queried over the telephone? It's me, James Russell stuns. I want to know have you seen Louise Louise? <span class="highlight"><strong>Kindly </strong></span><span class="missing-words">[--- missing words---]</span>  it's being my fate to see it three times. At first. I must admit I wasn't impressed by it. But the music grows on one <span class="highlight"><strong>off</strong> <strong>to</strong> <strong>repeat</strong></span> still I don't think I want to see it again. Just at present where you going to offer me a seat in your box.</p>
+<p>Is that you Lord Carrie? Would she queried over the telephone? It's me, James Russell stuns. I want to know have you seen Louise Louise? <span class="highlight"><strong>Kindly </strong></span><span class="missing-words">[--- missing words---]</span>  it's being my fate to see it three times. At first. I must admit I wasn't impressed by it. But the music grows on one <span class="highlight"><strong>off</strong> <strong>to</strong> <strong>repeat</strong></span> still I don't think I want to see it again. Just at present where you going to offer me a seat in your box. <strong>(<em>4 errors</em>)</strong></p>
 
 <p>[0:02:44-0:02:51]</p>
 
@@ -470,36 +565,36 @@
 
 <p>[0:02:52-0:03:13]</p>
 
-<p>You left comes on this this afternoon. I understand but I <span class="highlight"><strong>didn't</strong></span> think you left a <span class="highlight"><strong>nice</strong></span>. The footman would have been <span class="highlight"><strong>shorted</strong> <strong>had</strong></span> mentioned it if you had is it going to be a <span class="highlight"><strong>faction</strong></span> to leave <span class="highlight"><strong>needs his</strong> <strong>own</strong></span> people as well as <span class="highlight"><strong>cogs</strong></span>. I hope not some of these houses in Berkeley Square. <strong>I </strong>have practically no accommodation for that sort of thing.</p>
+<p>You left comes on this this afternoon. I understand but I <span class="highlight"><strong>didn't</strong></span> think you left a <span class="highlight"><strong>nice</strong></span>. The footman would have been <span class="highlight"><strong>shorted</strong> <strong>had</strong></span> mentioned it if you had is it going to be a <span class="highlight"><strong>faction</strong></span> to leave <span class="highlight"><strong>needs his</strong> <strong>own</strong></span> people as well as <span class="highlight"><strong>cogs</strong></span>. I hope not some of these houses in Berkeley Square. <strong>I </strong>have practically no accommodation for that sort of thing. <strong>(<em>9 errors</em>)</strong></p>
 
 <p>[0:03:14-0:03:42]</p>
 
-<p>She's not <span class="highlight"><strong>allowed</strong></span> to carry Woods <span class="highlight"><strong>announce to</strong> <strong>Jay and</strong></span> returning to <span class="highlight"><strong>head</strong></span> to <span class="highlight"><strong>you</strong></span>. Now. I come to think of it. <span class="missing-words">[--- missing words---]</span>  I left her at the silk counter at selfridges. I may have told her to wait there a moment while I went to look at the silks in a better light and I may easily have forgotten about her when I found I <span class="highlight"><strong>had them</strong> <strong>to help a person</strong></span> with me in that case. She's still sitting there. She would move unless she was told to Louise has no initiative.</p>
+<p>She's not <span class="highlight"><strong>allowed</strong></span> to carry Woods <span class="highlight"><strong>announce to</strong> <strong>Jay and</strong></span> returning to <span class="highlight"><strong>head</strong></span> to <span class="highlight"><strong>you</strong></span>. Now. I come to think of it. <span class="missing-words">[--- missing words---]</span>  I left her at the silk counter at selfridges. I may have told her to wait there a moment while I went to look at the silks in a better light and I may easily have forgotten about her when I found I <span class="highlight"><strong>had them</strong> <strong>to help a person</strong></span> with me in that case. She's still sitting there. She would move unless she was told to Louise has no initiative. <strong>(<em>13 errors</em>)</strong></p>
 
 
 <p>[0:03:43-0:04:05]</p>
 
-<p>You said you <span class="highlight"><strong>trying</strong></span> to match the <span class="highlight"><strong>Silicon</strong></span> Harold's interjected The Dowager <span class="missing-words">[--- missing words---]</span>  remember <span class="missing-words">[--- missing words---]</span>  those places where everyone is so kind and sympathetic and <span class="highlight"><strong>two</strong></span> devoted that one <span class="highlight"><strong>of the</strong> <strong>most</strong></span> hates to take even a real of <span class="highlight"><strong>cutting</strong></span> away from such Pleasant surroundings.</p>
+<p>You said you <span class="highlight"><strong>trying</strong></span> to match the <span class="highlight"><strong>Silicon</strong></span> Harold's interjected The Dowager <span class="missing-words">[--- missing words---]</span>  remember <span class="missing-words">[--- missing words---]</span>  those places where everyone is so kind and sympathetic and <span class="highlight"><strong>two</strong></span> devoted that one <span class="highlight"><strong>of the</strong> <strong>most</strong></span> hates to take even a real of <span class="highlight"><strong>cutting</strong></span> away from such Pleasant surroundings. <strong>(<em>7 errors</em>)</strong></p>
 
 <p>[0:04:06-0:04:53]</p>
 
-<p>I think you might have taken Louise away. I don't like the idea of her being <span class="highlight"><strong>that</strong></span> among a lot of strangers supposing some unprincipled person was to get into conversation with <span class="missing-words">[--- missing words---]</span>  impossible Louise has no conversation. I've never discovered <span class="highlight"><strong>the</strong></span> single topic on which she had anything to say Beyond do you think so I daresay you'll write <span class="highlight"><strong>a</strong> <strong>real it</strong> <strong>sold</strong> <strong>his</strong></span> reticence about the fall of the Rebo Ministry was ridiculous. Considering how much <span class="highlight"><strong>heard</strong> <strong>your</strong></span> mother used to visit Paris this bread and butter <span class="highlight"><strong>has</strong> <strong>come</strong> <strong>tomorrow to</strong></span> thin it <span class="highlight"><strong>scrambles</strong></span> away long before you can get <span class="highlight"><strong>you</strong></span> to your mouth one feels so <span class="highlight"><strong>observed</strong></span> snapping at <span class="highlight"><strong>once</strong></span>. In<span class="highlight"><strong> Middle</strong></span> like a trout <span class="highlight"><strong>sleeping</strong></span> at mayfly.</p>
+<p>I think you might have taken Louise away. I don't like the idea of her being <span class="highlight"><strong>that</strong></span> among a lot of strangers supposing some unprincipled person was to get into conversation with <span class="missing-words">[--- missing words---]</span>  impossible Louise has no conversation. I've never discovered <span class="highlight"><strong>the</strong></span> single topic on which she had anything to say Beyond do you think so I daresay you'll write <span class="highlight"><strong>a</strong> <strong>real it</strong> <strong>sold</strong> <strong>his</strong></span> reticence about the fall of the Rebo Ministry was ridiculous. Considering how much <span class="highlight"><strong>heard</strong> <strong>your</strong></span> mother used to visit Paris this bread and butter <span class="highlight"><strong>has</strong> <strong>come</strong> <strong>tomorrow to</strong></span> thin it <span class="highlight"><strong>scrambles</strong></span> away long before you can get <span class="highlight"><strong>you</strong></span> to your mouth one feels so <span class="highlight"><strong>observed</strong></span> snapping at <span class="highlight"><strong>once</strong></span>. In<span class="highlight"><strong> Middle</strong></span> like a trout <span class="highlight"><strong>sleeping</strong></span> at mayfly. <strong>(<em>19 errors</em>)</strong></p>
 
 <p>[0:04:54-0:05:03]</p>
 
-<p>I am rather surprised <span class="highlight"><strong>that</strong></span> The Dowager that you <span class="highlight"><strong>come</strong></span> sit <span class="highlight"><strong>that</strong> </span>making a hearty <span class="highlight"><strong>to eat</strong></span> when you've just lost <span class="highlight"><strong>her</strong> </span>favorite niece.</p>
+<p>I am rather surprised <span class="highlight"><strong>that</strong></span> The Dowager that you <span class="highlight"><strong>come</strong></span> sit <span class="highlight"><strong>that</strong> </span>making a hearty <span class="highlight"><strong>to eat</strong></span> when you've just lost <span class="highlight"><strong>her</strong> </span>favorite niece. <strong>(<em>6 errors</em>)</strong></p>
 
 <p>[0:05:04-0:05:13]</p>
 
-<p>You talk as if I had lost her in the church <span class="highlight"><strong>on since</strong></span> instead of having <span class="highlight"><strong>temporal</strong> <strong>Emma</strong> <strong>Slater</strong></span>. I'm sure to remember presently where I left her.</p>
+<p>You talk as if I had lost her in the church <span class="highlight"><strong>on since</strong></span> instead of having <span class="highlight"><strong>temporal</strong> <strong>Emma</strong> <strong>Slater</strong></span>. I'm sure to remember presently where I left her. <strong>(<em>5 errors</em>)</strong></p>
 
 <p>[0:05:14-0:06:14]</p>
 
-<p>You didn't visit any place of devotion. Did you if you've left her mooning about Westminster Abbey or <span class="highlight"><strong>some pizzas</strong></span> eaten <span class="highlight"><strong>scrap</strong></span> without being able to give any satisfactory reason why she is <span class="missing-words">[--- missing words---]</span> she'll be <span class="highlight"><strong>sweet used</strong></span> under the <span class="highlight"><strong>counter</strong></span> and mouse act and send to Reginald McKenna <span class="highlight"><strong>is</strong></span> that would be extremely awkward said Jane meeting <span class="highlight"><strong>and</strong></span> irresolute piece of bread and [--- missing words---] about half way. We hardly <span class="highlight"><strong>knew</strong></span> the McKennas and it would be very tiresome having to <span class="highlight"><strong>tell if I'm</strong> <strong>just</strong> <strong>saw a man. So pathetic</strong></span> private <span class="highlight"><strong>sector three</strong> <strong>just now leaving</strong></span> Louise to him asking to have her sent back in time for dinner. <span class="missing-words">[--- missing words---]</span> Go to any place of devotion <span class="highlight"><strong>then when</strong></span> I did get mixed up with the Salvation Army procession, it was quite interesting to be at Close Quarters with them. <span class="highlight"><strong>That's</strong></span> so absolutely different to what they used to be. When I first remember them in the <span class="highlight"><strong>ages</strong> </span>they used to go about then <span class="highlight"><strong>I'm Kimpton</strong></span> disheveled in a sort of smiling.</p>
+        <p>You didn't visit any place of devotion. Did you if you've left her mooning about Westminster Abbey or <span class="highlight"><strong>some pizzas</strong></span> eaten <span class="highlight"><strong>scrap</strong></span> without being able to give any satisfactory reason why she is <span class="missing-words">[--- missing words---]</span> she'll be <span class="highlight"><strong>sweet used</strong></span> under the <span class="highlight"><strong>counter</strong></span> and mouse act and send to Reginald McKenna <span class="highlight"><strong>is</strong></span> that would be extremely awkward said Jane meeting <span class="highlight"><strong>and</strong></span> irresolute piece of bread and <span class="missing-words">[--- missing words---]</span> about half way. We hardly <span class="highlight"><strong>knew</strong></span> the McKennas and it would be very tiresome having to <span class="highlight"><strong>tell if I'm</strong> <strong>just</strong> <strong>saw a man. So pathetic</strong></span> private <span class="highlight"><strong>sector three</strong> <strong>just now leaving</strong></span> Louise to him asking to have her sent back in time for dinner. <span class="missing-words">[--- missing words---]</span> Go to any place of devotion <span class="highlight"><strong>then when</strong></span> I did get mixed up with the Salvation Army procession, it was quite interesting to be at Close Quarters with them. <span class="highlight"><strong>That's</strong></span> so absolutely different to what they used to be. When I first remember them in the <span class="highlight"><strong>ages</strong> </span>they used to go about then <span class="highlight"><strong>I'm Kimpton</strong></span> disheveled in a sort of smiling. <strong>(<em>29 errors</em>)</strong></p>
 
 <p>[0:06:14-0:06:35]</p>
 
-<p>Rage with the world <span class="highlight"><strong>of</strong></span> now <span class="highlight"><strong>that's</strong> <strong>preussens</strong> <strong>Jones</strong></span> and <span class="highlight"><strong>flamboyant play</strong></span> decorative like a geranium bed with religious convictions <span class="highlight"><strong>Lord acatl why he</strong></span> was going on about them in the lift of the <span class="highlight"><strong>Davis</strong></span> Street <span class="highlight"><strong>to</strong></span> the other day saying <span class="highlight"><strong>for</strong> <strong>the</strong> <strong>loss</strong></span> of good work, they did and <span class="highlight"><strong>water</strong></span> loss. It would have been if they'd never existed.</p>
+<p>Rage with the world <span class="highlight"><strong>of</strong></span> now <span class="highlight"><strong>that's</strong> <strong>preussens</strong> <strong>Jones</strong></span> and <span class="highlight"><strong>flamboyant play</strong></span> decorative like a geranium bed with religious convictions <span class="highlight"><strong>Lord</strong></span> acatl why he was going on about them in the lift of the <span class="highlight"><strong>Davis</strong></span> Street <span class="highlight"><strong>to</strong></span> the other day saying <span class="highlight"><strong>for</strong> <strong>the</strong> <strong>loss</strong></span> of good work, they did and <span class="highlight"><strong>water</strong></span> loss. It would have been if they'd never existed. <strong>(<em>13 errors</em>)</strong></p>
 
 <p>[0:06:37-0:06:46]</p>
 
@@ -507,44 +602,48 @@
 
 <p>[0:06:47-0:06:53]</p>
 
-<p>If you say things like that quite loud in <span class="highlight"><strong>the</strong></span> tube lift, they <span class="highlight"><strong>old was</strong></span> sound like epigrams.</p>
+<p>If you say things like that quite loud in <span class="highlight"><strong>the</strong></span> tube lift, they <span class="highlight"><strong>old was</strong></span> sound like epigrams. <strong>(<em>3 errors</em>)</strong></p>
 
 <p>[0:06:54-0:07:28]</p>
 
-<p>I think you ought to do something about Louise said The Dowager I'm trying to think whether she was with me when I called on the age of spells exit. I rather enjoyed myself <span class="missing-words">[--- missing words---]</span> a joke was trying as usual to <span class="highlight"><strong>REM</strong></span> that odious cardiotoxic a woman down my throat knowing perfectly well that I detest her and in an unguarded moment. She said she was leaving her present house and going to <span class="highlight"><strong>Lover's</strong></span> Seymour Street. I daresay she will if she stays there long enough I said</p>
+<p>I think you ought to do something about Louise said The Dowager I'm trying to think whether she was with me when I called on the age of spells exit. I rather enjoyed myself <span class="missing-words">[--- missing words---]</span> a joke was trying as usual to <span class="highlight"><strong>REM</strong></span> that odious cardiotoxic a woman down my throat knowing perfectly well that I detest her and in an unguarded moment. She said she was leaving her present house and going to <span class="highlight"><strong>Lover's</strong></span> Seymour Street. I daresay she will if she stays there long enough I said <strong>(<em>2 errors</em>)</strong></p>
 
 <p>[0:07:29-0:08:14]</p>
 
-<p>Ada didn't see it for about 3 minutes and then she was positively uncivil <span class="highlight"><strong>know</strong></span> I am certain I didn't leave Louise there. If you could manage to remember where you did leave her it would be more to the point than these negative assurances said lady being food so far all that we know is that she's not at the county. Would you just spelled exits or Westminster Abbey <span class="missing-words">[--- missing words---]</span> Monet's I know I went to Monet's because I remember meeting that delightful Malcolm. What's his name there? You know whom I mean.</p>
+<p>Ada didn't see it for about 3 minutes and then she was positively uncivil <span class="highlight"><strong>know</strong></span> I am certain I didn't leave Louise there. If you could manage to remember where you did leave her it would be more to the point than these negative assurances said lady being food so far all that we know is that she's not at the county. Would you just spelled exits or Westminster Abbey <span class="missing-words">[--- missing words---]</span> Monet's I know I went to Monet's because I remember meeting that delightful Malcolm. What's his name there? You know whom I mean. <strong>(<em>1 error</em>)</strong></p>
 
 <p>[0:08:15-0:08:57]</p>
 
-<p>That's the great advantage of people having unusual first names. You needn't try and remember <span class="highlight"><strong>Fort</strong> <strong>there</strong>. <strong>Another</strong></span> name is of course, I <span class="highlight"><strong>knew </strong></span>one or two other Malcolm's but none <span class="missing-words">[--- missing words---]</span> could possibly be described as delightful. He gave me two tickets for the <span class="highlight"><strong>happiest</strong></span> Sunday evenings in Sloane Square. <strong>I </strong>probably left them at Monet's but still it was awfully kind of him to give them to me. Do you think you left Louise there? I might <span class="highlight"><strong>tell if I don't know</strong></span>. Ask <span class="missing-words">[--- missing words---]</span> Robert before you clear the tea things <span class="highlight"><strong>the way</strong></span> I wish you would <span class="highlight"><strong>bring</strong></span> up Monday is in <span class="highlight"><strong>region</strong> <strong>speed.</strong></span> <span class="highlight"><strong>I don't</strong></span> ask if I left two theater tickets and one niece in their shop this afternoon.</p>
+<p>That's the great advantage of people having unusual first names. You needn't try and remember <span class="highlight"><strong>Fort</strong> <strong>there</strong>. <strong>Another</strong></span> name is of course, I <span class="highlight"><strong>knew </strong></span>one or two other Malcolm's but none <span class="missing-words">[--- missing words---]</span> could possibly be described as delightful. He gave me two tickets for the <span class="highlight"><strong>happiest</strong></span> Sunday evenings in Sloane Square. <strong>I </strong>probably left them at Monet's but still it was awfully kind of him to give them to me. Do you think you left Louise there? I might <span class="highlight"><strong>tell if I don't know</strong></span>. Ask <span class="missing-words">[--- missing words---]</span> Robert before you clear the tea things <span class="highlight"><strong>the way</strong></span> I wish you would <span class="highlight"><strong>bring</strong></span> up Monday is in <span class="highlight"><strong>region</strong> <strong>speed.</strong></span> <span class="highlight"><strong>I don't</strong></span> ask if I left two theater tickets and one niece in their shop this afternoon. <strong>(<em>17 errors</em>)</strong></p>
 
 <p>[0:08:58-0:09:20]</p>
 
-<p>A <span class="highlight"><strong>nice</strong> <strong>man</strong> <strong>asks</strong> <strong>a</strong></span> footman. Yes, Miss. Louise didn't come home with me and I'm not <span class="highlight"><strong>show up</strong></span> where I left her Miss Louise <strong>his</strong> being upstairs <span class="highlight"><strong>in</strong></span> the afternoon. <span class="highlight"><strong>Mom</strong></span> reading to the second kitchen maid who has the <span class="highlight"><strong>mule nausea</strong></span>. I took up <span class="highlight"><strong>to you</strong></span> to miss Louise at the <span class="highlight"><strong>quotient</strong> <strong>of</strong></span> 5 mam.</p>
+<p>A <span class="highlight"><strong>nice</strong> <strong>man</strong> <strong>asks</strong> <strong>a</strong></span> footman. Yes, Miss. Louise didn't come home with me and I'm not <span class="highlight"><strong>show up</strong></span> where I left her Miss Louise <strong>his</strong> being upstairs <span class="highlight"><strong>in</strong></span> the afternoon. <span class="highlight"><strong>Mom</strong></span> reading to the second kitchen maid who has the <span class="highlight"><strong>mule nausea</strong></span>. I took up <span class="highlight"><strong>to you</strong></span> to miss Louise at the <span class="highlight"><strong>quotient</strong> <strong>of</strong></span> 5 mam. <strong>(<em>14 errors</em>)</strong></p>
 
 <p>[0:09:21-0:10:00]</p>
 
-<p>Of course, how silly of me? I remember now. I asked her to read the Faerie queene to <span class="highlight"><strong>poema</strong></span> to try to send her to sleep. I always get someone to read the Faerie queene to <span class="highlight"><strong>meet you for not having you around you</strong></span> and it usually sends me to sleep Louis doesn't seem to have been successful but one <span class="highlight"><strong>can</strong></span> say she hasn't tried I expect after the first hour or so the kitchen maid with <span class="highlight"><strong>Robinhood</strong> <strong>being</strong></span> left alone with <span class="highlight"><strong>him</strong> <strong>your browser</strong> <strong>bunch</strong></span>. Of course Louis <span class="highlight"><strong>is</strong> </span> wouldn't leave off till someone told her to any how you can ring up Monet's Robin and <span class="highlight"><strong>I asked</strong></span> whether I left two theater tickets there.</p>
+<p>Of course, how silly of me? I remember now. I asked her to read the Faerie queene to <span class="highlight"><strong>poema</strong></span> to try to send her to sleep. I always get someone to read the Faerie queene to <span class="highlight"><strong>meet you for not having you around you</strong></span> and it usually sends me to sleep Louis doesn't seem to have been successful but one <span class="highlight"><strong>can</strong></span> say she hasn't tried I expect after the first hour or so the kitchen maid with <span class="highlight"><strong>Robinhood</strong> <strong>being</strong></span> left alone with <span class="highlight"><strong>him</strong> <strong>your browser</strong> <strong>bunch</strong></span>. Of course Louis <span class="highlight"><strong>is</strong> </span> wouldn't leave off till someone told her to any how you can ring up Monet's Robin and <span class="highlight"><strong>I asked</strong></span> whether I left two theater tickets there. <strong>(<em>19 errors</em>)</strong></p>
 
 <p>[0:10:01-0:10:09]</p>
 
-<p>Except for your silk Susan <span class="highlight"><strong>they'll</strong></span> seem to be the only things I've forgotten this afternoon quite wonderful for me.</p>
+<p>Except for your silk Susan <span class="highlight"><strong>they'll</strong></span> seem to be the only things I've forgotten this afternoon quite wonderful for me. <strong>(<em>1 error</em>)</strong></p>
 
 <p>[0:10:11-0:10:16]</p>
 
 <p>end of Louise recording by Graham Redman</p>
 
-<p><strong>WORD COUNT: 1543 (- more than the original!)</strong></p>
+<p><strong>WORD COUNT: 1543</strong></p>
+ <p><span class="highlight"><strong>TOTAL ERRORS: 201</strong></span></p>
 
+<p><strong>201 (errors) / 1,532 (source file word count) = 0.13120</strong></p>
+
+<p><strong>Error % of 13.120 = (100 - 13.120 =) 86.88% accurate</strong></p>
 
  </div>
            
-              
+     <br>         
                     
-            <h4>Overview of Otter.ai service</h4>
+            <h3>Overview of the Otter.ai service</h3>
             <p><a target=”_blank” href="https://otter.ai/">https://otter.ai/</a> Tests were performed while running a month’s trial of their 'Pro' plan for individuals, with 6000mins per month quota, a maximum file duration of 4 hours, and txt, pdf, docx, srt (caption format) export options. They also have a free 'Basic' plan aimed at individuals that offers a monthly transcription quota of 600mins, restricted to 3 files only per month, with the longest duration file at 40mins, txt as the only export format.</p>
              
            <h4>Otter.ai Features</h4>
@@ -554,7 +653,7 @@
             <li>audio: mp3, aac, wav, m4a, wma</li>
             <li>video: mp4, avi, mov, wmv, mpg</li>
             </ul>
-              <li>advanced export: PDF, DOCX, SRT</li>
+              <li>advanced export: to ClipBoard, TXT, DOCX, PDF and SRT</li>
             <li>custom vocabulary option for 'specialised' word recognition</li>
             <li>synch audio and video from Dropbox</li>
             <li>bulk file import and export available</li>
@@ -565,11 +664,9 @@
           <img src="images/Otter_AI-UKSC-test_1_Export_Text_formats.jpg" alt="Format export options from Ottter.AI"  width="50%">       
           
           
-          
-          <p><strong>Test of UKSC file: </strong>cr1-09-12-16-judgements_imx30_1.mp4, as downloaded from: <br><a target=”_blank” href="https://discovery.nationalarchives.gov.uk/details/r/f965fcd22e564027b331f6934773f1da">https://discovery.nationalarchives.gov.uk/details/r/f965fcd22e564027b331f6934773f1da</a></p>
+         
         
-        <h4>Otter.AI</h4>
-        
+    
         
         <p class="img-cap">Otter.AI ‘MyConversations’/ Edit page</p>
           
@@ -578,11 +675,11 @@
           <img src="images/Otter_AIpreviewPage.PNG" alt="Otter.ai My Cnvesations Preview Page" width=50% class="float-left">
           
           <p>The Otter.ai service produces the following outputs:</p>
-        <ul>
-           <li><strong>Audio playback</strong> of transcript - the text highlights individual word by word and in synch with the spoken word implying that the underlying timecode must be applied to each word and quite accurate. YouTube by contrast tends to be ‘short phrase’ based – presumably the time-code is per a set period of time rather. </li>
-            <li><strong>Text output to screen</strong> <a target=”_blank” href="https://otter.ai/note/22YSYXFVYCP6Q34K?f=%2Fmy-notes">https://otter.ai/note/22YSYXFVYCP6Q34K?f=%2Fmy-notes</a></li>
+        <ul class="indent">
+           <li><strong>Audio playback of transcript</strong> - the text highlights individual word by word and in synch with the spoken word implying that the underlying timecode must be applied to each word and quite accurate. YouTube by contrast tends to be ‘short phrase’ based – presumably the time-code is per a set period of time rather. </li>
+            <li><strong>Text output to screen</strong></li>
             <li><strong>Summary Keywords</strong> derived from the text transcription e.g. “school”, “admission”, “grounds” etc. </li>
-            <li><strong>Time-coded text</strong> – in this case one block of text per speaker (total of 2), not line-by-line time-code details as seen in YouTube CC export files </li></ul>
+            <li><strong>Time-coded text</strong> – in this case one block of text per speaker (total of 2)</li></ul>
          </div>
           
           
@@ -596,118 +693,60 @@
                        
                                    
             
-   
+   <br>
            
         
             
-            <h4>How to Automatically Transcribe Video files into Text Using YouTube</h4>
-        <p><a target=”_blank” href="https://www.youtube.com/watch?v=mIuVURa4ivI">https://www.youtube.com/watch?v=mIuVURa4ivI</a></p>
-        <p>Video must be uploaded to YouTube for generation of ‘Closed Captions’ to take
-            As of 2016 video, states that automatic transcriptions can take from a minute to a day.</p>
-            <p>No punctuation, you can edit the transcriptions on YouTube after generation. No text output, tough apparently there is a get around.</p>
-            
-         <p>   How to Transcribe Audio to Text (Video Transcription Tutorial!)
-          <a target=”_blank” href="https://www.youtube.com/watch?v=bltDLL6-CbQ">https://www.youtube.com/watch?v=bltDLL6-CbQ</a></p>
+            <h3>Automatic Transcription of Video via YouTube Studio</h3>
+       
+        <p>Video can be uploaded to YouTube in order to generate Closed Captions. YouTube ‘Studio’ (available to all user accounts) allows the upload of multiple (but unique) files (up to 15 at once) by browse, or drag-and-drop selection into browser upload area. Upload is a two stage process, - a standard-definition (SD) file will first be generated, and after a processing period, depending on original file quality, a higher resolution version will become available.</p>
         
-        
-        <h4>Google Voice</h4>
-        
-        <p>These services require upload or sending through of link to video to be processed, OR upload audio only - mp3 etc.</p>
-        
-        <p>Online Services
-            Temi - around 10c per minute
-            Spext - around 25c per minute</p>
-        <p>Automated processes, fast turnaround, - require very clear audio. Results may be variable, particularly where background noise/ music present or speaker has a strong accent. Not recommended by video host where high level of accuracy is important (though 2nd, manual clean up run could be made to fix errors)</p>
-            
-            
-            
-          
- 
- 
- 
-          
-    
-                    
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-            
-            <h3>YouTube Studio</h3>
-            <p>File upload – YouTube Studio</p>
-        <p>YouTube ‘Studio’ (available to all user accounts) allows upload of multiple files (15 at once) by browse, or drag-and-drop selection. Upload is a two stage process, - a standard-definition (SD) file will first be generated, and, after a processing period, any full resolution version will become available. </p>
-        
-        <p>Three main window tabs form the process of file upload and configuration for publication. As part of the initial processing upon upload you can select:   Language, subtitles and closed captions (CC). There are a few different English options based on (generalised?) regional vocalisation (and dialect?). </p>
+        <p>Three main window tabs form the process of file upload and configuration for publication. As part of the initial processing upon upload you can select: 
+          <ul>
+              <li>Language, subtitles and closed captions (CC)</li>
+              <li>License and distribution</li>
+              <li>Visibility - options for online publication. This can be set to ‘Private’ to restrict viewing to permitted users only</li>
+          </ul>
+           <p>There are a few different English options available from the Language, subtitles and closed captions (CC) form, these based on regional vocalisation and dialect. </p>
            
          
-         <p class="img-cap">Language, subtitles and closed captions (CC)</p>
+         <p class="img-cap">Image: Language, subtitles and closed captions (CC)</p>
            
            
            <img src="images/YouTube_CC_language_selector.jpg" alt="YouTube select language, subtitles and closed captions (CC) options"  width="50%">
-           
-           <p class="img-cap">License and distribution options</p>
-           
-           <img src="images/YouTube_disallow_embedding_comments.jpg" alt="YouTube Licence and distribution opions" width="50%">
-           
-           <p class="img-cap">Visibility Options</p>
+     
            
             
-       
-            
-      <div class="box-div1">     
-      <img src="images/YouTube_Visibility_Private.jpg" alt="YouTube video visibility options" width="50%" class="float-left">      
-    <h4>Restriction of circulation</h4>
-        <p>In the license and distribution section are the options for ‘Allow embedding and Publish to subscriptions feed and notify subscribers. These features can be disabled by tickbox.    
-            Comments and ratings can also be disallowed.</p>
-        
-        <p>On the 3rd tab are the <span class="code-blue">‘Visibility’</span> options for online publication. This can be set to ‘Private’ – <span class="quote">“only you and people who you choose can watch your video.”</span> </p>
-               </div>
-        
-      
-        
-           <h4>Your Video</h4>
+           <p> Once refreshed (i.e. the upload status changed from ‘Refresh’ to ‘Published, Automatic’) you then have the option to edit, download or delete video files. There is also an option within the page to ‘Add language’ by which you can add an additional set of transcription captions in a different language.</p>
            
-          
-           
-           <div class="box-div1">
-            <img src="images/YouTube_Studio_side_menu_SUBS.jpg" class="float-left" alt="" width="30%">
-            
-           <p> Once refreshed (status changed from ‘Refresh’ to ‘Published, Automatic’) you then have the option to edit, download or delete. There is also an option within the page to ‘Add language.’</p>
-           
-          <h4> Edit options</h4>
+          <h5>Transcription Edit Options</h5>
         <p>The edit options in YouTube Studio allow: </p>
         <ul>
            <li>editing of the transcript text (see left-hand column in image below) and </li>
-            <li>editing of timecode position and duration of portions of text by dragging to new position, cropping and stretching of text-boxes along a timeline (located beneath video preview)</li>
+            <li>editing of timecode position and the duration of each text block by dragging to new position, cropping and stretching of text-boxes placed along a timeline (this located beneath the video preview)</li>
             <li>introduction of new subtitle text, or removal of existing</li>    
          </ul>
+          <p class="img-cap">Video: Transcription/ Caption Edit Options</p>
+
          
-         </div>
+         <video width="100%" controls class="vid-left">
+  <source src="images/YouTube_Subs_DEMO.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
          
-         <img src="images/YouTube_Transcribe_and_Time_Settings_page.jpg" alt="YouTube transcribe and set timings" width="75%">
-         
-         <h4><a href="Tests/media/YouTube_Subs_DEMO.mp4">See video: YouTube_Subs_DEMO.mp4</a> <span class="todo">EMBED RATHER THAN LINK</span></h4>
-         
-         <h4>Download Formats</h4>
+       
+         <h5>Download Formats</h5>
         <p>Download options are: *.WebVTT, *.SRT and ‘*.SBV’. SBV contain time stamps are formatted in H:MM:SS.000 format.</p>
         
-    
- 
-        
+   <h4>Testing of YouTube Transcription</h4>
+  <p>Transcription via YouTube Studio was tested by the upload of a short duration UK Supreme Court (UKSC) video file, as sourced from TNA Discovery. The audio was first manually transcribed in order to produce a complete and correct text with which to compare with transcription text output. Consistency checks were made by submitting the same content on subsequent occasions. The text output turned out to be consistent in all cases, including areas of missing text. It should be noted that punctuation is not a feature available from this service. 
       <!--HIDE-UNHIDE-->
-         <p><a href="javascript:unhide('YouTube-Check');" class="hidelink">Toggle YouTube Tests Tests</a></p>
+         <a href="javascript:unhide('YouTube-Check');" class="hidelink">Toggle YouTube Test</a></p>
       
        <!--HIDDEN-->
     <div id="YouTube-Check" class="hidden" class="img-cent" class="hidden-test">           
                       
- <h1>YouTube Consistency Checks</h1>
+ <h1>YouTube Transcription Test</h1>
  
   <p><strong>SOURCE TEXT – 280 words</strong></p>
 
@@ -717,19 +756,16 @@
 
 <p>The JFS formerly the Jews free school has an admissions policy that gives preference to children who are recognized as Jewish according to the Orthodox Jewish religion. This means that the child's mother must either be descended from a Jewish mother herself or have converted to Judaism in accordance with the requirements of Jewish orthodoxy. This appeal is about a boy whose mother converted to Judaism in a way that did not satisfy the Orthodox requirements. He was refused entry to the school. His father challenged the admissions policy on the ground that in discriminating against those who had not been recognised as Jewish it breached the race relations act. That act forbids discrimination on the ground of ethnic origin. The majority of the court has concluded that the JFS admission policy does discriminate on the ground of ethnic origin and is in consequence unlawful. The minority disagrees considering that the admission requirement is exclusively a religious requirement that does not depend on ethnic origin. The majority have made it plain in their judgments that the fact that the JFS admission policy has fallen foul of the race relations act certainly does not mean that those responsible for the admission policy have behaved in a way that is racist as that word is generally understood. In the result the substantive appeal is dismissed. The appeal on costs of the United synagogue is allowed to the extent set out in the judgment of Lord Hope.</p>
 
-<p><strong>2<sup>nd</sup> female voice, after All Rise from male Usher, boosted +10dB. Uploaded to YouTube</strong></p>
+
 
 <p><strong>YouTube output: 269</strong></p>
 
-<p>all right <br>
-non-issue [------ missing text -------- ] the e against the governing body of GHS and the only application you see against the governing body with GFS and the united silikov </p>
+<p>all <span class="highlight"><strong>right</strong></span> <br>
+<span class="highlight"><strong>non-issue</strong></span> <span class="missing-words">[------ missing text -------- ]</span> <span class="highlight"><strong>the</strong></span> e against the governing body of <span class="highlight"><strong>GHS</strong></span> and <span class="missing-words">[------ missing text -------- ]</span> the <span class="highlight"><strong>only</strong></span> application <span class="highlight"><strong>you see</strong></span> against the governing body with <span class="highlight"><strong>GFS</strong></span> and the united <span class="highlight"><strong>silikov</strong></span> </p>
 
-<p>the JFS formally the jews free school has an admissions policy that gives preference to children who are recognized as jewish according to the Orthodox Jewish religion this means that the child's mother must either be descended from a Jewish mother herself or have converted to Judaism in accordance with the requirements of Jewish orthodoxy this appeal is about a boy whose mother converted to Judaism in a way that did not satisfy the orthodox requirements he was refused entry to the school his father challenged the admissions policy on the ground that in discriminating against those who had not [------ missing text -------- ] recognised as Jewish it breached the race relations act that act forbids discrimination on the ground of ethnic origin the majority of the court has concluded that the JFS admission policy does discriminate on the ground of ethnic origin and is in consequence unlawful the minority disagrees considering that the admission requirement is exclusively a religious requirement that does not depend on ethnic origin the majority have made it plain in their judgments that the fact that the JFS admission policy has fallen foul of the race relations act certainly does not mean that those responsible for the admission policy have behaved in a way that is racist as that word is generally understood in the result the substantive appeal is dismissed the appeal on costs of the United synagogue is allowed to the [------ missing text -------- ] set out in the judgement of Lord hope </p>
+<p>the JFS formally the jews free school has an admissions policy that gives preference to children who are recognized as jewish according to the Orthodox Jewish religion this means that the child's mother must either be descended from a Jewish mother herself or have converted to Judaism in accordance with the requirements of Jewish orthodoxy this appeal is about a boy whose mother converted to Judaism in a way that did not satisfy the orthodox requirements he was refused entry to the school his father challenged the admissions policy on the ground that in discriminating against those who had not <span class="missing-words">[------ missing text -------- ]</span> recognised as Jewish it breached the race relations act that act forbids discrimination on the ground of ethnic origin the majority of the court has concluded that the JFS admission policy does discriminate on the ground of ethnic origin and is in consequence unlawful the minority disagrees considering that the admission requirement is exclusively a religious requirement that does not depend on ethnic origin the majority have made it plain in their judgments that the fact that the JFS admission policy has fallen foul of the race relations act certainly does not mean that those responsible for the admission policy have behaved in a way that is racist as that word is generally understood in the result the substantive appeal is dismissed the appeal on costs of the United synagogue is allowed to the <span class="missing-words">[------ missing text -------- ]</span> set out in the judgement of Lord hope </p>
 
-<p><strong>10 errors in text actually produced. <em>If using the word count from the SOURCE instead…. 1</em>0 / 280 ( = number of words in source) = 0.035 * 100 = 3.5% error. <br>
-<em>IF counting the missing words as errors: 280 – 269 = 11 missing words<br>
-</em>10 errors in text actually produced + 11 <em>= 21<br>
-21 </em>/ 280 ( = number of words in source) = 0.075 * 100 = 7.5% error.</strong></p>
+        <p><strong>9 errors in text actually produced. Using the word count from the SOURCE: 9 / 280 ( = number of words in source) = 0.0321 * 100 = 3.21% error, or 96.7% accurate.</strong></p>
 
 
   
@@ -741,40 +777,33 @@ non-issue [------ missing text -------- ] the e against the governing body of GH
     
           <br>
            
-            
-             
-              
-               
-                
-                 
-                  
-                   
-                    
-                     
-                      
-                       
-                        
-                          
-       <div class="explain">   
+            <div class="explain">   
         <h4>ADA compliant captions</h4>
 
 <p>University of Cincinnati Accessibility Network </p>
-<p>Re: YouTube captions misrepresent the spoken content within the presence of accents, dialects, background noise, or poor sound quality, or with use of proper nouns, abbreviations, or acronyms. Miscomprehension may occur because of the absence of grammar and punctuation, and lack of a complete textual representation of the audio that includes speaker identification and non-speech information. You should always review automatic captions and edit any parts that have not been properly transcribed.” <a target=”_blank” href="https://www.uc.edu/about/accessibility-network/video-media/youtube-studio-captioning-instructions.html">https://www.uc.edu/about/accessibility-network/video-media/youtube-studio-captioning-instructions.html</a></p>
+<p><span class="quote">"...YouTube captions misrepresent the spoken content within the presence of accents, dialects, background noise, or poor sound quality, or with use of proper nouns, abbreviations, or acronyms. Miscomprehension may occur because of the absence of grammar and punctuation, and lack of a complete textual representation of the audio that includes speaker identification and non-speech information. You should always review automatic captions and edit any parts that have not been properly transcribed.”</span> </p>
 
-<p>YouTube’s Automatic Captions Prove Insufficient for ADA Compliance <a target=”_blank” href="https://www.automaticsync.com/captionsync/youtube-automatic-captions/">https://www.automaticsync.com/captionsync/youtube-automatic-captions/</a></p>
+<p><a target=”_blank” href="https://www.automaticsync.com/captionsync/youtube-automatic-captions/">YouTube’s Automatic Captions Prove Insufficient for ADA Compliance</a></p>
 
 </div>
 
-        
+        <p><strong>Links:</strong> <br>
+         <a target=”_blank” href="https://www.youtube.com/watch?v=mIuVURa4ivI">How to Automatically Transcribe Video files into Text Using YouTube</a> <br>         
+          <a target=”_blank” href="https://www.youtube.com/watch?v=bltDLL6-CbQ">How to Transcribe Audio to Text (Video Transcription Tutorial!)</a> <br>
+          <a target=”_blank” href="https://www.uc.edu/about/accessibility-network/video-media/youtube-studio-captioning-instructions.html">YouTube Studio Captioning</a></p>     
         
         <br>
 
 <h3>Google Docs (in-Browser) transcription</h3>
+<p>Google Docs supports speech recognition by which the text of a document can be populated in near real time by dictation via a hardware built-in or external microphone.</p>
+
+
+
  <div class="box-div1">
       
        <img src="images/Microphone_Privacy.jpg" alt="PC Microphone_Privacy setting for online speech recognition" width=55% class="float-left"> 
             
-                 <p>Google Docs can be used to automatically transcribe from ‘computer sound’ as well as via the PC microphone. To enable its use in this manner the ‘Online speech recognition’ switch (found in <strong><em>Settings > Privacy > Speech</em></strong>) must be set to <span class="code-blue">On</span></p>     
+                 <p>Google Docs can also be used to automatically transcribe from ‘computer sound’ (a setting by which sound from a browser or media player etc. can be captured) as well as via microphone. To enable its use in this manner (in Windows 10) the ‘Online speech recognition’ switch (found in <strong><em>Settings > Privacy > Speech</em></strong>) must be set to <span class="code-blue">On</span>.</p>     
              
              </div>
              
@@ -782,8 +811,8 @@ non-issue [------ missing text -------- ] the e against the governing body of GH
 <img src="images/sound_settings.jpg" alt="PC sound settings" width="40%" class="float-left" >
        
 <p>Additionally the Input option under <strong><em>settings > Sound</em></strong> needs to be changed from the built-in microphone to the ‘<span class="code-blue">Stereo Mix</span>’ option, - this enables recording of PC sound. </p>
-<p>As it would appear from testing that the capture is to some extent dependant on a volume above a certain level (possibly to limit interference from low level background speech) The Master Volume for the Output Device (Speakers) should be set to a high to 100% level to ensure that all voices are beyond any set threshold (- this to be investigated) for capture. </p>
-<p>In order to avoid annoyance to others from playback, and to maintain privacy, the PC’s output speakers should be effectively muted <em>without</em> reducing the PC volume. One simple way to achieve this is to plug a headphone extension cable (without headphones attached) into the PC’s headphone socket. </p>
+<p>It would appear from testing that capture is to some extent dependent on the PC volume level being above a certain threshold (possibly to limit interference from low level background speech). The Master Volume level for the Output Device (Speakers) should be set to as high as 100% to ensure that all voices are recognised for capture. </p>
+<p>In order to avoid annoyance to others from playback, and to maintain privacy, the PC’s output speakers can be effectively muted <em>without</em> reducing the PC volume simply by plugging a headphone extension cable (without headphones attached) into the PC’s headphone/ audio out socket.</p>
 
  </div>    
 
@@ -808,10 +837,21 @@ non-issue [------ missing text -------- ] the e against the governing body of GH
       
       
       <p>At this point you should see text, initially ‘pixelated’ resolve and, with a small delay, progressively type out within the GoogleDoc. </p>
-<p>Once the session has concluded, deactivate the recording. You then have the option to edit within the doc or ‘<strong><em>Download As</em></strong>’:    docx, odt, rtf, pdf, txt, html (zipped) and epub. Alternatively you can ‘Email as Attachment’ with the same option formats available, or publish to web. </p>
+<p>Once the session has concluded, deactivate the recording. You then have the option to edit within the doc or ‘<strong><em>Download As</em></strong>’ in formats: docx, odt, rtf, pdf, txt, html (zipped) and epub. Alternatively you can ‘Email as Attachment’ with the same option formats available, or publish directly online. </p>
       </div>
          
-         
+      <h3>Consistency Checks</h3> 
+<p>Three transcription runs were made against the same video (UKSC video: cr1-09-12-16-judgements_imx30_1.mp4 from TNA Discovery). The video was played from one Chrome browser instance, while GoogleDocs was used to record from a second Chrome instance. </p>
+<p>As a visual estimate of consistency of capture, the text of each run was compared with another in the online <a target=”_blank” href="https://www.diffchecker.com/diff">DiffChecker</a> tool. It can quickly be seen that there are particular points of inconsistency in capture, - one is after the initial <span class="quote">“All rise!”</span> from a male usher, when a 2nd, another when a female voice pronounces the initial case presentation (it should be noted that there is an extended pause in speech between the usher and the 2nd speaker). This particular section of speech is not very well recorded and when making a manual transcription I could not be certain as to all the words spoken. The initial few works spoken by a 3rd, male voice (which follows closely after the 2nd female voice) are missed in all tests. This 3rd voice is very clear and well recorded.</p>
+   <p class="img-cap">Image: transcription job 1 compared with job 2: ‘11 removals, 10 additions’</p>
+   
+   
+   <img src="images/100_50_oercent_compare.jpg" alt="" width=75%>
+   
+   <p class="img-cap">Image: transcription job 1 compared with job 3: ‘13 removals, 13 additions’</p>
+   <img src="images/100_50_oercent_compare_2nd_Run.jpg" alt="" width=75%>
+   
+   <br><br>
          
              
           <!--HIDE-UNHIDE-->
@@ -944,86 +984,9 @@ non-issue [------ missing text -------- ] the e against the governing body of GH
        </div>
 <!-- HIDDEN CONTENT-->
 
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-        <h3>Subtitle format comparisons</h3>
-        
-        
-         <h4>WebVTT</h4>
-      <div class="box-div1">       
-            
-        <img src="images/captions_VTT-format.PNG" alt="auto_captions_from_YouTube_in_VTT_format" width="60%" class="float-left">
-        
-          <p>“The WebVTT format (Web Video Text Tracks) is a …W3C standard for displaying timed text in connection with the HTML5 <track> element… The WebVTT specification is still in draft stage but the basic features are already supported by all major browsers.” <a target=”_blank” href="https://en.wikipedia.org/wiki/WebVTT">https://en.wikipedia.org/wiki/WebVTT</a></p>
-        
-       </div>
-       
-        
-        
-        <h4>SRT (SubRip Text)</h4> 
-        
-      <div class="box-div1">   
-                   
-               <img src="images/captions_SRT-format.PNG" alt="" class="float-left">
-               <p>Subtitles are numbered sequentially (from 1).</p>
-               
-               </div>
-               
-               <div class="box-div1">   
-   <img src="images/captions_SBV-format.PNG" alt="" class="float-left">
-   <p><strong>SBV</strong> is a YouTube Captions file, developed by Google. It is limited to YouTube use but can be converted to SRT</p>
-   </div>
-   
-   <h3>Web Video Text Tracks Format (WebVTT)</h3>
-  <p><span class="quote">“Web Video Text Tracks Format (WebVTT) is a format for displaying timed text tracks (such as subtitles or captions) using the <span class="span-code">&lt;track&gt;</span> element. The primary purpose of WebVTT files is to add text overlays to a <span class="span-code">&lt;video&gt;.“</span></span>
-       <a target=”_blank” href="https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API">https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API</a></p>
-
-
-<h3>&lt;track&gt;: The Embed Text Track element</h3>
-<p>
-    Details from: <a target=”_blank” href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track</a>
-</p>
-<div class="box-div1"> 
- 
- <img src="images/HTML-5_track_element.PNG" alt="" class="float-left" width="45%">
- <p>The HTML <span class="span-code">&lt;track&gt;</span> element is a child of the <span class="span-code">&lt;audio&gt;</span> and <span class="span-code">&lt;video&gt;</span>. elements,  It allows for time-based data to apply automatically handle subtitles. </p>
- 
- </div>
   
-   <h4>Attribute: ‘kind’</h4>
-<ul>
-   <li>subtitles: intended for text translations of audio language not understood by the viewer.</li>
-   <li>captions: Closed Captions: to provide a transcription (and possibly a translation of the audio)</li>
-   <li>captions: Closed Captions: to provide a transcription (and possibly a translation of the audio)</li>
-   </ul>
    
-<ul><li>1 run accuracy</li>
-    <li>Multiple run consistency </li></ul>
-<p>The text output from the second run when compared with the first is absolutely consistent, - the same errors, the same omitted text.</p>
-   
- 
-   
-   
-   <h3>Consistency Checks</h3> 
-<p>Three transcription runs were made against the same video (UKSC video: cr1-09-12-16-judgements_imx30_1.mp4 (from <a target=”_blank” href="http://discovery.nationalarchives.gov.uk/VideoPlayer/?url=https://tna-video-player.s3.amazonaws.com/66/UKSC/1/cr1-09-12-16-judgements_imx30_1.mp4">http://discovery.nationalarchives.gov.uk/VideoPlayer/?url=https://tna-video-player.s3.amazonaws.com/66/UKSC/1/cr1-09-12-16-judgements_imx30_1.mp4</a>). The video was played from one Chrome browser instance, while GoogleDocs was used from a second. </p>
-<p>As a visual estimate of consistency of capture, the text of each run was compared with another in the online tool ‘DiffChecker’ (<a target=”_blank” href="https://www.diffchecker.com/diff">https://www.diffchecker.com/diff</a>). It can quickly be seen that there are particular points of inconsistency in capture, one is after the initial “All rise!” from a male usher, when a 2nd, female voice pronounces the initial case presentation (it should be noted that there is an extended pause in speech between the usher and the 2nd speaker). This section of speech is not very well recorded and when making a manual transcription I could not be certain as to all the words spoken. The initial few works spoken by a 3rd, male voice, which follows closely after the 2nd, are missed in all tests, - speculatively this may be due to a delay in the speech recognition engine becoming active from an ‘uncertainty’ in how to proceed. This 3rd voice is very clear and well recorded.</p>
-   <p class="img-cap">Run 1 compared with Run 2: ‘11 removals, 10 additions’</p>
-   
-   
-   <img src="images/100_50_oercent_compare.jpg" alt="" width=75%>
-   
-   <p class="img-cap">Run 1 compared with Run 3: ‘13 removals, 13 additions’</p>
-   <img src="images/100_50_oercent_compare_2nd_Run.jpg" alt="" width=75%>
-   
-   <br><br>
+
    
    
    

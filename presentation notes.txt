@@ -1,0 +1,19 @@
+Intro to Project:
+
+1 Show index page with video animation
+- What is Definition of a transcription?
+A transcription is a written or printed text version (i.e. a 'transcript') created from some spoken source, which may be made at a live event or from a recording.
+
+CHANGE TO PROJECT OVERVIEW PAGE
+
+Aims of the project
+Through research and testing, to establish what transcriptions systems and services are available, how well they work and how easily they could be used.
+To investigate transcription options and methods, and their relative feature-sets, To compare accuracy of output
+
+What is Video Chaptering? 
+'Chaptering' as used here in an AV context is the division of the playback timeline representing the duration of a digital video file in order to allow easy navigation to pre-determined points of interest identified within an AV recording. The longer the duration of a video or audio file, the more difficult it is for a user to identify and locate points of interest.
+
+Aims of the project
+To investigate methods of annotating points of interest within a timeline, and allow a user to navigate directly via timecode to the points that relate.
+
+While generally talking about video - in both cases transcription and chaptering the same processes can be applied to audio only files as well as video)
